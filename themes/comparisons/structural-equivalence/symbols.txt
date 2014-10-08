@@ -1,0 +1,7 @@
+equal
+equalp
+tree-equal
+string=
+string-equal
+destructuring-bind
+subsetp

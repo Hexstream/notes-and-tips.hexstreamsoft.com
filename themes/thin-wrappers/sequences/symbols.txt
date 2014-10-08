@@ -1,0 +1,17 @@
+count
+count-if-not
+find
+find-if-not
+position
+position-if-not
+remove
+remove-if-not
+delete
+delete-if-not
+substitute
+substitute-if-not
+nsubstitute
+nsubstitute-if-not
+copy-seq
+fill
+vector

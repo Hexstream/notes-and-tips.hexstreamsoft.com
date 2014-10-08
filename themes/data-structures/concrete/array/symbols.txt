@@ -1,0 +1,16 @@
+make-array
+aref
+row-major-aref
+array-element-type
+array-dimensions
+array-dimension
+array-rank
+array-total-size
+array-displacement
+arrayp
+array-adjustable-p
+array-has-fill-pointer-p
+array-in-bounds-p
+adjust-array
+array-row-major-index
+upgraded-array-element-type

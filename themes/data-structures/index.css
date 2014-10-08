@@ -21,12 +21,11 @@ table th.horizontal-grouping-header:first-child {
     text-align: left;
 }
 
-table th.horizontal-grouping-header a {
+table th.horizontal-grouping-header .superclass {
     opacity: 0.4;
 }
 
 table th.horizontal-grouping-header a.here {
-    opacity: 1;
 }
 
 table th.horizontal-grouping-header small {
@@ -36,6 +35,15 @@ table th.horizontal-grouping-header small {
 
 table th ul li + li {
     margin-top: 0.2em;
+}
+
+table .hanging-menu {
+    font-size: medium;
+    font-weight: normal;
+    margin-top: 0;
+    top: -0.25em;
+    right: -0.85em;
+    background: transparent;
 }
 
 table > tbody > tr > th.horizontal-grouping-header a:last-child {

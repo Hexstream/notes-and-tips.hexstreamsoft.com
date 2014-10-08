@@ -1,0 +1,12 @@
+make-hash-table
+gethash
+hash-table-test
+hash-table-rehash-size
+hash-table-rehash-threshold
+hash-table-count
+hash-table-size
+hash-table-p
+remhash
+clrhash
+maphash
+sxhash

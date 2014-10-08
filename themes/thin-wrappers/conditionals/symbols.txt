@@ -1,0 +1,14 @@
+when
+unless
+cond
+and
+or
+case
+ccase
+ecase
+typecase
+ctypecase
+etypecase
+not
+handler-case
+restart-case

@@ -1,0 +1,10 @@
+*modules*
+*provide*
+require
+gentemp
+multiple-value-setq
+setq
+psetq
+rplaca
+rplacd
+set

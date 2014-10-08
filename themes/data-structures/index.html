@@ -211,12 +211,20 @@
 
     </nav>
 
+    <p id="last-updated"><span>This page was last updated on </span><time datetime="2014-10-27">27 october 2014</time><span>.</span></p>
+
     <main>
 
       <header id="page-header">
         <h1>Data structures</h1>
         <p class="description"></p>
       </header>
+
+      <nav class="hanging-menu">
+        <ul>
+          <li><a href="symbols.txt">symbol names</a></li>
+        </ul>
+      </nav>
 
       <section id="concrete">
 
@@ -227,6 +235,12 @@
           <a class="here">Concrete</a>
         </h1>
 
+        <nav class="hanging-menu">
+          <ul>
+            <li><a href="concrete/symbols.txt">symbol names</a></li>
+          </ul>
+        </nav>
+
         <nav class="section-nav">
 
           <nav class="navbox">
@@ -236,14 +250,14 @@
               <span class="here-indicator-right"> </span>
             </h1>
             <ul>
-              <li><a href="#cons">cons</a></li>
-              <li><a href="#hash-table">hash-table</a></li>
-              <li><a href="#array">array</a></li>
-              <li><a href="#vector">vector</a></li>
-              <li><a href="#string">string</a></li>
-              <li><a href="#random-state">random-state</a></li>
-              <li><a href="#readtable">readtable</a></li>
-              <li><a href="#sequence">sequence</a></li>
+              <li><a href="#concrete_cons">cons</a></li>
+              <li><a href="#concrete_hash-table">hash-table</a></li>
+              <li><a href="#concrete_array">array</a></li>
+              <li><a href="#concrete_vector">vector</a></li>
+              <li><a href="#concrete_string">string</a></li>
+              <li><a href="#concrete_random-state">random-state</a></li>
+              <li><a href="#concrete_readtable">readtable</a></li>
+              <li><a href="#concrete_sequence">sequence</a></li>
             </ul>
           </nav>
 
@@ -263,14 +277,24 @@
               <th>See sections, symbols</th>
             </tr>
           </thead>
-          <tbody id="cons">
+          <tbody id="concrete_cons">
             <tr>
               <th class="horizontal-grouping-header" colspan="4">
-                <a class="symbol" href="../../#sequence">sequence</a>
-                <span class="separator"> ← </span>
-                <a class="symbol" href="../../#list">list</a>
-                <span class="separator"> ← </span>
-                <a class="symbol here" href="../../#cons">cons</a>
+                <div>
+                  <a href="#concrete_cons" class="anchor">⚓</a>
+                  <a class="symbol superclass" href="../../#sequence">sequence</a>
+                  <span class="separator"> ← </span>
+                  <a class="symbol superclass" href="../../#list">list</a>
+                  <span class="separator"> ← </span>
+                  <a class="symbol here" href="../../#cons">cons</a>
+
+                  <nav class="hanging-menu">
+                    <ul>
+                      <li><a href="concrete/cons/symbols.txt">symbol names</a></li>
+                    </ul>
+                  </nav>
+
+                </div>
               </th>
             </tr>
             <tr>
@@ -288,14 +312,23 @@
                 </ul>
               </td>
               <td>
-                <a href="../../namespaces/operators/#conses-specific">Conses-specific functions</a>
+                <a href="../../namespaces/operators/#functions_conses_conses-specific">Conses-specific functions</a>
               </td>
             </tr>
           </tbody>
-          <tbody id="hash-table">
+          <tbody id="concrete_hash-table">
             <tr>
               <th class="horizontal-grouping-header" colspan="4">
-                <a class="symbol here" href="../../#hash-table">hash-table</a>
+                <div>
+                  <a href="#concrete_hash-table" class="anchor">⚓</a><a class="symbol here" href="../../#hash-table">hash-table</a>
+
+                  <nav class="hanging-menu">
+                    <ul>
+                      <li><a href="concrete/hash-table/symbols.txt">symbol names</a></li>
+                    </ul>
+                  </nav>
+
+                </div>
               </th>
             </tr>
             <tr>
@@ -323,7 +356,7 @@
               <td>
                 <ul>
                   <li>
-                    <a href="../../namespaces/operators/#hash-tables">Hash table functions</a>
+                    <a href="../../namespaces/operators/#functions_hash-tables">Hash table functions</a>
                     <ul>
                       <li><a class="symbol" href="../../#remhash">remhash</a></li>
                       <li><a class="symbol" href="../../#clrhash">clrhash</a></li>
@@ -335,10 +368,20 @@
               </td>
             </tr>
           </tbody>
-          <tbody id="array">
+          <tbody id="concrete_array">
             <tr>
               <th class="horizontal-grouping-header" colspan="4">
-                <a class="symbol here" href="../../#array">array</a>
+                <div>
+                  <a href="#concrete_array" class="anchor">⚓</a>
+                  <a class="symbol here" href="../../#array">array</a>
+
+                  <nav class="hanging-menu">
+                    <ul>
+                      <li><a href="concrete/array/symbols.txt">symbol names</a></li>
+                    </ul>
+                  </nav>
+                </div>
+
               </th>
             </tr>
             <tr>
@@ -375,7 +418,7 @@
               <td>
                 <ul>
                   <li>
-                    <a href="../../namespaces/operators/#arrays">Array functions</a>
+                    <a href="../../namespaces/operators/#functions_arrays">Array functions</a>
                     <ul>
                       <li><a class="symbol" href="../../#adjust-array">adjust-array</a></li>
                       <li><a class="symbol" href="../../#array-row-major-index">array-row-major-index</a></li>
@@ -386,14 +429,24 @@
               </td>
             </tr>
           </tbody>
-          <tbody id="vector">
+          <tbody id="concrete_vector">
             <tr>
               <th class="horizontal-grouping-header" colspan="4">
-                <a href="../../#sequence">sequence</a>
-                <span class="separator"> ← </span>
-                <a href="../../#array">array</a>
-                <span class="separator"> ← </span>
-                <a class="symbol here" href="../../#array">vector</a>
+                <div>
+                  <a href="#concrete_vector" class="anchor">⚓</a>
+                  <a class="symbol superclass" href="../../#sequence">sequence</a>
+                  <span class="separator"> ← </span>
+                  <a class="symbol superclass" href="../../#array">array</a>
+                  <span class="separator"> ← </span>
+                  <a class="symbol here" href="../../#array">vector</a>
+
+                  <nav class="hanging-menu">
+                    <ul>
+                      <li><a href="concrete/vector/symbols.txt">symbol names</a></li>
+                    </ul>
+                  </nav>
+
+                </div>
               </th>
             </tr>
             <tr>
@@ -422,7 +475,7 @@
               <td>
                 <ul>
                   <li>
-                    <a href="../../namespaces/operators/#vectors">Vector functions</a>
+                    <a href="../../namespaces/operators/#functions_arrays_vectors">Vector functions</a>
                     <ul>
                       <li><a class="symbol" href="../../#vector-push">vector-push</a></li>
                       <li><a class="symbol" href="../../#vector-push-extend">vector-push-extend</a></li>
@@ -433,16 +486,26 @@
               </td>
             </tr>
           </tbody>
-          <tbody id="string">
+          <tbody id="concrete_string">
             <tr>
               <th class="horizontal-grouping-header" colspan="4">
-                <a href="../../#sequence">sequence</a>
-                <span class="separator"> ← </span>
-                <a href="../../#array">array</a>
-                <span class="separator"> ← </span>
-                <a href="../../#vector">vector</a>
-                <span class="separator"> ← </span>
-                <a class="symbol here" href="../../#string">string</a>
+                <div>
+                  <a href="#concrete_string" class="anchor">⚓</a>
+                  <a class="symbol superclass" href="../../#sequence">sequence</a>
+                  <span class="separator"> ← </span>
+                  <a class="symbol superclass" href="../../#array">array</a>
+                  <span class="separator"> ← </span>
+                  <a class="symbol superclass" href="../../#vector">vector</a>
+                  <span class="separator"> ← </span>
+                  <a class="symbol here" href="../../#string">string</a>
+
+                  <nav class="hanging-menu">
+                    <ul>
+                      <li><a href="concrete/string/symbols.txt">symbol names</a></li>
+                    </ul>
+                  </nav>
+
+                </div>
               </th>
             </tr>
             <tr>
@@ -458,7 +521,7 @@
                     [storage]
                     <ul>
                       <li>(setf <a class="symbol" href="../../#char">char</a>)</li>
-                      <li>(setf <a class="symbol" href="../../#char">schar</a>)</li>
+                      <li>(setf <a class="symbol" href="../../#schar">schar</a>)</li>
                     </ul>
                   </li>
                 </ul>
@@ -472,7 +535,7 @@
               <td>
                 <ul>
                   <li>
-                    <a href="../../namespaces/operators/#strings">String functions</a>
+                    <a href="../../namespaces/operators/#functions_arrays_strings">String functions</a>
                     <ul>
                       <li>Comparisons</li>
                       <li>Case modification</li>
@@ -483,10 +546,20 @@
               </td>
             </tr>
           </tbody>
-          <tbody id="random-state">
+          <tbody id="concrete_random-state">
             <tr>
               <th class="horizontal-grouping-header" colspan="4">
-                <a class="symbol here" href="../../#random-state">random-state</a>
+                <div>
+                  <a href="#concrete_random-state" class="anchor">⚓</a>
+                  <a class="symbol here" href="../../#random-state">random-state</a>
+
+                  <nav class="hanging-menu">
+                    <ul>
+                      <li><a href="concrete/random-state/symbols.txt">symbol names</a></li>
+                    </ul>
+                  </nav>
+
+                </div>
               </th>
             </tr>
             <tr>
@@ -505,10 +578,20 @@
               </td>
             </tr>
           </tbody>
-          <tbody id="readtable">
+          <tbody id="concrete_readtable">
             <tr>
               <th class="horizontal-grouping-header" colspan="4">
-                <a class="symbol here" href="../../#readtable">readtable</a>
+                <div>
+                  <a href="#concrete_readtable" class="anchor">⚓</a>
+                  <a class="symbol here" href="../../#readtable">readtable</a>
+
+                  <nav class="hanging-menu">
+                    <ul>
+                      <li><a href="concrete/readtable/symbols.txt">symbol names</a></li>
+                    </ul>
+                  </nav>
+
+                </div>
               </th>
             </tr>
             <tr>
@@ -545,15 +628,25 @@
                 </ul>
               </td>
               <td>
-                <a href="../../namespaces/operators/#readtables">Readtable functions</a>
+                <a href="../../namespaces/operators/#functions_streams_readtables">Readtable functions</a>
               </td>
             </tr>
           </tbody>
-          <tbody id="sequence">
+          <tbody id="concrete_sequence">
             <tr>
               <th class="horizontal-grouping-header" colspan="4">
-                <a class="symbol here" href="../../#sequence">sequence</a>
-                <small>(Not really a "concrete data structure" but rather a "protocol".)</small>
+                <div>
+                  <a href="#concrete_sequence" class="anchor">⚓</a>
+                  <a class="symbol here" href="../../#sequence">sequence</a>
+                  <small>(Not really a "concrete data structure" but rather a "protocol".)</small>
+
+                  <nav class="hanging-menu">
+                    <ul>
+                      <li><a href="concrete/sequence/symbols.txt">symbol names</a></li>
+                    </ul>
+                  </nav>
+
+                </div>
               </th>
             </tr>
             <tr>
@@ -581,7 +674,7 @@
               <td>
                 <ul>
                   <li>
-                    <a href="../../namespaces/operators/#sequences">Sequence functions</a>
+                    <a href="../../namespaces/operators/#functions_sequences">Sequence functions</a>
                   </li>
                 </ul>
               </td>
@@ -606,12 +699,12 @@
                 <span class="here-indicator-right"> </span>
               </h1>
               <ul>
-                <li><a href="#lists">Lists</a></li>
-                <li><a href="#alists">Alists</a></li>
-                <li><a href="#plists">Plists</a></li>
-                <li><a href="#trees">Trees</a></li>
-                <li><a href="#sets">Sets</a></li>
-                <li><a href="#bits">Bits</a></li>
+                <li><a href="#intentional_lists">Lists</a></li>
+                <li><a href="#intentional_alists">Alists</a></li>
+                <li><a href="#intentional_plists">Plists</a></li>
+                <li><a href="#intentional_trees">Trees</a></li>
+                <li><a href="#intentional_sets">Sets</a></li>
+                <li><a href="#intentional_bits">Bits</a></li>
               </ul>
             </nav>
 
@@ -626,10 +719,16 @@
           <a class="here">Intentional</a>
         </h1>
 
-        <section id="lists">
+        <nav class="hanging-menu">
+          <ul>
+            <li><a href="intentional/symbols.txt">symbol names</a></li>
+          </ul>
+        </nav>
+
+        <section id="intentional_lists">
 
           <h1 class="breadcrumbs">
-            <a href="#lists" class="anchor">⚓</a>
+            <a href="#intentional_lists" class="anchor">⚓</a>
             <a href="#">Data structures</a>
             <span class="separator"> » </span>
             <a href="#intentional">Intentional</a>
@@ -637,18 +736,24 @@
             <a class="here">Lists</a>
           </h1>
 
+          <nav class="hanging-menu">
+            <ul>
+              <li><a href="intentional/lists/symbols.txt">symbol names</a></li>
+            </ul>
+          </nav>
+
           <ul>
-            <li><a href="../../namespaces/operators/#lists">List functions</a></li>
-            <li><a class="symbol" href="../../#list">list</a> (<a href="../../namespaces/type-specifiers/#misc">system class</a>)</li>
-            <li><a class="symbol" href="../../#null">null</a> (<a href="../../namespaces/type-specifiers/#misc">system class</a>)</li>
+            <li><a href="../../namespaces/operators/#functions_conses_lists">List functions</a></li>
+            <li><a class="symbol" href="../../#list">list</a> (system class)</li>
+            <li><a class="symbol" href="../../#null">null</a> (system class)</li>
           </ul>
 
         </section>
 
-        <section id="alists">
+        <section id="intentional_alists">
 
           <h1 class="breadcrumbs">
-            <a href="#alists" class="anchor">⚓</a>
+            <a href="#intentional_alists" class="anchor">⚓</a>
             <a href="#">Data structures</a>
             <span class="separator"> » </span>
             <a href="#intentional">Intentional</a>
@@ -656,16 +761,22 @@
             <a class="here">Alists</a>
           </h1>
 
+          <nav class="hanging-menu">
+            <ul>
+              <li><a href="intentional/alists/symbols.txt">symbol names</a></li>
+            </ul>
+          </nav>
+
           <ul>
-            <li><a href="../../namespaces/operators/#alists">Alist functions</a></li>
+            <li><a href="../../namespaces/operators/#functions_conses_alists">Alist functions</a></li>
           </ul>
 
         </section>
 
-        <section id="plists">
+        <section id="intentional_plists">
 
           <h1 class="breadcrumbs">
-            <a href="#plists" class="anchor">⚓</a>
+            <a href="#intentional_plists" class="anchor">⚓</a>
             <a href="#">Data structures</a>
             <span class="separator"> » </span>
             <a href="#intentional">Intentional</a>
@@ -673,16 +784,22 @@
             <a class="here">Plists</a>
           </h1>
 
+          <nav class="hanging-menu">
+            <ul>
+              <li><a href="intentional/plists/symbols.txt">symbol names</a></li>
+            </ul>
+          </nav>
+
           <ul>
-            <li><a href="../../namespaces/operators/#plists">Plist functions</a></li>
+            <li><a href="../../namespaces/operators/#functions_conses_plists">Plist functions</a></li>
           </ul>
 
         </section>
 
-        <section id="trees">
+        <section id="intentional_trees">
 
           <h1 class="breadcrumbs">
-            <a href="#trees" class="anchor">⚓</a>
+            <a href="#intentional_trees" class="anchor">⚓</a>
             <a href="#">Data structures</a>
             <span class="separator"> » </span>
             <a href="#intentional">Intentional</a>
@@ -690,16 +807,22 @@
             <a class="here">Trees</a>
           </h1>
 
+          <nav class="hanging-menu">
+            <ul>
+              <li><a href="intentional/trees/symbols.txt">symbol names</a></li>
+            </ul>
+          </nav>
+
           <ul>
-            <li><a href="../../namespaces/operators/#trees">Tree functions</a></li>
+            <li><a href="../../namespaces/operators/#functions_conses_trees">Tree functions</a></li>
           </ul>
 
         </section>
 
-        <section id="sets">
+        <section id="intentional_sets">
 
           <h1 class="breadcrumbs">
-            <a href="#sets" class="anchor">⚓</a>
+            <a href="#intentional_sets" class="anchor">⚓</a>
             <a href="#">Data structures</a>
             <span class="separator"> » </span>
             <a href="#intentional">Intentional</a>
@@ -707,16 +830,22 @@
             <a class="here">Sets</a>
           </h1>
 
+          <nav class="hanging-menu">
+            <ul>
+              <li><a href="intentional/sets/symbols.txt">symbol names</a></li>
+            </ul>
+          </nav>
+
           <ul>
-            <li><a href="../../namespaces/operators/#sets">Set functions</a></li>
+            <li><a href="../../namespaces/operators/#functions_conses_sets">Set functions</a></li>
           </ul>
 
         </section>
 
-        <section id="bits">
+        <section id="intentional_bits">
 
           <h1 class="breadcrumbs">
-            <a href="#bits" class="anchor">⚓</a>
+            <a href="#intentional_bits" class="anchor">⚓</a>
             <a href="#">Data structures</a>
             <span class="separator"> » </span>
             <a href="#intentional">Intentional</a>
@@ -724,8 +853,14 @@
             <a class="here">Bits</a>
           </h1>
 
+          <nav class="hanging-menu">
+            <ul>
+              <li><a href="intentional/bits/symbols.txt">symbol names</a></li>
+            </ul>
+          </nav>
+
           <ul>
-            <li><a href="../../namespaces/operators/#integers-as-bits">Integers-as-bits functions</a></li>
+            <li><a href="../../namespaces/operators/#functions_math_integers-as-bits">Integers-as-bits functions</a></li>
           </ul>
 
         </section>

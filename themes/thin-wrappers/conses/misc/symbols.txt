@@ -1,0 +1,16 @@
+acons
+getf
+nth
+nreconc
+revappend
+push
+pushnew
+pop
+member
+member-if-not
+rassoc
+rassoc-if-not
+subst
+subst-if-not
+nsubst
+nsubst-if-not

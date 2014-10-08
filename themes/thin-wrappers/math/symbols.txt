@@ -1,0 +1,13 @@
+1+
+1-
+incf
+decf
+evenp
+oddp
+logtest
+mask-field
+signum
+minusp
+zerop
+plusp
+phase

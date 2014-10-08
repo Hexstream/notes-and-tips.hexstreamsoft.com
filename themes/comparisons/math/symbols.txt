@@ -1,0 +1,14 @@
+<
+<=
+/=
+=
+>=
+>
+signum
+minusp
+zerop
+plusp
+evenp
+oddp
+min
+max

@@ -1,0 +1,8 @@
+warn
+error
+cerror
+abort
+continue
+muffle-warning
+ignore-errors
+with-simple-restart

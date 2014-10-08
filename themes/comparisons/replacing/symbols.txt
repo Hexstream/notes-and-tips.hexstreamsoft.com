@@ -1,0 +1,16 @@
+replace
+subst
+subst-if
+subst-if-not
+nsubst
+nsubst-if
+nsubst-if-not
+sublis
+nsublis
+substitute
+substitute-if
+substitute-if-not
+nsubstitute
+nsubstitute-if
+nsubstitute-if-not
+getf
