@@ -1,0 +1,10 @@
+adjoin
+intersection
+nintersection
+nset-difference
+nset-exclusive-or
+nunion
+set-difference
+set-exclusive-or
+subsetp
+union

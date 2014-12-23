@@ -1,0 +1,4 @@
+define-compiler-macro
+define-setf-expander
+defmacro
+macrolet

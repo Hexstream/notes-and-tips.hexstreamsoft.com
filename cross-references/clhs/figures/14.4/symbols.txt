@@ -1,0 +1,8 @@
+acons
+assoc
+assoc-if
+assoc-if-not
+pairlis
+rassoc
+rassoc-if
+rassoc-if-not

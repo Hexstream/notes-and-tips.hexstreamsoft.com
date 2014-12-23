@@ -1,0 +1,6 @@
+decf
+incf
+pop
+push
+pushnew
+remf

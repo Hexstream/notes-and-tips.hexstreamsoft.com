@@ -1,0 +1,13 @@
+/=
+<
+<=
+=
+>
+>=
+evenp
+max
+min
+minusp
+oddp
+plusp
+zerop

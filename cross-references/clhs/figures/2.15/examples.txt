@@ -1,0 +1,29 @@
+FROBBOZ
+frobboz
+fRObBoz
+unwind-protect
++$
+1+
++1
+pascal_style
+file.rel.43
+\(
+\+1
++\1
+\frobboz
+3.14159265\s0
+3.14159265\S0
+3.14159265s0
+APL\\360
+apl\\360
+\(b^2\)\-\4*a*c
+\(\b^2\)\-\4*\a*\c
+|"|
+|(b^2) - 4*a*c|
+|frobboz|
+|APL\360|
+|APL\\360|
+|apl\\360|
+|\|\||
+|(B^2) - 4*A*C|
+|(b^2) - 4*a*c|

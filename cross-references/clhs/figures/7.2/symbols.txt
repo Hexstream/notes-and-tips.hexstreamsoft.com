@@ -1,0 +1,10 @@
++
+and
+append
+list
+max
+min
+nconc
+or
+progn
+standard

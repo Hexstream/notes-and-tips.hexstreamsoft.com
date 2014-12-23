@@ -1,0 +1,6 @@
+make-pathname
+pathname-device
+pathname-directory
+pathname-host
+pathname-name
+pathname-type

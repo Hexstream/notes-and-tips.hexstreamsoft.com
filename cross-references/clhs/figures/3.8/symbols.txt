@@ -1,0 +1,14 @@
+declaim
+defclass
+defconstant
+define-compiler-macro
+define-condition
+define-modify-macro
+define-setf-expander
+defmacro
+defpackage
+defparameter
+defsetf
+defstruct
+deftype
+defvar

@@ -1,0 +1,6 @@
+*macroexpand-hook*
+defmacro
+macro-function
+macroexpand
+macroexpand-1
+macrolet

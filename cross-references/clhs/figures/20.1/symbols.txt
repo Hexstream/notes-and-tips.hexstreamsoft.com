@@ -1,0 +1,12 @@
+compile-file
+delete-file
+directory
+file-author
+file-length
+file-position
+file-write-date
+load
+open
+probe-file
+rename-file
+with-open-file

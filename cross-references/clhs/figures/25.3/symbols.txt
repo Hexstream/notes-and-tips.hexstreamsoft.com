@@ -1,0 +1,11 @@
+*features*
+lisp-implementation-type
+lisp-implementation-version
+long-site-name
+machine-instance
+machine-type
+machine-version
+room
+short-site-name
+software-type
+software-version

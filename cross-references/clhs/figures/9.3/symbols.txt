@@ -1,0 +1,12 @@
+arithmetic-error-operands
+arithmetic-error-operation
+cell-error-name
+file-error-pathname
+package-error-package
+print-not-readable-object
+simple-condition-format-arguments
+simple-condition-format-control
+stream-error-stream
+type-error-datum
+type-error-expected-type
+unbound-slot-instance

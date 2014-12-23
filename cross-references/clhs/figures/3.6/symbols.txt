@@ -1,0 +1,3 @@
+*macroexpand-hook*
+compiler-macro-function
+define-compiler-macro

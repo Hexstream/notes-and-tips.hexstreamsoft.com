@@ -1,0 +1,8 @@
+clrhash
+gethash
+hash-table-count
+hash-table-p
+make-hash-table
+maphash
+remhash
+sxhash

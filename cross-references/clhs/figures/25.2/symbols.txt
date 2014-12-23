@@ -1,0 +1,14 @@
+*debugger-hook*
+apropos
+apropos-list
+break
+describe
+documentation
+dribble
+ed
+inspect
+invoke-debugger
+step
+time
+trace
+untrace

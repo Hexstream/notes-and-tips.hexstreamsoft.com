@@ -1,0 +1,6 @@
+delete-file
+directory
+file-author
+file-write-date
+probe-file
+truename

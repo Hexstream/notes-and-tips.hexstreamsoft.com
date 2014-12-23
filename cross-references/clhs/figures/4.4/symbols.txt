@@ -1,0 +1,8 @@
+and
+eql
+member
+mod
+not
+or
+satisfies
+values

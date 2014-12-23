@@ -1,0 +1,15 @@
+boundp
+defconstant
+defparameter
+defvar
+lambda
+let
+let*
+makunbound
+multiple-value-bind
+multiple-value-setq
+progv
+psetq
+set
+setq
+symbol-value

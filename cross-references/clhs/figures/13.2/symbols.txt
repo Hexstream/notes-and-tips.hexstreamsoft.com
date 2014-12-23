@@ -1,0 +1,9 @@
+char-code
+char-downcase
+char-int
+char-name
+char-upcase
+character
+code-char
+digit-char
+name-char

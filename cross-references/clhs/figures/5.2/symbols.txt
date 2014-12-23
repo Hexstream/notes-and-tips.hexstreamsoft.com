@@ -1,0 +1,17 @@
+assert
+ccase
+ctypecase
+decf
+define-modify-macro
+define-setf-expander
+defsetf
+get-setf-expansion
+getf
+incf
+pop
+psetf
+push
+remf
+rotatef
+setf
+shiftf

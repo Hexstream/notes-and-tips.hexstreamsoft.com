@@ -1,0 +1,7 @@
+close
+input-stream-p
+interactive-stream-p
+output-stream-p
+stream-element-type
+streamp
+with-open-stream

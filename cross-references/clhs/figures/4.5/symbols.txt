@@ -1,0 +1,15 @@
+coerce
+declaim
+declare
+defclass
+define-condition
+defstruct
+deftype
+ftype
+locally
+proclaim
+subtypep
+the
+type
+type-of
+typep

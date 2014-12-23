@@ -1,0 +1,6 @@
+constituent
+invalid
+macro character
+multiple escape
+single escape
+whitespace

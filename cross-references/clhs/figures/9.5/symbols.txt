@@ -1,0 +1,5 @@
+*break-on-signals*
+cerror
+error
+signal
+warn

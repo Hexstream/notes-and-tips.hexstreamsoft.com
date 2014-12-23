@@ -1,0 +1,3 @@
+get-internal-real-time
+get-internal-run-time
+internal-time-units-per-second

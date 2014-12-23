@@ -1,0 +1,10 @@
+*readtable*
+copy-readtable
+get-dispatch-macro-character
+get-macro-character
+make-dispatch-macro-character
+readtable-case
+readtablep
+set-dispatch-macro-character
+set-macro-character
+set-syntax-from-char

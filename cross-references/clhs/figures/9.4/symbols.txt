@@ -1,0 +1,3 @@
+handler-bind
+handler-case
+ignore-errors

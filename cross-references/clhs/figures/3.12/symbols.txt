@@ -1,0 +1,7 @@
+define-method-combination
+defun
+flet
+handler-case
+labels
+lambda
+restart-case

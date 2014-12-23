@@ -1,0 +1,8 @@
+copy-symbol
+gensym
+gentemp
+keywordp
+make-symbol
+symbol-name
+symbol-package
+symbol-value

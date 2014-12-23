@@ -1,0 +1,9 @@
+sin i z = i sinh z
+cos i z = cosh z
+tan i z = i tanh z
+sinh i z = i sin z
+cosh i z = cos z
+arcsin i z = i arcsinh z
+arctan i z = i arctanh z
+arcsinh i z = i arcsin z
+arctanh i z = i arctan z

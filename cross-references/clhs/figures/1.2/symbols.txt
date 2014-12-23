@@ -1,0 +1,16 @@
+assoc-if-not
+count-if-not
+delete-if-not
+find-if-not
+gentemp
+member-if-not
+nsubst-if-not
+nsubstitute-if-not
+position-if-not
+provide
+rassoc-if-not
+remove-if-not
+require
+set
+subst-if-not
+substitute-if-not

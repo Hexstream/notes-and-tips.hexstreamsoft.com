@@ -1,0 +1,13 @@
+bit
+bit-and
+bit-andc1
+bit-andc2
+bit-eqv
+bit-ior
+bit-nand
+bit-nor
+bit-not
+bit-orc1
+bit-orc2
+bit-xor
+sbit
