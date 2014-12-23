@@ -1,4 +1,3 @@
-apropos
 apropos-list
 copy-symbol
 export

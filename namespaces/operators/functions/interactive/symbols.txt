@@ -1,0 +1,7 @@
+apropos
+describe
+disassemble
+dribble
+ed
+inspect
+room

@@ -89,6 +89,10 @@ restart-case
 with-compilation-unit
 with-condition-restarts
 with-simple-restart
+step
+time
+trace
+untrace
 declaim
 destructuring-bind
 lambda
@@ -103,10 +107,6 @@ prog*
 prog1
 prog2
 return
-step
-time
-trace
-untrace
 with-accessors
 with-slots
 with-input-from-string
@@ -441,7 +441,6 @@ packagep
 symbol-package
 use-package
 unuse-package
-apropos
 apropos-list
 copy-symbol
 export
@@ -677,7 +676,6 @@ update-instance-for-redefined-class
 change-class
 update-instance-for-different-class
 class-of
-describe
 describe-object
 slot-value
 slot-exists-p
@@ -708,6 +706,8 @@ identity
 constantp
 copy-structure
 decode-universal-time
+apropos
+describe
 disassemble
 dribble
 documentation

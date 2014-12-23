@@ -28,3 +28,10 @@ table > tbody > tr > td > div.topic {
     vertical-align: top;
     text-align: center;
 }
+
+.related {
+    font-style: italic;
+    border: solid antiquewhite 0.15em;
+    padding: 0.05em 0.15em;
+    margin-left: 0.25em;
+}

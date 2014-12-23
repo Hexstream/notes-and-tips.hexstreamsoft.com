@@ -325,7 +325,6 @@ packagep
 symbol-package
 use-package
 unuse-package
-apropos
 apropos-list
 copy-symbol
 export
@@ -561,7 +560,6 @@ update-instance-for-redefined-class
 change-class
 update-instance-for-different-class
 class-of
-describe
 describe-object
 slot-value
 slot-exists-p
@@ -577,6 +575,13 @@ function-keywords
 method-qualifiers
 no-applicable-method
 no-next-method
+apropos
+describe
+disassemble
+dribble
+ed
+inspect
+room
 apply
 funcall
 boundp
@@ -592,10 +597,7 @@ identity
 constantp
 copy-structure
 decode-universal-time
-disassemble
-dribble
 documentation
-ed
 eq
 eql
 equal
@@ -612,7 +614,6 @@ get-internal-real-time
 get-internal-run-time
 get-setf-expansion
 get-universal-time
-inspect
 lisp-implementation-type
 lisp-implementation-version
 load
@@ -627,7 +628,6 @@ not
 proclaim
 provide
 require
-room
 short-site-name
 long-site-name
 sleep

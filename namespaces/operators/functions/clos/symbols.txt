@@ -8,7 +8,6 @@ update-instance-for-redefined-class
 change-class
 update-instance-for-different-class
 class-of
-describe
 describe-object
 slot-value
 slot-exists-p

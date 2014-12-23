@@ -12,10 +12,6 @@ prog*
 prog1
 prog2
 return
-step
-time
-trace
-untrace
 with-accessors
 with-slots
 with-input-from-string

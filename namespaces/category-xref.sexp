@@ -14,6 +14,7 @@
   "Iteration"
   "Assignment"
   "Conditions and restarts"
+  "Interactive"
   "Misc")
  ("Functions"
   "Bindings"
@@ -51,6 +52,7 @@
   ("CLOS"
    "Instances"
    "Methods")
+  "Interactive"
   "Misc"))
 
 (("Variables" ("Variable" "Constant variable"))

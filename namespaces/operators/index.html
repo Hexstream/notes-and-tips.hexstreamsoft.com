@@ -202,7 +202,7 @@
 
     </nav>
 
-    <p id="last-updated"><span>This page was last updated on </span><time datetime="2014-10-27">27 october 2014</time><span>.</span></p>
+    <p id="last-updated"><span>This page was last updated on </span><time datetime="2014-12-22">22 december 2014</time><span>.</span></p>
 
     <main>
 
@@ -504,8 +504,12 @@
                   <span class="item-count">(<span>10</span>)</span>
                 </li>
                 <li>
+                  <a href="#macros_interactive">Interactive</a>
+                  <span class="item-count">(<span>4</span>)</span>
+                </li>
+                <li>
                   <a href="#macros_misc">Misc</a>
-                  <span class="item-count">(<span>25</span>)</span>
+                  <span class="item-count">(<span>21</span>)</span>
                 </li>
               </ul>
             </nav>
@@ -665,6 +669,35 @@
           </ul>
         </section>
 
+        <section id="macros_interactive">
+
+          <h1 class="breadcrumbs">
+            <a href="#macros_interactive" class="anchor">⚓</a>
+            <a href="#">Operators</a>
+            <span class="separator"> » </span>
+            <a href="#macros">Macros</a>
+            <span class="separator"> » </span>
+            <a class="here">Interactive</a>
+          </h1>
+
+          <nav class="hanging-menu">
+            <ul>
+              <li><a href="macros/interactive/symbols.txt">symbol names</a></li>
+            </ul>
+          </nav>
+
+          <ul>
+            <li><a class="symbol" href="../../#step">step</a></li>
+            <li><a class="symbol" href="../../#time">time</a></li>
+            <li><a class="symbol" href="../../#trace">trace</a> / <a class="symbol" href="../../#untrace">untrace</a></li>
+          </ul>
+
+          <footer>
+            <p>See also: <a href="#functions_interactive">interactive functions</a>.</p>
+          </footer>
+
+        </section>
+
         <section id="macros_misc">
 
           <h1 class="breadcrumbs">
@@ -692,7 +725,6 @@
             <li><a class="symbol" href="../../#prog">prog</a> / <a class="symbol" href="../../#prog*">prog*</a></li>
             <li><a class="symbol" href="../../#prog1">prog1</a> / <a class="symbol" href="../../#prog2">prog2</a></li>
             <li><a class="symbol" href="../../#return">return</a></li>
-            <li><a class="symbol" href="../../#step">step</a> / <a class="symbol" href="../../#time">time</a> / <a class="symbol" href="../../#trace">trace</a> / <a class="symbol" href="../../#untrace">untrace</a></li>
             <li><a class="symbol" href="../../#with-accessors">with-accessors</a> / <a class="symbol" href="../../#with-slots">with-slots</a></li>
             <li><a class="symbol" href="../../#with-input-from-string">with-input-from-string</a> / <a class="symbol" href="../../#with-output-to-string">with-output-to-string</a></li>
             <li><a class="symbol" href="../../#with-open-file">with-open-file</a> / <a class="symbol" href="../../#with-open-stream">with-open-stream</a></li>
@@ -771,6 +803,7 @@
                     <li><a href="#functions_clos_methods">Methods</a></li>
                   </ul>
                 </li>
+                <li><a href="#functions_interactive">Interactive</a></li>
                 <li><a href="#functions_misc">Misc</a></li>
               </ul>
             </nav>
@@ -1615,7 +1648,7 @@
           </nav>
 
           <ul>
-            <li><a class="symbol" href="../../#apropos">apropos</a> / <a class="symbol" href="../../#apropos-list">apropos-list</a></li>
+            <li><a class="symbol" href="../../#apropos-list">apropos-list</a> <span class="related">(<a class="symbol supplemental" href="../../#apropos">apropos</a> is in <a href="#functions_interactive">interactive</a>)</span></li>
             <li><a class="symbol" href="../../#copy-symbol">copy-symbol</a></li>
             <li><a class="symbol" href="../../#export">export</a> / <a class="symbol" href="../../#unexport">unexport</a></li>
             <li><a class="symbol" href="../../#find-all-symbols">find-all-symbols</a></li>
@@ -2181,7 +2214,7 @@
 
             <ul>
               <li><a class="symbol" href="../../#class-of">class-of</a></li>
-              <li><a class="symbol" href="../../#describe">describe</a> / (defgeneric <a class="symbol" href="../../#describe-object">describe-object</a>)</li>
+              <li>(defgeneric <a class="symbol" href="../../#describe-object">describe-object</a>) <span class="related">(<a class="symbol supplemental" href="../../#describe">describe</a> is in <a href="#functions_interactive">interactive</a>)</span></li>
               <li>(setf <a class="symbol" href="../../#slot-value">slot-value</a>) / <a class="symbol" href="../../#slot-exists-p">slot-exists-p</a> / <a class="symbol" href="../../#slot-boundp">slot-boundp</a> / <a class="symbol" href="../../#slot-makunbound">slot-makunbound</a></li>
               <li>(defgeneric <a class="symbol" href="../../#slot-missing">slot-missing</a>) / (defgeneric <a class="symbol" href="../../#slot-unbound">slot-unbound</a>)</li>
             </ul>
@@ -2225,6 +2258,39 @@
 
         </section>
 
+        <section id="functions_interactive">
+
+          <h1 class="breadcrumbs">
+            <a href="#functions_interactive" class="anchor">⚓</a>
+            <a href="#">Operators</a>
+            <span class="separator"> » </span>
+            <a href="#functions">Functions</a>
+            <span class="separator"> » </span>
+            <a class="here">Interactive</a>
+          </h1>
+
+          <nav class="hanging-menu">
+            <ul>
+              <li><a href="functions/interactive/symbols.txt">symbol names</a></li>
+            </ul>
+          </nav>
+
+          <ul>
+            <li><a class="symbol" href="../../#apropos">apropos</a> <span class="related">(<a class="symbol supplemental" href="../../#apropos-list">apropos-list</a> is in <a href="#functions_symbols">Symbols</a>)</span></li>
+            <li><a class="symbol" href="../../#describe">describe</a> <span class="related">((defgeneric <a class="symbol" href="../../#describe-object">describe-object</a>) is in <a href="#functions_clos">CLOS</a> » <a href="#functions_clos_instances">Instances</a>)</span></li>
+            <li><a class="symbol" href="../../#disassemble">disassemble</a></li>
+            <li><a class="symbol" href="../../#dribble">dribble</a></li>
+            <li><a class="symbol" href="../../#ed">ed</a></li>
+            <li><a class="symbol" href="../../#inspect">inspect</a></li>
+            <li><a class="symbol" href="../../#room">room</a></li>
+          </ul>
+
+          <footer>
+            <p>See also: <a href="#macros_interactive">interactive macros</a>.</p>
+          </footer>
+
+        </section>
+
         <section id="functions_misc">
 
           <h1 class="breadcrumbs">
@@ -2254,10 +2320,7 @@
             <li><a class="symbol" href="../../#constantp">constantp</a></li>
             <li><a class="symbol" href="../../#copy-structure">copy-structure</a></li>
             <li><a class="symbol" href="../../#decode-universal-time">decode-universal-time</a></li>
-            <li><a class="symbol" href="../../#disassemble">disassemble</a></li>
-            <li><a class="symbol" href="../../#dribble">dribble</a></li>
             <li>(defgeneric <a class="symbol" href="../../#documentation">documentation</a>)</li>
-            <li><a class="symbol" href="../../#ed">ed</a></li>
             <li><a class="symbol" href="../../#eq">eq</a> / <a class="symbol" href="../../#eql">eql</a> / <a class="symbol" href="../../#equal">equal</a> / <a class="symbol" href="../../#equalp">equalp</a></li>
             <li><a class="symbol" href="../../#encode-universal-time">encode-universal-time</a></li>
             <li><a class="symbol" href="../../#ensure-generic-function">ensure-generic-function</a></li>
@@ -2270,7 +2333,6 @@
             <li><a class="symbol" href="../../#get-internal-run-time">get-internal-run-time</a></li>
             <li><a class="symbol" href="../../#get-setf-expansion">get-setf-expansion</a></li>
             <li><a class="symbol" href="../../#get-universal-time">get-universal-time</a></li>
-            <li><a class="symbol" href="../../#inspect">inspect</a></li>
             <li><a class="symbol" href="../../#lisp-implementation-type">lisp-implementation-type</a> / <a class="symbol" href="../../#lisp-implementation-version">lisp-implementation-version</a></li>
             <li><a class="symbol" href="../../#load">load</a></li>
             <li><a class="symbol" href="../../#machine-instance">machine-instance</a> / <a class="symbol" href="../../#machine-type">machine-type</a> / <a class="symbol" href="../../#machine-version">machine-version</a></li>
@@ -2280,7 +2342,6 @@
             <li><a class="symbol" href="../../#proclaim">proclaim</a></li>
             <li><a class="symbol" href="../../#provide">provide</a></li>
             <li><a class="symbol" href="../../#require">require</a></li>
-            <li><a class="symbol" href="../../#room">room</a></li>
             <li><a class="symbol" href="../../#short-site-name">short-site-name</a> / <a class="symbol" href="../../#long-site-name">long-site-name</a></li>
             <li><a class="symbol" href="../../#sleep">sleep</a></li>
             <li><a class="symbol" href="../../#software-type">software-type</a> / <a class="symbol" href="../../#software-version">software-version</a></li>
@@ -2291,6 +2352,7 @@
             <li>(setf <a class="symbol" href="../../#values">values</a>)</li>
             <li><a class="symbol" href="../../#values-list">values-list</a></li>
           </ul>
+
         </section>
 
         <nav class="end-of-section-indicator">
