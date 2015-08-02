@@ -35,3 +35,11 @@ table > tbody > tr > td > div.topic {
     padding: 0.05em 0.15em;
     margin-left: 0.25em;
 }
+
+.highlight, .highlight a {
+    color: green;
+}
+
+.stub, .stub a {
+    color: #BB0000;
+}
