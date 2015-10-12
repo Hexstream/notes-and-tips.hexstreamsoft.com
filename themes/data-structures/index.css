@@ -1,3 +1,7 @@
+#concrete-data-structures-table {
+    left: -1.8em;
+}
+
 table th, table td {
     vertical-align: top;
 }
@@ -11,13 +15,19 @@ table a {
     text-decoration: none;
 }
 
-table th.horizontal-grouping-header {
+table th.anchor, table th.horizontal-grouping-header {
     font-size: xx-large;
     padding-top: 0.3em;
     padding-bottom: 0.3em;
 }
 
-table th.horizontal-grouping-header:first-child {
+table th.anchor a {
+    display: inline;
+    text-align: right;
+    padding-right: 0.6em;
+}
+
+table th.horizontal-grouping-header {
     text-align: left;
 }
 
@@ -46,6 +56,6 @@ table .hanging-menu {
     background: transparent;
 }
 
-table > tbody > tr > th.horizontal-grouping-header a:last-child {
+table > tbody > tr > th.horizontal-grouping-header a {
     font-size: inherit;
 }
