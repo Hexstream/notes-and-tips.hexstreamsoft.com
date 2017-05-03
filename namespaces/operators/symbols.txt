@@ -259,7 +259,7 @@ make-string
 simple-string-p
 string
 string<
-string<
+string<=
 string/=
 string=
 string>=
