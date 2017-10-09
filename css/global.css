@@ -1,1 +1,10 @@
 @import "https://global.hexstreamsoft.com/css/global.css";
+
+.packed-sections {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.packed-sections > section {
+    flex: 1 1 auto;
+}

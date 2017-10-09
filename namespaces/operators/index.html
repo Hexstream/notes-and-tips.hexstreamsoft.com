@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html>
+
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Jean-Philippe Paradis" />
@@ -8,6 +9,7 @@
     <link rel="license" href="https://www.hexstreamsoft.com/UNLICENSE" />
     <link rel="next" href="../variables/" />
     <meta name="description" content="All the operators (functions, macros and special forms) of Common Lisp, separated into logical groups. Find related operators quickly." />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Operators | Namespaces | Notes and tips: Standard Common Lisp symbols</title>
     <link href="../../css/global.css" rel="stylesheet" type="text/css" />
     <link href="../../shared.css" rel="stylesheet" type="text/css" />
@@ -16,24 +18,20 @@
     <script src="https://www.hexstreamsoft.com/scripts/global.js"></script>
     <script src="../../scripts/global.js"></script>
   </head>
+
   <body>
 
-    <nav id="site-nav">
+    <nav id="top-nav">
 
-      <nav class="breadcrumbs-and-extras">
+      <div class="main">
 
-        <nav class="breadcrumbs">
+        <div class="breadcrumbs">
           <a href="https://www.hexstreamsoft.com/">HexstreamSoft</a>
-          <span class="separator"> » </span>
-          <a href="https://www.hexstreamsoft.com/articles/">Articles</a>
-          <span class="separator"> » </span>
-          <a href="../../">CL symbols</a>
-          <span class="separator"> » </span>
-          <a href="../">Namespaces</a>
-          <span class="separator"> » </span>
-          <a class="here">Operators</a>
-          <div class="float-clear"></div>
-        </nav>
+          <span class="crumb"><span class="s"> » </span><a href="https://www.hexstreamsoft.com/articles/">Articles</a></span>
+          <span class="crumb"><span class="s"> » </span><a href="../../">CL symbols</a></span>
+          <span class="crumb"><span class="s"> » </span><a href="../">Namespaces</a></span>
+          <span class="crumb"><span class="s"> » </span><a class="here">Operators</a></span>
+        </div>
 
         <nav id="meta-nav">
           <a href="https://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/namespaces/operators/">
@@ -56,131 +54,75 @@
           <a href="../../themes/">Switch to themes</a>
         </nav>
 
-        <div class="float-clear"></div>
+      </div>
 
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2014-12-22">22 december 2014</time><span>.</span></p>
+
+    </nav>
+
+    <nav class="ancestors-nav">
+
+      <nav class="tabs contains-title">
+        <h1>
+          <a href="../">Namespaces</a>
+        </h1>
+        <ul>
+          <li class="highlight">
+            <a class="here">Operators</a>
+          </li>
+          <li class="highlight">
+            <a href="../variables/">Variables</a>
+          </li>
+          <li class="highlight">
+            <a href="../type-specifiers/">Type specifiers</a>
+          </li>
+          <li class="stub">
+            <a href="../lambda-lists/">Lambda lists</a>
+          </li>
+          <li>
+            <a href="../restart-kinds/">Restart kinds</a>
+          </li>
+          <li>
+            <a href="../declaration-identifiers/">Declaration identifiers</a>
+          </li>
+          <li>
+            <a href="../documentation-types/">Documentation types</a>
+          </li>
+          <li>
+            <a href="../method-combination-types/">Method combination types</a>
+          </li>
+        </ul>
       </nav>
 
-
-
-      <nav class="ancestors-nav">
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="operators_navbox">
-          <h1>
-            <a class="here">
-              Operators
-              <span class="here-indicator-left"> </span>
-              <span class="here-indicator-right"> </span>
-              <span class="item-count">(<span>789</span>)</span>
-            </a>
-          </h1>
-          <ul>
-            <li>
-              <a href="#special-operators">Special operators</a>
-              <span class="item-count">(<span>25</span>)</span>
-            </li>
-            <li>
-              <a href="#macros">Macros</a>
-              <span class="item-count">(<span>91</span>)</span>
-            </li>
-            <li>
-              <a href="#functions">Functions</a>
-              <span class="item-count">(<span>675</span>)</span>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="namespaces_navbox">
-          <h1>
-            <a href="../">Namespaces</a>
-          </h1>
-          <ul>
-            <li class="highlight">
-              <a class="here">Operators</a>
-              <span class="here-indicator-left"> </span>
-              <span class="here-indicator-right"> </span>
-            </li>
-            <li class="highlight">
-              <a href="../variables/">Variables</a>
-            </li>
-            <li class="highlight">
-              <a href="../type-specifiers/">Type specifiers</a>
-            </li>
-            <li class="stub">
-              <a href="../lambda-lists/">Lambda lists</a>
-            </li>
-            <li>
-              <a href="../restart-kinds/">Restart kinds</a>
-            </li>
-            <li>
-              <a href="../declaration-identifiers/">Declaration identifiers</a>
-            </li>
-            <li>
-              <a href="../documentation-types/">Documentation types</a>
-            </li>
-            <li>
-              <a href="../method-combination-types/">Method <abbr title="combination">comb</abbr> types</a>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="cl-symbols_navbox">
-          <h1>
-            <a href="../../"><abbr title="Common Lisp">CL</abbr> symbols</a>
-          </h1>
+      <nav class="tabs contains-title contains-groups">
+        <h1>
+          <a href="../../"><abbr title="Common Lisp">CL</abbr> symbols</a>
+        </h1>
+        <div>
           <ul>
             <li>
               <a href="../../#all-standard-symbols">All standard symbols</a>
             </li>
           </ul>
           <ul>
-            <li>
-              <a href="../">
-                Namespaces
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </a>
-            </li>
-            <li>
-              <a href="../../themes/">Themes</a>
-            </li>
-            <li>
-              <a href="../../cross-references/">Cross-references</a>
-            </li>
-            <li>
-              <a href="../../datasets/">Datasets</a>
-            </li>
+            <li><a class="here">Namespaces</a></li>
+            <li><a href="../../themes/">Themes</a></li>
+            <li><a href="../../cross-references/">Cross-references</a></li>
+            <li><a href="../../datasets/">Datasets</a></li>
           </ul>
-        </nav>
+        </div>
+      </nav>
 
-        <div class="level-separator"></div>
+      <nav class="tabs contains-title">
+        <h1><a href="https://www.hexstreamsoft.com/articles/">Articles</a></h1>
+      </nav>
 
-        <nav class="navbox empty" id="articles_navbox">
-          <h1>
-            <a href="https://www.hexstreamsoft.com/articles/">Articles</a>
-          </h1>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="main_navbox">
-          <h1>
-            <a href="https://www.hexstreamsoft.com/">HexstreamSoft</a>
-          </h1>
+      <nav class="tabs contains-title contains-groups">
+        <h1><a href="https://www.hexstreamsoft.com/">HexstreamSoft</a></h1>
+        <div>
           <ul>
             <li><a href="https://www.hexstreamsoft.com/libraries/">Libraries</a></li>
-            <li>
-              <a href="https://www.hexstreamsoft.com/articles/">
-                Articles
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </a>
-            </li>
+            <li><a href="https://www.hexstreamsoft.com/articles/" class="ancestor">Articles</a></li>
             <li><a href="https://www.hexstreamsoft.com/accounts/">Accounts</a></li>
             <li><a href="https://www.hexstreamsoft.com/resources/">Resources</a></li>
           </ul>
@@ -188,13 +130,10 @@
             <li><a href="https://worknotes.hexstreamsoft.com/">Worknotes</a></li>
             <li><a href="https://status-quo.hexstreamsoft.com/">Status quo</a></li>
           </ul>
-        </nav>
-
+        </div>
       </nav>
 
     </nav>
-
-    <p id="last-updated"><span>This page was last updated on </span><time datetime="2014-12-22">22 december 2014</time><span>.</span></p>
 
     <main>
 
@@ -209,15 +148,31 @@
         </ul>
       </nav>
 
+      <nav class="tabs">
+        <ul>
+          <li>
+            <a href="#special-operators">Special operators <span class="item-count">(<span>25</span>)</span></a>
+          </li>
+          <li>
+            <a href="#macros">Macros <span class="item-count">(<span>91</span>)</span></a>
+          </li>
+          <li>
+            <a href="#functions">Functions <span class="item-count">(<span>675</span>)</span></a>
+          </li>
+        </ul>
+      </nav>
+
       <section id="special-operators">
 
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#special-operators" class="anchor">⚓</a>
           </span>
-          <a href="#">Operators</a>
-          <span class="separator"> » </span>
-          <a class="here">Special operators</a>
+          <div class="breadcrumbs">
+            <a href="#">Operators</a>
+            <span class="separator"> » </span>
+            <a class="here">Special operators</a>
+          </div>
         </h1>
 
         <nav class="hanging-menu">
@@ -226,43 +181,32 @@
           </ul>
         </nav>
 
-        <nav class="section-nav">
-
-          <nav class="navbox">
-            <h1>
-              <a class="here">Special operators</a>
-              <span class="here-indicator-left"> </span>
-              <span class="here-indicator-right"> </span>
-            </h1>
-            <ul>
-              <li>
-                <a href="#special-operators_program-flow-control" class="inlining-node">Program flow control</a>
-                <ul class="inlined-nodes">
-                  <li><a href="#special-operators_program-flow-control_non-local-exits">Non-local exits</a></li>
-                  <li><a href="#special-operators_program-flow-control_misc">Misc</a></li>
-                </ul>
-              </li>
-              <li><a href="#special-operators_bindings">Bindings</a></li>
-              <li><a href="#special-operators_evaluation">Evaluation</a></li>
-              <li><a href="#special-operators_declarations">Declarations</a></li>
-            </ul>
-          </nav>
-
-          <a href="#macros" class="navbox-next">⬇</a>
-
+        <nav class="tabs">
+          <ul>
+            <li class="contains-children">
+              <a href="#special-operators_program-flow-control">Program flow control</a>
+              <ul>
+                <li><a href="#special-operators_program-flow-control_non-local-exits">Non-local exits</a></li>
+                <li><a href="#special-operators_program-flow-control_misc">Misc</a></li>
+              </ul>
+            </li>
+            <li><a href="#special-operators_bindings">Bindings</a></li>
+            <li><a href="#special-operators_evaluation">Evaluation</a></li>
+            <li><a href="#special-operators_declarations">Declarations</a></li>
+          </ul>
         </nav>
 
         <section id="special-operators_program-flow-control">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#special-operators_program-flow-control" class="anchor">⚓</a>
             </span>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#special-operators">Special operators</a>
-            <span class="separator"> » </span>
-            <a class="here">Program flow control</a>
+            <div class="breadcrumbs">
+              <a href="#">Operators</a>
+              <span class="crumb"><span class="s"> » </span><a href="#special-operators">Special operators</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Program flow control</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -273,17 +217,16 @@
 
           <section id="special-operators_program-flow-control_non-local-exits">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#special-operators_program-flow-control_non-local-exits" class="anchor">⚓</a>
               </span>
-              <a href="#">Operators</a>
-              <span class="separator"> » </span>
-              <a href="#special-operators">Special operators</a>
-              <span class="separator"> » </span>
-              <a href="#special-operators_program-flow-control">Program flow control</a>
-              <span class="separator"> » </span>
-              <a class="here">Non-local exits</a>
+              <div class="breadcrumbs">
+                <a href="#">Operators</a>
+                <span class="crumb"><span class="s"> » </span><a href="#special-operators">Special operators</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#special-operators_program-flow-control">Program flow control</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">Non-local exits</a></span>
+              </div>
             </h1>
 
             <nav class="hanging-menu">
@@ -292,47 +235,49 @@
               </ul>
             </nav>
 
-            <table>
-              <thead>
-                <tr>
-                  <th>"Scope establisher"</th>
-                  <th>"Invoker"</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th><a class="symbol" href="../../#block">block</a></th>
-                  <td><a class="symbol" href="../../#return-from">return-from</a></td>
-                </tr>
-                <tr>
-                  <th><a class="symbol" href="../../#catch">catch</a></th>
-                  <td><a class="symbol" href="../../#throw">throw</a></td>
-                </tr>
-                <tr>
-                  <th><a class="symbol" href="../../#tagbody">tagbody</a></th>
-                  <td><a class="symbol" href="../../#go">go</a></td>
-                </tr>
-                <tr>
-                  <th><a class="symbol" href="../../#unwind-protect">unwind-protect</a></th>
-                  <td>(automatic)</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th>"Scope establisher"</th>
+                    <th>"Invoker"</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th><a class="symbol" href="../../#block">block</a></th>
+                    <td><a class="symbol" href="../../#return-from">return-from</a></td>
+                  </tr>
+                  <tr>
+                    <th><a class="symbol" href="../../#catch">catch</a></th>
+                    <td><a class="symbol" href="../../#throw">throw</a></td>
+                  </tr>
+                  <tr>
+                    <th><a class="symbol" href="../../#tagbody">tagbody</a></th>
+                    <td><a class="symbol" href="../../#go">go</a></td>
+                  </tr>
+                  <tr>
+                    <th><a class="symbol" href="../../#unwind-protect">unwind-protect</a></th>
+                    <td>(automatic)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
           </section>
 
           <section id="special-operators_program-flow-control_misc">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#special-operators_program-flow-control_misc" class="anchor">⚓</a>
               </span>
-              <a href="#">Operators</a>
-              <span class="separator"> » </span>
-              <a href="#special-operators">Special operators</a>
-              <span class="separator"> » </span>
-              <a href="#special-operators_program-flow-control">Program flow control</a>
-              <span class="separator"> » </span>
-              <a class="here">Misc</a>
+              <div class="breadcrumbs">
+                <a href="#">Operators</a>
+                <span class="crumb"><span class="s"> » </span><a href="#special-operators">Special operators</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#special-operators_program-flow-control">Program flow control</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">Misc</a></span>
+              </div>
             </h1>
 
             <nav class="hanging-menu">
@@ -358,15 +303,15 @@
 
         <section id="special-operators_bindings">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#special-operators_bindings" class="anchor">⚓</a>
             </span>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#special-operators">Special operators</a>
-            <span class="separator"> » </span>
-            <a class="here">Bindings</a>
+            <div class="breadcrumbs">
+              <a href="#">Operators</a>
+              <span class="crumb"><span class="s"> » </span><a href="#special-operators">Special operators</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Bindings</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -375,56 +320,59 @@
             </ul>
           </nav>
 
-          <table>
-            <thead>
-              <tr>
-                <th>Lexical scope only</th>
-                <th>Dynamic scope only</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#flet">flet</a></li>
-                    <li><a class="symbol" href="../../#labels">labels</a></li>
-                    <li><a class="symbol" href="../../#macrolet">macrolet</a></li>
-                    <li><a class="symbol" href="../../#symbol-macrolet">symbol-macrolet</a></li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#progv">progv</a></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <th colspan="2" class="horizontal-grouping-header">Either</th>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <ul>
-                    <li><a class="symbol" href="../../#let">let</a></li>
-                    <li><a class="symbol" href="../../#let*">let*</a></li>
-                    <li><a class="symbol" href="../../#setq">setq</a></li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Lexical scope only</th>
+                  <th>Dynamic scope only</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <ul>
+                      <li><a class="symbol" href="../../#flet">flet</a></li>
+                      <li><a class="symbol" href="../../#labels">labels</a></li>
+                      <li><a class="symbol" href="../../#macrolet">macrolet</a></li>
+                      <li><a class="symbol" href="../../#symbol-macrolet">symbol-macrolet</a></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li><a class="symbol" href="../../#progv">progv</a></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th colspan="2" class="horizontal-grouping-header">Either</th>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <ul>
+                      <li><a class="symbol" href="../../#let">let</a></li>
+                      <li><a class="symbol" href="../../#let*">let*</a></li>
+                      <li><a class="symbol" href="../../#setq">setq</a></li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
         </section>
 
         <section id="special-operators_evaluation">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#special-operators_evaluation" class="anchor">⚓</a>
             </span>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#special-operators">Special operators</a>
-            <span class="separator"> » </span>
-            <a class="here">Evaluation</a>
+            <div class="breadcrumbs">
+              <a href="#">Operators</a>
+              <span class="crumb"><span class="s"> » </span><a href="#special-operators">Special operators</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Evaluation</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -443,15 +391,15 @@
 
         <section id="special-operators_declarations">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#special-operators_declarations" class="anchor">⚓</a>
             </span>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#special-operators">Special operators</a>
-            <span class="separator"> » </span>
-            <a class="here">Declarations</a>
+            <div class="breadcrumbs">
+              <a href="#">Operators</a>
+              <span class="crumb"><span class="s"> » </span><a href="#special-operators">Special operators</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Declarations</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -476,63 +424,14 @@
 
       <section id="macros">
 
-        <nav class="section-nav">
-
-          <nav class="ancestors-nav">
-
-            <a href="#special-operators" class="navbox-previous">⬆</a>
-
-            <nav class="navbox">
-              <h1>
-                <a class="here">Macros</a>
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </h1>
-              <ul>
-                <li>
-                  <a href="#macros_conditionals">Conditionals</a>
-                  <span class="item-count">(<span>11</span>)</span>
-                </li>
-                <li>
-                  <a href="#macros_definitions">Definitions</a>
-                  <span class="item-count">(<span>18</span>)</span>
-                </li>
-                <li>
-                  <a href="#macros_iteration">Iteration</a>
-                  <span class="item-count">(<span>14</span>)</span>
-                </li>
-                <li>
-                  <a href="#macros_assignment">Assignment</a>
-                  <span class="item-count">(<span>13</span>)</span>
-                </li>
-                <li>
-                  <a href="#macros_conditions-and-restarts">Conditions and restarts</a>
-                  <span class="item-count">(<span>10</span>)</span>
-                </li>
-                <li>
-                  <a href="#macros_interactive">Interactive</a>
-                  <span class="item-count">(<span>4</span>)</span>
-                </li>
-                <li>
-                  <a href="#macros_misc">Misc</a>
-                  <span class="item-count">(<span>21</span>)</span>
-                </li>
-              </ul>
-            </nav>
-
-            <a href="#functions" class="navbox-next">⬇</a>
-
-          </nav>
-
-        </nav>
-
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#macros" class="anchor">⚓</a>
           </span>
-          <a href="#">Operators</a>
-          <span class="separator"> » </span>
-          <a class="here">Macros</a>
+          <div class="breadcrumbs">
+            <a href="#">Operators</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">Macros</a></span>
+          </div>
         </h1>
 
         <nav class="hanging-menu">
@@ -541,17 +440,43 @@
           </ul>
         </nav>
 
+        <nav class="tabs">
+          <ul>
+            <li>
+              <a href="#macros_conditionals">Conditionals <span class="item-count">(<span>11</span>)</span></a>
+            </li>
+            <li>
+              <a href="#macros_definitions">Definitions <span class="item-count">(<span>18</span>)</span></a>
+            </li>
+            <li>
+              <a href="#macros_iteration">Iteration <span class="item-count">(<span>14</span>)</span></a>
+            </li>
+            <li>
+              <a href="#macros_assignment">Assignment <span class="item-count">(<span>13</span>)</span></a>
+            </li>
+            <li>
+              <a href="#macros_conditions-and-restarts">Conditions and restarts <span class="item-count">(<span>10</span>)</span></a>
+            </li>
+            <li>
+              <a href="#macros_interactive">Interactive <span class="item-count">(<span>4</span>)</span></a>
+            </li>
+            <li>
+              <a href="#macros_misc">Misc <span class="item-count">(<span>21</span>)</span></a>
+            </li>
+          </ul>
+        </nav>
+
         <section id="macros_conditionals">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#macros_conditionals" class="anchor">⚓</a>
             </span>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#macros">Macros</a>
-            <span class="separator"> » </span>
-            <a class="here">Conditionals</a>
+            <div class="breadcrumbs">
+              <a href="#">Operators</a>
+              <span class="crumb"><span class="s"> » </span><a href="#macros">Macros</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Conditionals</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -571,15 +496,15 @@
 
         <section id="macros_definitions">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#macros_definitions" class="anchor">⚓</a>
             </span>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#macros">Macros</a>
-            <span class="separator"> » </span>
-            <a class="here">Definitions</a>
+            <div class="breadcrumbs">
+              <a href="#">Operators</a>
+              <span class="crumb"><span class="s"> » </span><a href="#macros">Macros</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Definitions</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -600,15 +525,15 @@
 
         <section id="macros_iteration">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#macros_iteration" class="anchor">⚓</a>
             </span>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#macros">Macros</a>
-            <span class="separator"> » </span>
-            <a class="here">Iteration</a>
+            <div class="breadcrumbs">
+              <a href="#">Operators</a>
+              <span class="crumb"><span class="s"> » </span><a href="#macros">Macros</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Iteration</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -629,15 +554,15 @@
 
         <section id="macros_assignment">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#macros_assignment" class="anchor">⚓</a>
             </span>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#macros">Macros</a>
-            <span class="separator"> » </span>
-            <a class="here">Assignment</a>
+            <div class="breadcrumbs">
+              <a href="#">Operators</a>
+              <span class="crumb"><span class="s"> » </span><a href="#macros">Macros</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Assignment</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -658,15 +583,15 @@
 
         <section id="macros_conditions-and-restarts">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#macros_conditions-and-restarts" class="anchor">⚓</a>
             </span>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#macros">Macros</a>
-            <span class="separator"> » </span>
-            <a class="here">Conditions and restarts</a>
+            <div class="breadcrumbs">
+              <a href="#">Operators</a>
+              <span class="crumb"><span class="s"> » </span><a href="#macros">Macros</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Conditions and restarts</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -689,15 +614,15 @@
 
         <section id="macros_interactive">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#macros_interactive" class="anchor">⚓</a>
             </span>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#macros">Macros</a>
-            <span class="separator"> » </span>
-            <a class="here">Interactive</a>
+            <div class="breadcrumbs">
+              <a href="#">Operators</a>
+              <span class="crumb"><span class="s"> » </span><a href="#macros">Macros</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Interactive</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -720,15 +645,15 @@
 
         <section id="macros_misc">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#macros_misc" class="anchor">⚓</a>
             </span>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#macros">Macros</a>
-            <span class="separator"> » </span>
-            <a class="here">Misc</a>
+            <div class="breadcrumbs">
+              <a href="#">Operators</a>
+              <span class="crumb"><span class="s"> » </span><a href="#macros">Macros</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Misc</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -764,83 +689,14 @@
 
       <section id="functions">
 
-        <nav class="section-nav">
-
-          <nav class="ancestors-nav">
-
-            <a href="#macros" class="navbox-previous">⬆</a>
-
-            <nav class="navbox">
-              <h1>
-                <a class="here">Functions</a>
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </h1>
-              <ul>
-                <li><a href="#functions_bindings">Bindings</a></li>
-                <li>
-                  <a href="#functions_math" class="inlining-node">Math</a>
-                  <ul class="inlined-nodes">
-                    <li><a href="#functions_math_rounding">Rounding</a></li>
-                    <li><a href="#functions_math_trigonometry">Trigonometry</a></li>
-                    <li><a href="#functions_math_integers-as-bits">Integers as bits</a></li>
-                    <li><a href="#functions_math_misc">Misc</a></li>
-                  </ul>
-                </li>
-                <li><a href="#functions_hash-tables">Hash tables</a></li>
-                <li>
-                  <a href="#functions_arrays" class="inlining-node">Arrays</a>
-                  <ul class="inlined-nodes">
-                    <li><a href="#functions_arrays_vectors">Vectors</a></li>
-                    <li><a href="#functions_arrays_strings">Strings</a></li>
-                    <li><a href="#functions_arrays_bit-arrays">Bit arrays</a></li>
-                    <li><a href="#functions_arrays_misc">Misc</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#functions_streams" class="inlining-node">Streams</a>
-                  <ul class="inlined-nodes">
-                    <li><a href="#functions_streams_stream-objects">Stream objects</a></li>
-                    <li><a href="#functions_streams_readtables">Readtables</a></li>
-                    <li><a href="#functions_streams_reading">Reading <i>/</i> Writing</a></li>
-                  </ul>
-                </li>
-                <li><a href="#functions_files">Files <i>/</i> Pathnames</a></li>
-                <li><a href="#functions_packages">Packages <i>/</i> Symbols</a></li>
-                <li>
-                  <a href="#functions_conses" class="inlining-node">Conses</a>
-                  <ul class="inlined-nodes">
-                    <li><a href="#functions_conses_conses-specific">Conses-specific</a></li>
-                    <li><a href="#functions_conses_lists">Lists <i>/</i> Alists <i>/</i> Plists</a></li>
-                    <li><a href="#functions_conses_trees">Trees <i>/</i> Sets</a></li>
-                  </ul>
-                </li>
-                <li><a href="#functions_sequences">Sequences</a></li>
-                <li><a href="#functions_characters">Characters</a></li>
-                <li><a href="#functions_conditions">Conditions <i>/</i> Restarts</a></li>
-                <li>
-                  <a href="#functions_clos" class="inlining-node">CLOS</a>
-                  <ul class="inlined-nodes">
-                    <li><a href="#functions_clos_instances">Instances</a></li>
-                    <li><a href="#functions_clos_methods">Methods</a></li>
-                  </ul>
-                </li>
-                <li><a href="#functions_interactive">Interactive</a></li>
-                <li><a href="#functions_misc">Misc</a></li>
-              </ul>
-            </nav>
-
-          </nav>
-
-        </nav>
-
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#functions" class="anchor">⚓</a>
           </span>
-          <a href="#">Operators</a>
-          <span class="separator"> » </span>
-          <a class="here">Functions</a>
+          <div class="breadcrumbs">
+            <a href="#">Operators</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">Functions</a></span>
+          </div>
         </h1>
 
         <nav class="hanging-menu">
@@ -849,17 +705,72 @@
           </ul>
         </nav>
 
+        <nav class="tabs">
+          <ul>
+            <li><a href="#functions_bindings">Bindings</a></li>
+            <li class="contains-children">
+              <a href="#functions_math">Math</a>
+              <ul>
+                <li><a href="#functions_math_rounding">Rounding</a></li>
+                <li><a href="#functions_math_trigonometry">Trigonometry</a></li>
+                <li><a href="#functions_math_integers-as-bits">Integers as bits</a></li>
+                <li><a href="#functions_math_misc">Misc</a></li>
+              </ul>
+            </li>
+            <li><a href="#functions_hash-tables">Hash tables</a></li>
+            <li class="contains-children">
+              <a href="#functions_arrays">Arrays</a>
+              <ul>
+                <li><a href="#functions_arrays_vectors">Vectors</a></li>
+                <li><a href="#functions_arrays_strings">Strings</a></li>
+                <li><a href="#functions_arrays_bit-arrays">Bit arrays</a></li>
+                <li><a href="#functions_arrays_misc">Misc</a></li>
+              </ul>
+            </li>
+            <li class="contains-children">
+              <a href="#functions_streams">Streams</a>
+              <ul>
+                <li><a href="#functions_streams_stream-objects">Stream objects</a></li>
+                <li><a href="#functions_streams_readtables">Readtables</a></li>
+                <li><a href="#functions_streams_reading">Reading <i>/</i> Writing</a></li>
+              </ul>
+            </li>
+            <li><a href="#functions_files">Files <i>/</i> Pathnames</a></li>
+            <li><a href="#functions_packages">Packages <i>/</i> Symbols</a></li>
+            <li class="contains-children">
+              <a href="#functions_conses">Conses</a>
+              <ul>
+                <li><a href="#functions_conses_conses-specific">Conses-specific</a></li>
+                <li><a href="#functions_conses_lists">Lists <i>/</i> Alists <i>/</i> Plists</a></li>
+                <li><a href="#functions_conses_trees">Trees <i>/</i> Sets</a></li>
+              </ul>
+            </li>
+            <li><a href="#functions_sequences">Sequences</a></li>
+            <li><a href="#functions_characters">Characters</a></li>
+            <li><a href="#functions_conditions">Conditions <i>/</i> Restarts</a></li>
+            <li class="contains-children">
+              <a href="#functions_clos">CLOS</a>
+              <ul>
+                <li><a href="#functions_clos_instances">Instances</a></li>
+                <li><a href="#functions_clos_methods">Methods</a></li>
+              </ul>
+            </li>
+            <li><a href="#functions_interactive">Interactive</a></li>
+            <li><a href="#functions_misc">Misc</a></li>
+          </ul>
+        </nav>
+
         <section id="functions_bindings">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#functions_bindings" class="anchor">⚓</a>
             </span>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#functions">Functions</a>
-            <span class="separator"> » </span>
-            <a class="here">Bindings</a>
+            <div class="breadcrumbs">
+              <a href="#">Operators</a>
+              <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Bindings</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -878,15 +789,15 @@
 
         <section id="functions_math">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#functions_math" class="anchor">⚓</a>
             </span>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#functions">Functions</a>
-            <span class="separator"> » </span>
-            <a class="here">Math</a>
+            <div class="breadcrumbs">
+              <a href="#">Operators</a>
+              <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Math</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -895,39 +806,27 @@
             </ul>
           </nav>
 
-          <nav class="section-nav">
-
-            <nav class="navbox" id="math_navbox">
-              <h1>
-                <a class="here">Math</a>
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </h1>
-              <ul>
-                <li><a href="#functions_math_rounding">Rounding</a></li>
-                <li><a href="#functions_math_trigonometry">Trigonometry</a></li>
-                <li><a href="#functions_math_integers-as-bits">Integers as bits</a></li>
-                <li><a href="#functions_math_misc">Misc</a></li>
-              </ul>
-            </nav>
-
-            <a href="#functions_hash-tables" class="navbox-next">⬇</a>
-
+          <nav class="tabs">
+            <ul>
+              <li><a href="#functions_math_rounding">Rounding</a></li>
+              <li><a href="#functions_math_trigonometry">Trigonometry</a></li>
+              <li><a href="#functions_math_integers-as-bits">Integers as bits</a></li>
+              <li><a href="#functions_math_misc">Misc</a></li>
+            </ul>
           </nav>
 
           <section id="functions_math_rounding">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#functions_math_rounding" class="anchor">⚓</a>
               </span>
-              <a href="#">Operators</a>
-              <span class="separator"> » </span>
-              <a href="#functions">Functions</a>
-              <span class="separator"> » </span>
-              <a href="#functions_math">Math</a>
-              <span class="separator"> » </span>
-              <a class="here">Rounding</a>
+              <div class="breadcrumbs">
+                <a href="#">Operators</a>
+                <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#functions_math">Math</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">Rounding</a></span>
+              </div>
             </h1>
 
             <nav class="hanging-menu">
@@ -936,53 +835,54 @@
               </ul>
             </nav>
 
-            <table>
-              <thead>
-                <tr>
-                  <th>Rounding function</th>
-                  <th>Float variant</th>
-                  <th>Bias towards</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><a class="symbol" href="../../#ceiling">ceiling</a></td>
-                  <td><a class="symbol" href="../../#fceiling">fceiling</a></td>
-                  <td>Positive infinity</td>
-                </tr>
-                <tr>
-                  <td><a class="symbol" href="../../#floor">floor</a></td>
-                  <td><a class="symbol" href="../../#ffloor">ffloor</a></td>
-                  <td>Negative infinity</td>
-                </tr>
-                <tr>
-                  <td><a class="symbol" href="../../#round">round</a></td>
-                  <td><a class="symbol" href="../../#fround">fround</a></td>
-                  <td>Zero</td>
-                </tr>
-                <tr>
-                  <td><a class="symbol" href="../../#truncate">truncate</a></td>
-                  <td><a class="symbol" href="../../#ftruncate">ftruncate</a></td>
-                  <td>Even</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Rounding function</th>
+                    <th>Float variant</th>
+                    <th>Bias towards</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="symbol" href="../../#ceiling">ceiling</a></td>
+                    <td><a class="symbol" href="../../#fceiling">fceiling</a></td>
+                    <td>Positive infinity</td>
+                  </tr>
+                  <tr>
+                    <td><a class="symbol" href="../../#floor">floor</a></td>
+                    <td><a class="symbol" href="../../#ffloor">ffloor</a></td>
+                    <td>Negative infinity</td>
+                  </tr>
+                  <tr>
+                    <td><a class="symbol" href="../../#round">round</a></td>
+                    <td><a class="symbol" href="../../#fround">fround</a></td>
+                    <td>Zero</td>
+                  </tr>
+                  <tr>
+                    <td><a class="symbol" href="../../#truncate">truncate</a></td>
+                    <td><a class="symbol" href="../../#ftruncate">ftruncate</a></td>
+                    <td>Even</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
           </section>
 
           <section id="functions_math_trigonometry">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#functions_math_trigonometry" class="anchor">⚓</a>
               </span>
-              <a href="#">Operators</a>
-              <span class="separator"> » </span>
-              <a href="#functions">Functions</a>
-              <span class="separator"> » </span>
-              <a href="#functions_math">Math</a>
-              <span class="separator"> » </span>
-              <a class="here">Trigonometry</a>
+              <div class="breadcrumbs">
+                <a href="#">Operators</a>
+                <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#functions_math">Math</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">Trigonometry</a></span>
+              </div>
             </h1>
 
             <nav class="hanging-menu">
@@ -991,44 +891,45 @@
               </ul>
             </nav>
 
-            <table>
-              <tbody>
-                <tr>
-                  <td colspan="2"><a class="symbol" href="../../#sin">sin</a></td>
-                  <td colspan="2"><a class="symbol" href="../../#cos">cos</a></td>
-                  <td colspan="2"><a class="symbol" href="../../#tan">tan</a></td>
-                </tr>
-                <tr>
-                  <td><a class="symbol" href="../../#sinh">sinh</a></td>
-                  <td><a class="symbol" href="../../#asin">asin</a></td>
-                  <td><a class="symbol" href="../../#cosh">cosh</a></td>
-                  <td><a class="symbol" href="../../#acos">acos</a></td>
-                  <td><a class="symbol" href="../../#tanh">tanh</a></td>
-                  <td><a class="symbol" href="../../#atan">atan</a></td>
-                </tr>
-                <tr>
-                  <td colspan="2"><a class="symbol" href="../../#asinh">asinh</a></td>
-                  <td colspan="2"><a class="symbol" href="../../#acosh">acosh</a></td>
-                  <td colspan="2"><a class="symbol" href="../../#atanh">atanh</a></td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="scroll">
+              <table>
+                <tbody>
+                  <tr>
+                    <td colspan="2"><a class="symbol" href="../../#sin">sin</a></td>
+                    <td colspan="2"><a class="symbol" href="../../#cos">cos</a></td>
+                    <td colspan="2"><a class="symbol" href="../../#tan">tan</a></td>
+                  </tr>
+                  <tr>
+                    <td><a class="symbol" href="../../#sinh">sinh</a></td>
+                    <td><a class="symbol" href="../../#asin">asin</a></td>
+                    <td><a class="symbol" href="../../#cosh">cosh</a></td>
+                    <td><a class="symbol" href="../../#acos">acos</a></td>
+                    <td><a class="symbol" href="../../#tanh">tanh</a></td>
+                    <td><a class="symbol" href="../../#atan">atan</a></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2"><a class="symbol" href="../../#asinh">asinh</a></td>
+                    <td colspan="2"><a class="symbol" href="../../#acosh">acosh</a></td>
+                    <td colspan="2"><a class="symbol" href="../../#atanh">atanh</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
           </section>
 
           <section id="functions_math_integers-as-bits">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#functions_math_integers-as-bits" class="anchor">⚓</a>
               </span>
-              <a href="#">Operators</a>
-              <span class="separator"> » </span>
-              <a href="#functions">Functions</a>
-              <span class="separator"> » </span>
-              <a href="#functions_math">Math</a>
-              <span class="separator"> » </span>
-              <a class="here">Integers as bits</a>
+              <div class="breadcrumbs">
+                <a href="#">Operators</a>
+                <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#functions_math">Math</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">Integers as bits</a></span>
+              </div>
             </h1>
 
             <nav class="hanging-menu">
@@ -1053,17 +954,16 @@
 
           <section id="functions_math_misc">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#functions_math_misc" class="anchor">⚓</a>
               </span>
-              <a href="#">Operators</a>
-              <span class="separator"> » </span>
-              <a href="#functions">Functions</a>
-              <span class="separator"> » </span>
-              <a href="#functions_math">Math</a>
-              <span class="separator"> » </span>
-              <a class="here">Misc</a>
+              <div class="breadcrumbs">
+                <a href="#">Operators</a>
+                <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#functions_math">Math</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">Misc</a></span>
+              </div>
             </h1>
 
             <nav class="hanging-menu">
@@ -1114,15 +1014,15 @@
 
         <section id="functions_hash-tables">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#functions_hash-tables" class="anchor">⚓</a>
             </span>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#functions">Functions</a>
-            <span class="separator"> » </span>
-            <a class="here">Hash tables</a>
+            <div class="breadcrumbs">
+              <a href="#">Operators</a>
+              <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Hash tables</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -1144,39 +1044,15 @@
 
         <section id="functions_arrays">
 
-          <nav class="section-nav">
-
-            <nav class="ancestors-nav">
-
-              <nav class="navbox">
-                <h1>
-                  <a class="here">Arrays</a>
-                  <span class="here-indicator-left"> </span>
-                  <span class="here-indicator-right"> </span>
-                </h1>
-                <ul>
-                  <li><a href="#functions_arrays_vectors">Vectors</a></li>
-                  <li><a href="#functions_arrays_strings">Strings</a></li>
-                  <li><a href="#functions_arrays_bit-arrays">Bit arrays</a></li>
-                  <li><a href="#functions_arrays_misc">Misc</a></li>
-                </ul>
-              </nav>
-
-              <a href="#functions_streams" class="navbox-next">⬇</a>
-
-            </nav>
-
-          </nav>
-
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#functions_arrays" class="anchor">⚓</a>
             </span>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#functions">Functions</a>
-            <span class="separator"> » </span>
-            <a class="here">Arrays</a>
+            <div class="breadcrumbs">
+              <a href="#">Operators</a>
+              <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Arrays</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -1185,19 +1061,27 @@
             </ul>
           </nav>
 
+          <nav class="tabs">
+            <ul>
+              <li><a href="#functions_arrays_vectors">Vectors</a></li>
+              <li><a href="#functions_arrays_strings">Strings</a></li>
+              <li><a href="#functions_arrays_bit-arrays">Bit arrays</a></li>
+              <li><a href="#functions_arrays_misc">Misc</a></li>
+            </ul>
+          </nav>
+
           <section id="functions_arrays_vectors">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#functions_arrays_vectors" class="anchor">⚓</a>
               </span>
-              <a href="#">Operators</a>
-              <span class="separator"> » </span>
-              <a href="#functions">Functions</a>
-              <span class="separator"> » </span>
-              <a href="#functions_arrays">Arrays</a>
-              <span class="separator"> » </span>
-              <a class="here">Vectors</a>
+              <div class="breadcrumbs">
+                <a href="#">Operators</a>
+                <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#functions_arrays">Arrays</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">Vectors</a></span>
+              </div>
             </h1>
 
             <nav class="hanging-menu">
@@ -1222,17 +1106,16 @@
 
           <section id="functions_arrays_strings">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#functions_arrays_strings" class="anchor">⚓</a>
               </span>
-              <a href="#">Operators</a>
-              <span class="separator"> » </span>
-              <a href="#functions">Functions</a>
-              <span class="separator"> » </span>
-              <a href="#functions_arrays">Arrays</a>
-              <span class="separator"> » </span>
-              <a class="here">Strings</a>
+              <div class="breadcrumbs">
+                <a href="#">Operators</a>
+                <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#functions_arrays">Arrays</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">Strings</a></span>
+              </div>
             </h1>
 
             <nav class="hanging-menu">
@@ -1243,28 +1126,31 @@
 
             <p>All <a href="#functions_arrays_vectors">vectors</a> with an element-type of character (or one of its subtypes) are strings.</p>
 
-            <table>
-              <thead>
-                <tr>
-                  <th>Potentially sharing</th>
-                  <th>Always destructive</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><a class="symbol" href="../../#string-downcase">string-downcase</a></td>
-                  <td><a class="symbol" href="../../#nstring-downcase">nstring-downcase</a></td>
-                </tr>
-                <tr>
-                  <td><a class="symbol" href="../../#string-upcase">string-upcase</a></td>
-                  <td><a class="symbol" href="../../#nstring-upcase">nstring-upcase</a></td>
-                </tr>
-                <tr>
-                  <td><a class="symbol" href="../../#string-capitalize">string-capitalize</a></td>
-                  <td><a class="symbol" href="../../#nstring-capitalize">nstring-capitalize</a></td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Potentially sharing</th>
+                    <th>Always destructive</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="symbol" href="../../#string-downcase">string-downcase</a></td>
+                    <td><a class="symbol" href="../../#nstring-downcase">nstring-downcase</a></td>
+                  </tr>
+                  <tr>
+                    <td><a class="symbol" href="../../#string-upcase">string-upcase</a></td>
+                    <td><a class="symbol" href="../../#nstring-upcase">nstring-upcase</a></td>
+                  </tr>
+                  <tr>
+                    <td><a class="symbol" href="../../#string-capitalize">string-capitalize</a></td>
+                    <td><a class="symbol" href="../../#nstring-capitalize">nstring-capitalize</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
             <ul>
               <li>(setf <a class="symbol" href="../../#char">char</a>) / (setf <a class="symbol" href="../../#schar">schar</a>)</li>
               <li><a class="symbol" href="../../#make-string">make-string</a></li>
@@ -1279,17 +1165,16 @@
 
           <section id="functions_arrays_bit-arrays">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#functions_arrays_bit-arrays" class="anchor">⚓</a>
               </span>
-              <a href="#">Operators</a>
-              <span class="separator"> » </span>
-              <a href="#functions">Functions</a>
-              <span class="separator"> » </span>
-              <a href="#functions_arrays">Arrays</a>
-              <span class="separator"> » </span>
-              <a class="here">Bit arrays</a>
+              <div class="breadcrumbs">
+                <a href="#">Operators</a>
+                <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#functions_arrays">Arrays</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">Bit arrays</a></span>
+              </div>
             </h1>
 
             <nav class="hanging-menu">
@@ -1314,17 +1199,16 @@
 
           <section id="functions_arrays_misc">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#functions_arrays_misc" class="anchor">⚓</a>
               </span>
-              <a href="#">Operators</a>
-              <span class="separator"> » </span>
-              <a href="#functions">Functions</a>
-              <span class="separator"> » </span>
-              <a href="#functions_arrays">Arrays</a>
-              <span class="separator"> » </span>
-              <a class="here">Misc</a>
+              <div class="breadcrumbs">
+                <a href="#">Operators</a>
+                <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#functions_arrays">Arrays</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">Misc</a></span>
+              </div>
             </h1>
 
             <nav class="hanging-menu">
@@ -1363,39 +1247,15 @@
 
         <section id="functions_streams">
 
-          <nav class="section-nav">
-
-            <nav class="ancestors-nav">
-
-              <nav class="navbox">
-                <h1>
-                  <a class="here">Streams</a>
-                  <span class="here-indicator-left"> </span>
-                  <span class="here-indicator-right"> </span>
-                </h1>
-                <ul>
-                  <li><a href="#functions_streams_stream-objects">Stream objects</a></li>
-                  <li><a href="#functions_streams_readtables">Readtables</a></li>
-                  <li><a href="#functions_streams_reading">Reading</a></li>
-                  <li><a href="#functions_streams_writing">Writing</a></li>
-                </ul>
-              </nav>
-
-              <a href="#functions_files" class="navbox-next">⬇</a>
-
-            </nav>
-
-          </nav>
-
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#functions_streams" class="anchor">⚓</a>
             </span>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#functions">Functions</a>
-            <span class="separator"> » </span>
-            <a class="here">Streams</a>
+            <div class="breadcrumbs">
+              <a href="#">Operators</a>
+              <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Streams</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -1404,19 +1264,27 @@
             </ul>
           </nav>
 
+          <nav class="tabs">
+            <ul>
+              <li><a href="#functions_streams_stream-objects">Stream objects</a></li>
+              <li><a href="#functions_streams_readtables">Readtables</a></li>
+              <li><a href="#functions_streams_reading">Reading</a></li>
+              <li><a href="#functions_streams_writing">Writing</a></li>
+            </ul>
+          </nav>
+
           <section id="functions_streams_stream-objects">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#functions_streams_stream-objects" class="anchor">⚓</a>
               </span>
-              <a href="#">Operators</a>
-              <span class="separator"> » </span>
-              <a href="#functions">Functions</a>
-              <span class="separator"> » </span>
-              <a href="#functions_streams">Streams</a>
-              <span class="separator"> » </span>
-              <a class="here">Stream objects</a>
+              <div class="breadcrumbs">
+                <a href="#">Operators</a>
+                <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#functions_streams">Streams</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">Stream objects</a></span>
+              </div>
             </h1>
 
             <nav class="hanging-menu">
@@ -1444,17 +1312,16 @@
 
           <section id="functions_streams_readtables">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#functions_streams_readtables" class="anchor">⚓</a>
               </span>
-              <a href="#">Operators</a>
-              <span class="separator"> » </span>
-              <a href="#functions">Functions</a>
-              <span class="separator"> » </span>
-              <a href="#functions_streams">Streams</a>
-              <span class="separator"> » </span>
-              <a class="here">Readtables</a>
+              <div class="breadcrumbs">
+                <a href="#">Operators</a>
+                <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#functions_streams">Streams</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">Readtables</a></span>
+              </div>
             </h1>
 
             <nav class="hanging-menu">
@@ -1476,20 +1343,22 @@
 
           <section id="functions_streams_reading">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#functions_streams_reading" class="anchor">⚓</a>
               </span>
-              <a href="#">Operators</a>
-              <span class="separator"> » </span>
-              <a href="#functions">Functions</a>
-              <span class="separator"> » </span>
-              <a href="#functions_streams">Streams</a>
-              <span class="separator"> » </span>
-              <span class="related-group">
-                <a class="here">Reading</a>
-                <a href="#functions_streams_writing">Writing</a>
-              </span>
+              <div class="breadcrumbs">
+                <a href="#">Operators</a>
+                <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#functions_streams">Streams</a></span>
+                <span class="crumb">
+                  <span class="s"> » </span>
+                  <span class="related-group">
+                    <a class="here">Reading</a>
+                    <a href="#functions_streams_writing">Writing</a>
+                  </span>
+                </span>
+              </div>
             </h1>
 
             <nav class="hanging-menu">
@@ -1517,20 +1386,22 @@
 
           <section id="functions_streams_writing">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#functions_streams_writing" class="anchor">⚓</a>
               </span>
-              <a href="#">Operators</a>
-              <span class="separator"> » </span>
-              <a href="#functions">Functions</a>
-              <span class="separator"> » </span>
-              <a href="#functions_streams">Streams</a>
-              <span class="separator"> » </span>
-              <span class="related-group">
-                <a href="#functions_streams_reading">Reading</a>
-                <a class="here">Writing</a>
-              </span>
+              <div class="breadcrumbs">
+                <a href="#">Operators</a>
+                <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#functions_streams">Streams</a></span>
+                <span class="crumb">
+                  <span class="s"> » </span>
+                  <span class="related-group">
+                    <a href="#functions_streams_reading">Reading</a>
+                    <a class="here">Writing</a>
+                  </span>
+                </span>
+              </div>
             </h1>
 
             <nav class="hanging-menu">
@@ -1571,18 +1442,21 @@
 
         <section id="functions_files">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#functions_files" class="anchor">⚓</a>
             </span>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#functions">Functions</a>
-            <span class="separator"> » </span>
-            <span class="related-group">
-              <a class="here">Files</a>
-              <a href="#functions_pathnames">Pathnames</a>
-            </span>
+            <div class="breadcrumbs">
+              <a href="#">Operators</a>
+              <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+              <span class="crumb">
+                <span class="s"> » </span>
+                <span class="related-group">
+                  <a class="here">Files</a>
+                  <a href="#functions_pathnames">Pathnames</a>
+                </span>
+              </span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -1614,18 +1488,21 @@
 
         <section id="functions_pathnames">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#functions_pathnames" class="anchor">⚓</a>
             </span>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#functions">Functions</a>
-            <span class="separator"> » </span>
-            <span class="related-group">
-              <a href="#functions_files">Files</a>
-              <a class="here">Pathnames</a>
-            </span>
+            <div class="breadcrumbs">
+              <a href="#">Operators</a>
+              <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+              <span class="crumb">
+                <span class="s"> » </span>
+                <span class="related-group">
+                  <a href="#functions_files">Files</a>
+                  <a class="here">Pathnames</a>
+                </span>
+              </span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -1655,18 +1532,21 @@
 
         <section id="functions_packages">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#functions_packages" class="anchor">⚓</a>
             </span>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#functions">Functions</a>
-            <span class="separator"> » </span>
-            <span class="related-group">
-              <a class="here">Packages</a>
-              <a href="#functions_symbols">Symbols</a>
-            </span>
+            <div class="breadcrumbs">
+              <a href="#">Operators</a>
+              <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+              <span class="crumb">
+                <span class="s"> » </span>
+                <span class="related-group">
+                  <a class="here">Packages</a>
+                  <a href="#functions_symbols">Symbols</a>
+                </span>
+              </span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -1693,18 +1573,21 @@
 
         <section id="functions_symbols">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#functions_symbols" class="anchor">⚓</a>
             </span>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#functions">Functions</a>
-            <span class="separator"> » </span>
-            <span class="related-group">
-              <a href="#functions_packages">Packages</a>
-              <a class="here">Symbols</a>
-            </span>
+            <div class="breadcrumbs">
+              <a href="#">Operators</a>
+              <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+              <span class="crumb">
+                <span class="s"> » </span>
+                <span class="related-group">
+                  <a href="#functions_packages">Packages</a>
+                  <a class="here">Symbols</a>
+                </span>
+              </span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -1734,41 +1617,15 @@
 
         <section id="functions_conses">
 
-          <nav class="section-nav">
-
-            <nav class="ancestors-nav">
-
-              <nav class="navbox">
-                <h1>
-                  <a class="here">Conses</a>
-                  <span class="here-indicator-left"> </span>
-                  <span class="here-indicator-right"> </span>
-                </h1>
-                <ul>
-                  <li><a href="#functions_conses_conses-specific">Conses-specific</a></li>
-                  <li><a href="#functions_conses_lists">Lists</a></li>
-                  <li><a href="#functions_conses_alists">Alists</a></li>
-                  <li><a href="#functions_conses_plists">Plists</a></li>
-                  <li><a href="#functions_conses_trees">Trees</a></li>
-                  <li><a href="#functions_conses_sets">Sets</a></li>
-                </ul>
-              </nav>
-
-              <a href="#functions_sequences" class="navbox-next">⬇</a>
-
-            </nav>
-
-          </nav>
-
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#functions_conses" class="anchor">⚓</a>
             </span>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#functions">Functions</a>
-            <span class="separator"> » </span>
-            <a class="here">Conses</a>
+            <div class="breadcrumbs">
+              <a href="#">Operators</a>
+              <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Conses</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -1777,19 +1634,29 @@
             </ul>
           </nav>
 
+          <nav class="tabs">
+            <ul>
+              <li><a href="#functions_conses_conses-specific">Conses-specific</a></li>
+              <li><a href="#functions_conses_lists">Lists</a></li>
+              <li><a href="#functions_conses_alists">Alists</a></li>
+              <li><a href="#functions_conses_plists">Plists</a></li>
+              <li><a href="#functions_conses_trees">Trees</a></li>
+              <li><a href="#functions_conses_sets">Sets</a></li>
+            </ul>
+          </nav>
+
           <section id="functions_conses_conses-specific">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#functions_conses_conses-specific" class="anchor">⚓</a>
               </span>
-              <a href="#">Operators</a>
-              <span class="separator"> » </span>
-              <a href="#functions">Functions</a>
-              <span class="separator"> » </span>
-              <a href="#functions_conses">Conses</a>
-              <span class="separator"> » </span>
-              <a class="here">Conses-specific</a>
+              <div class="breadcrumbs">
+                <a href="#">Operators</a>
+                <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#functions_conses">Conses</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">Conses-specific</a></span>
+              </div>
             </h1>
 
             <nav class="hanging-menu">
@@ -1810,21 +1677,23 @@
 
           <section id="functions_conses_lists">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#functions_conses_lists" class="anchor">⚓</a>
               </span>
-              <a href="#">Operators</a>
-              <span class="separator"> » </span>
-              <a href="#functions">Functions</a>
-              <span class="separator"> » </span>
-              <a href="#functions_conses">Conses</a>
-              <span class="separator"> » </span>
-              <span class="related-group">
-                <a class="here">Lists</a>
-                <a href="#functions_conses_alists">Alists</a>
-                <a href="#functions_conses_plists">Plists</a>
-              </span>
+              <div class="breadcrumbs">
+                <a href="#">Operators</a>
+                <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#functions_conses">Conses</a></span>
+                <span class="crumb">
+                  <span class="s"> » </span>
+                  <span class="related-group">
+                    <a class="here">Lists</a>
+                    <a href="#functions_conses_alists">Alists</a>
+                    <a href="#functions_conses_plists">Plists</a>
+                  </span>
+                </span>
+              </div>
             </h1>
 
             <nav class="hanging-menu">
@@ -1858,21 +1727,23 @@
 
           <section id="functions_conses_alists">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#functions_conses_alists" class="anchor">⚓</a>
               </span>
-              <a href="#">Operators</a>
-              <span class="separator"> » </span>
-              <a href="#functions">Functions</a>
-              <span class="separator"> » </span>
-              <a href="#functions_conses">Conses</a>
-              <span class="separator"> » </span>
-              <span class="related-group">
-                <a href="#functions_conses_lists">Lists</a>
-                <a class="here">Alists</a>
-                <a href="#functions_conses_plists">Plists</a>
-              </span>
+              <div class="breadcrumbs">
+                <a href="#">Operators</a>
+                <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#functions_conses">Conses</a></span>
+                <span class="crumb">
+                  <span class="s"> » </span>
+                  <span class="related-group">
+                    <a href="#functions_conses_lists">Lists</a>
+                    <a class="here">Alists</a>
+                    <a href="#functions_conses_plists">Plists</a>
+                  </span>
+                </span>
+              </div>
             </h1>
 
             <nav class="hanging-menu">
@@ -1894,21 +1765,23 @@
 
           <section id="functions_conses_plists">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#functions_conses_plists" class="anchor">⚓</a>
               </span>
-              <a href="#">Operators</a>
-              <span class="separator"> » </span>
-              <a href="#functions">Functions</a>
-              <span class="separator"> » </span>
-              <a href="#functions_conses">Conses</a>
-              <span class="separator"> » </span>
-              <span class="related-group">
-                <a href="#functions_conses_lists">Lists</a>
-                <a href="#functions_conses_alists">Alists</a>
-                <a class="here">Plists</a>
-              </span>
+              <div class="breadcrumbs">
+                <a href="#">Operators</a>
+                <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#functions_conses">Conses</a></span>
+                <span class="crumb">
+                  <span class="s"> » </span>
+                  <span class="related-group">
+                    <a href="#functions_conses_lists">Lists</a>
+                    <a href="#functions_conses_alists">Alists</a>
+                    <a class="here">Plists</a>
+                  </span>
+                </span>
+              </div>
             </h1>
 
             <nav class="hanging-menu">
@@ -1925,20 +1798,22 @@
 
           <section id="functions_conses_trees">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#functions_conses_trees" class="anchor">⚓</a>
               </span>
-              <a href="#">Operators</a>
-              <span class="separator"> » </span>
-              <a href="#functions">Functions</a>
-              <span class="separator"> » </span>
-              <a href="#functions_conses">Conses</a>
-              <span class="separator"> » </span>
-              <span class="related-group">
-                <a class="here">Trees</a>
-                <a href="#functions_conses_sets">Sets</a>
-              </span>
+              <div class="breadcrumbs">
+                <a href="#">Operators</a>
+                <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#functions_conses">Conses</a></span>
+                <span class="crumb">
+                  <span class="s"> » </span>
+                  <span class="related-group">
+                    <a class="here">Trees</a>
+                    <a href="#functions_conses_sets">Sets</a>
+                  </span>
+                </span>
+              </div>
             </h1>
 
             <nav class="hanging-menu">
@@ -1958,20 +1833,22 @@
 
           <section id="functions_conses_sets">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#functions_conses_sets" class="anchor">⚓</a>
               </span>
-              <a href="#">Operators</a>
-              <span class="separator"> » </span>
-              <a href="#functions">Functions</a>
-              <span class="separator"> » </span>
-              <a href="#functions_conses">Conses</a>
-              <span class="separator"> » </span>
-              <span class="related-group">
-                <a href="#functions_conses_trees">Trees</a>
-                <a class="here">Sets</a>
-              </span>
+              <div class="breadcrumbs">
+                <a href="#">Operators</a>
+                <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#functions_conses">Conses</a></span>
+                <span class="crumb">
+                  <span class="s"> » </span>
+                  <span class="related-group">
+                    <a href="#functions_conses_trees">Trees</a>
+                    <a class="here">Sets</a>
+                  </span>
+                </span>
+              </div>
             </h1>
 
             <nav class="hanging-menu">
@@ -1984,32 +1861,35 @@
               <li><a class="symbol" href="../../#subsetp">subsetp</a></li>
             </ul>
 
-            <table>
-              <thead>
-                <tr>
-                  <th>Potentially sharing</th>
-                  <th>Also destructive</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><a class="symbol" href="../../#union">union</a></td>
-                  <td><a class="symbol" href="../../#nunion">nunion</a></td>
-                </tr>
-                <tr>
-                  <td><a class="symbol" href="../../#intersection">intersection</a></td>
-                  <td><a class="symbol" href="../../#nintersection">nintersection</a></td>
-                </tr>
-                <tr>
-                  <td><a class="symbol" href="../../#set-difference">set-difference</a></td>
-                  <td><a class="symbol" href="../../#nset-difference">nset-difference</a></td>
-                </tr>
-                <tr>
-                  <td><a class="symbol" href="../../#set-exclusive-or">set-exclusive-or</a></td>
-                  <td><a class="symbol" href="../../#nset-exclusive-or">nset-exclusive-or</a></td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Potentially sharing</th>
+                    <th>Also destructive</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="symbol" href="../../#union">union</a></td>
+                    <td><a class="symbol" href="../../#nunion">nunion</a></td>
+                  </tr>
+                  <tr>
+                    <td><a class="symbol" href="../../#intersection">intersection</a></td>
+                    <td><a class="symbol" href="../../#nintersection">nintersection</a></td>
+                  </tr>
+                  <tr>
+                    <td><a class="symbol" href="../../#set-difference">set-difference</a></td>
+                    <td><a class="symbol" href="../../#nset-difference">nset-difference</a></td>
+                  </tr>
+                  <tr>
+                    <td><a class="symbol" href="../../#set-exclusive-or">set-exclusive-or</a></td>
+                    <td><a class="symbol" href="../../#nset-exclusive-or">nset-exclusive-or</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
           </section>
 
           <nav class="end-of-section-indicator">
@@ -2022,15 +1902,15 @@
 
         <section id="functions_sequences">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#functions_sequences" class="anchor">⚓</a>
             </span>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#functions">Functions</a>
-            <span class="separator"> » </span>
-            <a class="here">Sequences</a>
+            <div class="breadcrumbs">
+              <a href="#">Operators</a>
+              <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Sequences</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -2041,65 +1921,67 @@
 
           <p>All <a href="#functions_conses_lists">proper lists</a> and <a href="#functions_arrays_vectors">vectors</a> are sequences.</p>
 
-          <table>
-            <tbody>
-              <tr>
-                <td><a class="symbol" href="../../#count">count</a></td>
-                <td><a class="symbol" href="../../#count-if">count-if</a></td>
-                <td><a class="symbol" href="../../#count-if-not">count-if-not</a></td>
-              </tr>
-              <tr>
-                <td><a class="symbol" href="../../#find">find</a></td>
-                <td><a class="symbol" href="../../#find-if">find-if</a></td>
-                <td><a class="symbol" href="../../#find-if-not">find-if-not</a></td>
-              </tr>
-              <tr>
-                <td><a class="symbol" href="../../#position">position</a></td>
-                <td><a class="symbol" href="../../#position-if">position-if</a></td>
-                <td><a class="symbol" href="../../#position-if-not">position-if-not</a></td>
-              </tr>
-              <tr>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#remove">remove</a></li>
-                    <li><a class="symbol" href="../../#delete">delete</a></li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#remove-if">remove-if</a></li>
-                    <li><a class="symbol" href="../../#delete-if">delete-if</a></li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#remove-if-not">remove-if-not</a></li>
-                    <li><a class="symbol" href="../../#delete-if-not">delete-if-not</a></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#substitute">substitute</a></li>
-                    <li><a class="symbol" href="../../#nsubstitute">nsubstitute</a></li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#substitute-if">substitute-if</a></li>
-                    <li><a class="symbol" href="../../#nsubstitute-if">nsubstitute-if</a></li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#substitute-if-not">substitute-if-not</a></li>
-                    <li><a class="symbol" href="../../#nsubstitute-if-not">nsubstitute-if-not</a></li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="scroll">
+            <table>
+              <tbody>
+                <tr>
+                  <td><a class="symbol" href="../../#count">count</a></td>
+                  <td><a class="symbol" href="../../#count-if">count-if</a></td>
+                  <td><a class="symbol" href="../../#count-if-not">count-if-not</a></td>
+                </tr>
+                <tr>
+                  <td><a class="symbol" href="../../#find">find</a></td>
+                  <td><a class="symbol" href="../../#find-if">find-if</a></td>
+                  <td><a class="symbol" href="../../#find-if-not">find-if-not</a></td>
+                </tr>
+                <tr>
+                  <td><a class="symbol" href="../../#position">position</a></td>
+                  <td><a class="symbol" href="../../#position-if">position-if</a></td>
+                  <td><a class="symbol" href="../../#position-if-not">position-if-not</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <ul>
+                      <li><a class="symbol" href="../../#remove">remove</a></li>
+                      <li><a class="symbol" href="../../#delete">delete</a></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li><a class="symbol" href="../../#remove-if">remove-if</a></li>
+                      <li><a class="symbol" href="../../#delete-if">delete-if</a></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li><a class="symbol" href="../../#remove-if-not">remove-if-not</a></li>
+                      <li><a class="symbol" href="../../#delete-if-not">delete-if-not</a></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <ul>
+                      <li><a class="symbol" href="../../#substitute">substitute</a></li>
+                      <li><a class="symbol" href="../../#nsubstitute">nsubstitute</a></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li><a class="symbol" href="../../#substitute-if">substitute-if</a></li>
+                      <li><a class="symbol" href="../../#nsubstitute-if">nsubstitute-if</a></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li><a class="symbol" href="../../#substitute-if-not">substitute-if-not</a></li>
+                      <li><a class="symbol" href="../../#nsubstitute-if-not">nsubstitute-if-not</a></li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <ul>
             <li><a class="symbol" href="../../#concatenate">concatenate</a></li>
@@ -2125,15 +2007,15 @@
 
         <section id="functions_characters">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#functions_characters" class="anchor">⚓</a>
             </span>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#functions">Functions</a>
-            <span class="separator"> » </span>
-            <a class="here">Characters</a>
+            <div class="breadcrumbs">
+              <a href="#">Operators</a>
+              <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Characters</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -2158,18 +2040,21 @@
 
         <section id="functions_conditions">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#functions_conditions" class="anchor">⚓</a>
             </span>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#functions">Functions</a>
-            <span class="separator"> » </span>
-            <span class="related-group">
-              <a class="here">Conditions</a>
-              <a href="#functions_restarts">Restarts</a>
-            </span>
+            <div class="breadcrumbs">
+              <a href="#">Operators</a>
+              <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+              <span class="crumb">
+                <span class="s"> » </span>
+                <span class="related-group">
+                  <a class="here">Conditions</a>
+                  <a href="#functions_restarts">Restarts</a>
+                </span>
+              </span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -2191,18 +2076,21 @@
 
         <section id="functions_restarts">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#functions_restarts" class="anchor">⚓</a>
             </span>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#functions">Functions</a>
-            <span class="separator"> » </span>
-            <span class="related-group">
-              <a href="#functions_conditions">Conditions</a>
-              <a class="here">Restarts</a>
-            </span>
+            <div class="breadcrumbs">
+              <a href="#">Operators</a>
+              <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+              <span class="crumb">
+                <span class="s"> » </span>
+                <span class="related-group">
+                  <a href="#functions_conditions">Conditions</a>
+                  <a class="here">Restarts</a>
+                </span>
+              </span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -2221,37 +2109,15 @@
 
         <section id="functions_clos">
 
-          <nav class="section-nav">
-
-            <nav class="ancestors-nav">
-
-              <nav class="navbox" id="clos_navbox">
-                <h1>
-                  <a class="here">CLOS</a>
-                  <span class="here-indicator-left"> </span>
-                  <span class="here-indicator-right"> </span>
-                </h1>
-                <ul>
-                  <li><a href="#functions_clos_instances">Instances</a></li>
-                  <li><a href="#functions_clos_methods">Methods</a></li>
-                </ul>
-              </nav>
-
-              <a href="#functions_misc" class="navbox-next">⬇</a>
-
-            </nav>
-
-          </nav>
-
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#functions_clos" class="anchor">⚓</a>
             </span>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#functions">Functions</a>
-            <span class="separator"> » </span>
-            <a class="here">CLOS</a>
+            <div class="breadcrumbs">
+              <a href="#">Operators</a>
+              <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">CLOS</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -2260,19 +2126,25 @@
             </ul>
           </nav>
 
+          <nav class="tabs">
+            <ul>
+              <li><a href="#functions_clos_instances">Instances</a></li>
+              <li><a href="#functions_clos_methods">Methods</a></li>
+            </ul>
+          </nav>
+
           <section id="functions_clos_instances">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#functions_clos_instances" class="anchor">⚓</a>
               </span>
-              <a href="#">Operators</a>
-              <span class="separator"> » </span>
-              <a href="#functions">Functions</a>
-              <span class="separator"> » </span>
-              <a href="#functions_clos">CLOS</a>
-              <span class="separator"> » </span>
-              <a class="here">Instances</a>
+              <div class="breadcrumbs">
+                <a href="#">Operators</a>
+                <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#functions_clos">CLOS</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">Instances</a></span>
+              </div>
             </h1>
 
             <nav class="hanging-menu">
@@ -2283,26 +2155,28 @@
 
             <p>All functions in the following table are generic functions.</p>
 
-            <table id="clos-init-table">
-              <tbody>
-                <tr>
-                  <th><a class="symbol" href="../../#make-instance">make-instance</a></th>
-                  <td><a class="symbol" href="../../#allocate-instance">allocate-instance</a> then <a class="symbol" href="../../#initialize-instance">initialize-instance</a></td>
-                  <td rowspan="4"><a class="symbol" href="../../#shared-initialize">shared-initialize</a></td>
-                </tr>
-                <tr>
-                  <th colspan="2"><a class="symbol" href="../../#reinitialize-instance">reinitialize-instance</a></th>
-                </tr>
-                <tr>
-                  <th><a class="symbol" href="../../#make-instances-obsolete">make-instances-obsolete</a><br /><small>(triggered by <a class="symbol" href="../../#defclass">defclass</a>)</small></th>
-                  <td><a class="symbol" href="../../#update-instance-for-redefined-class">update-instance-for-redefined-class</a></td>
-                </tr>
-                <tr>
-                  <th><a class="symbol" href="../../#change-class">change-class</a></th>
-                  <td><a class="symbol" href="../../#update-instance-for-different-class">update-instance-for-different-class</a></td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="scroll">
+              <table id="clos-init-table">
+                <tbody>
+                  <tr>
+                    <th><a class="symbol" href="../../#make-instance">make-instance</a></th>
+                    <td><a class="symbol" href="../../#allocate-instance">allocate-instance</a> then <a class="symbol" href="../../#initialize-instance">initialize-instance</a></td>
+                    <td rowspan="4"><a class="symbol" href="../../#shared-initialize">shared-initialize</a></td>
+                  </tr>
+                  <tr>
+                    <th colspan="2"><a class="symbol" href="../../#reinitialize-instance">reinitialize-instance</a></th>
+                  </tr>
+                  <tr>
+                    <th><a class="symbol" href="../../#make-instances-obsolete">make-instances-obsolete</a><br /><small>(triggered by <a class="symbol" href="../../#defclass">defclass</a>)</small></th>
+                    <td><a class="symbol" href="../../#update-instance-for-redefined-class">update-instance-for-redefined-class</a></td>
+                  </tr>
+                  <tr>
+                    <th><a class="symbol" href="../../#change-class">change-class</a></th>
+                    <td><a class="symbol" href="../../#update-instance-for-different-class">update-instance-for-different-class</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
             <ul>
               <li><a class="symbol" href="../../#class-of">class-of</a></li>
@@ -2315,17 +2189,16 @@
 
           <section id="functions_clos_methods">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#functions_clos_methods" class="anchor">⚓</a>
               </span>
-              <a href="#">Operators</a>
-              <span class="separator"> » </span>
-              <a href="#functions">Functions</a>
-              <span class="separator"> » </span>
-              <a href="#functions_clos">CLOS</a>
-              <span class="separator"> » </span>
-              <a class="here">Methods</a>
+              <div class="breadcrumbs">
+                <a href="#">Operators</a>
+                <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#functions_clos">CLOS</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">Methods</a></span>
+              </div>
             </h1>
 
             <nav class="hanging-menu">
@@ -2354,15 +2227,15 @@
 
         <section id="functions_interactive">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#functions_interactive" class="anchor">⚓</a>
             </span>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#functions">Functions</a>
-            <span class="separator"> » </span>
-            <a class="here">Interactive</a>
+            <div class="breadcrumbs">
+              <a href="#">Operators</a>
+              <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Interactive</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -2389,15 +2262,15 @@
 
         <section id="functions_misc">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#functions_misc" class="anchor">⚓</a>
             </span>
-            <a href="#">Operators</a>
-            <span class="separator"> » </span>
-            <a href="#functions">Functions</a>
-            <span class="separator"> » </span>
-            <a class="here">Misc</a>
+            <div class="breadcrumbs">
+              <a href="#">Operators</a>
+              <span class="crumb"><span class="s"> » </span><a href="#functions">Functions</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Misc</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -2464,11 +2337,17 @@
     </main>
 
     <footer id="footer">
-      <div>
-        <a href="#" class="back-to-top">⬆</a>
-        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Farticles%2Fnotes-tips-standard-common-lisp-symbols%2Fnamespaces%2Foperators%2F"><span class="checkmark">✔</span> HTML5</a></span>
-        <span class="page-badge"><a href="https://www.hexstreamsoft.com/README"><span class="checkmark">✔</span> Public Domain</a></span>
-        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Farticles%2Fnotes-tips-standard-common-lisp-symbols%2Fnamespaces%2Foperators%2F"><span class="checkmark">✔</span> CSS3</a></span>
+      <div class="back-to-top left">
+        <a href="#">⬆</a>
+      </div>
+      <div class="main">
+        <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Farticles%2Fnotes-tips-standard-common-lisp-symbols%2Fnamespaces%2Foperators%2F">✔ HTML5</a>
+        <a href="https://www.hexstreamsoft.com/README">✔ Public Domain</a>
+        <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Farticles%2Fnotes-tips-standard-common-lisp-symbols%2Fnamespaces%2Foperators%2F">✔ CSS3</a>
+        <a>✔ Mobile-friendly</a>
+      </div>
+      <div class="back-to-top right">
+        <a href="#">⬆</a>
       </div>
     </footer>
 

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html>
+
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Jean-Philippe Paradis" />
@@ -9,6 +10,7 @@
     <link rel="prev" href="../variables/" />
     <link rel="next" href="../lambda-lists/" />
     <meta name="description" content="All the type specifiers (system classes, types and condition types) of Common Lisp, separated into logical groups. Find related type specifiers quickly." />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Type specifiers | Namespaces | Notes and tips: Standard Common Lisp symbols | Articles | HexstreamSoft</title>
     <link href="../../css/global.css" rel="stylesheet" type="text/css" />
     <link href="../../shared.css" rel="stylesheet" type="text/css" />
@@ -17,24 +19,20 @@
     <script src="https://www.hexstreamsoft.com/scripts/global.js"></script>
     <script src="../../scripts/global.js"></script>
   </head>
+
   <body>
 
-    <nav id="site-nav">
+    <nav id="top-nav">
 
-      <nav class="breadcrumbs-and-extras">
+      <div class="main">
 
-        <nav class="breadcrumbs">
+        <div class="breadcrumbs">
           <a href="https://www.hexstreamsoft.com/">HexstreamSoft</a>
-          <span class="separator"> » </span>
-          <a href="https://www.hexstreamsoft.com/articles/">Articles</a>
-          <span class="separator"> » </span>
-          <a href="../../">CL symbols</a>
-          <span class="separator"> » </span>
-          <a href="../">Namespaces</a>
-          <span class="separator"> » </span>
-          <a class="here">Type specifiers</a>
-          <div class="float-clear"></div>
-        </nav>
+          <span class="crumb"><span class="s"> » </span><a href="https://www.hexstreamsoft.com/articles/">Articles</a></span>
+          <span class="crumb"><span class="s"> » </span><a href="../../">CL symbols</a></span>
+          <span class="crumb"><span class="s"> » </span><a href="../">Namespaces</a></span>
+          <span class="crumb"><span class="s"> » </span><a class="here">Type specifiers</a></span>
+        </div>
 
         <nav id="meta-nav">
           <a href="https://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/namespaces/type-specifiers/">
@@ -58,123 +56,75 @@
           <a href="../../themes/">Switch to themes</a>
         </nav>
 
-        <div class="float-clear"></div>
+      </div>
 
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2014-10-27">27 october 2014</time><span>.</span></p>
+
+    </nav>
+
+    <nav class="ancestors-nav">
+
+      <nav class="tabs contains-title">
+        <h1>
+          <a href="../">Namespaces</a>
+        </h1>
+        <ul>
+          <li class="highlight">
+            <a href="../operators/">Operators</a>
+          </li>
+          <li class="highlight">
+            <a href="../variables/">Variables</a>
+          </li>
+          <li class="highlight">
+            <a class="here">Type specifiers</a>
+          </li>
+          <li class="stub">
+            <a href="../lambda-lists/">Lambda lists</a>
+          </li>
+          <li>
+            <a href="../restart-kinds/">Restart kinds</a>
+          </li>
+          <li>
+            <a href="../declaration-identifiers/">Declaration identifiers</a>
+          </li>
+          <li>
+            <a href="../documentation-types/">Documentation types</a>
+          </li>
+          <li>
+            <a href="../method-combination-types/">Method combination types</a>
+          </li>
+        </ul>
       </nav>
 
-      <nav class="ancestors-nav">
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="type-specifiers_navbox">
-          <h1>
-            <a class="here">Type specifiers</a>
-            <span class="here-indicator-left"> </span>
-            <span class="here-indicator-right"> </span>
-          </h1>
-          <ul>
-            <li>
-              <a href="#system-classes">System classes</a>
-            </li>
-            <li>
-              <a href="#types">Types</a>
-            </li>
-            <li>
-              <a href="#conditions">Conditions</a>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="namespaces_navbox">
-          <h1>
-            <a href="../">Namespaces</a>
-          </h1>
-          <ul>
-            <li class="highlight">
-              <a href="../operators/">Operators</a>
-            </li>
-            <li class="highlight">
-              <a href="../variables/">Variables</a>
-            </li>
-            <li class="highlight">
-              <a class="here">Type specifiers</a>
-              <span class="here-indicator-left"> </span>
-              <span class="here-indicator-right"> </span>
-            </li>
-            <li class="stub">
-              <a href="../lambda-lists/">Lambda lists</a>
-            </li>
-            <li>
-              <a href="../restart-kinds/">Restart kinds</a>
-            </li>
-            <li>
-              <a href="../declaration-identifiers/">Declaration identifiers</a>
-            </li>
-            <li>
-              <a href="../documentation-types/">Documentation types</a>
-            </li>
-            <li>
-              <a href="../method-combination-types/">Method <abbr title="combination">comb</abbr> types</a>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="cl-symbols_navbox">
-          <h1>
-            <a href="../../"><abbr title="Common Lisp">CL</abbr> symbols</a>
-          </h1>
+      <nav class="tabs contains-title contains-groups">
+        <h1>
+          <a href="../../"><abbr title="Common Lisp">CL</abbr> symbols</a>
+        </h1>
+        <div>
           <ul>
             <li>
               <a href="../../#all-standard-symbols">All standard symbols</a>
             </li>
           </ul>
           <ul>
-            <li>
-              <a href="../">
-                Namespaces
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </a>
-            </li>
-            <li>
-              <a href="../../themes/">Themes</a>
-            </li>
-            <li>
-              <a href="../../cross-references/">Cross-references</a>
-            </li>
-            <li>
-              <a href="../../datasets/">Datasets</a>
-            </li>
+            <li><a class="here">Namespaces</a></li>
+            <li><a href="../../themes/">Themes</a></li>
+            <li><a href="../../cross-references/">Cross-references</a></li>
+            <li><a href="../../datasets/">Datasets</a></li>
           </ul>
-        </nav>
+        </div>
+      </nav>
 
-        <div class="level-separator"></div>
+      <nav class="tabs contains-title">
+        <h1><a href="https://www.hexstreamsoft.com/articles/">Articles</a></h1>
+      </nav>
 
-        <nav class="navbox empty" id="articles_navbox">
-          <h1>
-            <a href="https://www.hexstreamsoft.com/articles/">Articles</a>
-          </h1>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="main_navbox">
-          <h1>
-            <a href="https://www.hexstreamsoft.com/">HexstreamSoft</a>
-          </h1>
+      <nav class="tabs contains-title contains-groups">
+        <h1><a href="https://www.hexstreamsoft.com/">HexstreamSoft</a></h1>
+        <div>
           <ul>
             <li><a href="https://www.hexstreamsoft.com/libraries/">Libraries</a></li>
-            <li>
-              <a href="https://www.hexstreamsoft.com/articles/">
-                Articles
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </a>
-            </li>
+            <li><a href="https://www.hexstreamsoft.com/articles/" class="ancestor">Articles</a></li>
             <li><a href="https://www.hexstreamsoft.com/accounts/">Accounts</a></li>
             <li><a href="https://www.hexstreamsoft.com/resources/">Resources</a></li>
           </ul>
@@ -182,13 +132,10 @@
             <li><a href="https://worknotes.hexstreamsoft.com/">Worknotes</a></li>
             <li><a href="https://status-quo.hexstreamsoft.com/">Status quo</a></li>
           </ul>
-        </nav>
-
+        </div>
       </nav>
 
     </nav>
-
-    <p id="last-updated"><span>This page was last updated on </span><time datetime="2014-10-27">27 october 2014</time><span>.</span></p>
 
     <main>
 
@@ -203,15 +150,24 @@
         </ul>
       </nav>
 
+      <nav class="tabs">
+        <ul>
+          <li><a href="#system-classes">System classes</a></li>
+          <li><a href="#types">Types</a></li>
+          <li><a href="#conditions">Conditions</a></li>
+        </ul>
+      </nav>
+
       <section id="system-classes">
 
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#system-classes" class="anchor">⚓</a>
           </span>
-          <a href="#">Type specifiers</a>
-          <span class="separator"> » </span>
-          <a class="here">System classes</a>
+          <div class="breadcrumbs">
+            <a href="#">Type specifiers</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">System classes</a></span>
+          </div>
         </h1>
 
         <nav class="hanging-menu">
@@ -220,37 +176,26 @@
           </ul>
         </nav>
 
-        <nav class="section-nav">
-
-          <nav class="navbox" id="system-classes_navbox">
-            <h1>
-              <a class="here">System classes</a>
-              <span class="here-indicator-left"> </span>
-              <span class="here-indicator-right"> </span>
-            </h1>
-            <ul>
-              <li><a href="#system-classes_clos">CLOS</a></li>
-              <li><a href="#system-classes_numbers">Numbers</a></li>
-              <li><a href="#system-classes_streams">Streams</a></li>
-              <li><a href="#system-classes_misc">Misc</a></li>
-            </ul>
-          </nav>
-
-          <a href="#types" class="navbox-next">⬇</a>
-
+        <nav class="tabs">
+          <ul>
+            <li><a href="#system-classes_clos">CLOS</a></li>
+            <li><a href="#system-classes_numbers">Numbers</a></li>
+            <li><a href="#system-classes_streams">Streams</a></li>
+            <li><a href="#system-classes_misc">Misc</a></li>
+          </ul>
         </nav>
 
         <section id="system-classes_clos">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#system-classes_clos" class="anchor">⚓</a>
             </span>
-            <a href="#">Types specifiers</a>
-            <span class="separator"> » </span>
-            <a href="#system-classes">System classes</a>
-            <span class="separator"> » </span>
-            <a class="here">CLOS</a>
+            <div class="breadcrumbs">
+              <a href="#">Type specifiers</a>
+              <span class="crumb"><span class="s"> » </span><a href="#system-classes">System classes</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">CLOS</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -259,52 +204,54 @@
             </ul>
           </nav>
 
-          <table>
-            <thead>
-              <tr>
-                <th>Base class</th>
-                <th>Standard implementation(s)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th><a class="symbol" href="../../#class">class</a></th>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#built-in-class">built-in-class</a></li>
-                    <li><a class="symbol" href="../../#standard-class">standard-class</a></li>
-                    <li><a class="symbol" href="../../#structure-class">structure-class</a></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <th><a class="symbol" href="../../#generic-function">generic-function</a></th>
-                <td><a class="symbol" href="../../#standard-generic-function">standard-generic-function</a></td>
-              </tr>
-              <tr>
-                <th><a class="symbol" href="../../#method">method</a></th>
-                <td><a class="symbol" href="../../#standard-method">standard-method</a></td>
-              </tr>
-              <tr>
-                <th><a class="symbol" href="../../#method-combination">method-combination</a></th>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Base class</th>
+                  <th>Standard implementation(s)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th><a class="symbol" href="../../#class">class</a></th>
+                  <td>
+                    <ul>
+                      <li><a class="symbol" href="../../#built-in-class">built-in-class</a></li>
+                      <li><a class="symbol" href="../../#standard-class">standard-class</a></li>
+                      <li><a class="symbol" href="../../#structure-class">structure-class</a></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th><a class="symbol" href="../../#generic-function">generic-function</a></th>
+                  <td><a class="symbol" href="../../#standard-generic-function">standard-generic-function</a></td>
+                </tr>
+                <tr>
+                  <th><a class="symbol" href="../../#method">method</a></th>
+                  <td><a class="symbol" href="../../#standard-method">standard-method</a></td>
+                </tr>
+                <tr>
+                  <th><a class="symbol" href="../../#method-combination">method-combination</a></th>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
         </section>
 
         <section id="system-classes_numbers">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#system-classes_numbers" class="anchor">⚓</a>
             </span>
-            <a href="#">Types specifiers</a>
-            <span class="separator"> » </span>
-            <a href="#system-classes">System classes</a>
-            <span class="separator"> » </span>
-            <a class="here">Numbers</a>
+            <div class="breadcrumbs">
+              <a href="#">Type specifiers</a>
+              <span class="crumb"><span class="s"> » </span><a href="#system-classes">System classes</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Numbers</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -313,39 +260,41 @@
             </ul>
           </nav>
 
-          <table class="vertical-tree">
-            <tbody>
-              <tr>
-                <td colspan="4"><a class="symbol" href="../../#number">number</a></td>
-              </tr>
-              <tr>
-                <td colspan="3"><a class="symbol" href="../../#real">real</a></td>
-                <td rowspan="3"><a class="symbol" href="../../#complex">complex</a></td>
-              </tr>
-              <tr>
-                <td colspan="2"><a class="symbol" href="../../#rational">rational</a></td>
-                <td rowspan="2"><a class="symbol" href="../../#float">float</a></td>
-              </tr>
-              <tr>
-                <td><a class="symbol" href="../../#integer">integer</a></td>
-                <td><a class="symbol" href="../../#ratio">ratio</a></td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="scroll">
+            <table class="vertical-tree">
+              <tbody>
+                <tr>
+                  <td colspan="4"><a class="symbol" href="../../#number">number</a></td>
+                </tr>
+                <tr>
+                  <td colspan="3"><a class="symbol" href="../../#real">real</a></td>
+                  <td rowspan="3"><a class="symbol" href="../../#complex">complex</a></td>
+                </tr>
+                <tr>
+                  <td colspan="2"><a class="symbol" href="../../#rational">rational</a></td>
+                  <td rowspan="2"><a class="symbol" href="../../#float">float</a></td>
+                </tr>
+                <tr>
+                  <td><a class="symbol" href="../../#integer">integer</a></td>
+                  <td><a class="symbol" href="../../#ratio">ratio</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
         </section>
 
         <section id="system-classes_streams">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#system-classes_streams" class="anchor">⚓</a>
             </span>
-            <a href="#">Types specifiers</a>
-            <span class="separator"> » </span>
-            <a href="#system-classes">System classes</a>
-            <span class="separator"> » </span>
-            <a class="here">Streams</a>
+            <div class="breadcrumbs">
+              <a href="#">Type specifiers</a>
+              <span class="crumb"><span class="s"> » </span><a href="#system-classes">System classes</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Streams</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -369,15 +318,15 @@
 
         <section id="system-classes_misc">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#system-classes_misc" class="anchor">⚓</a>
             </span>
-            <a href="#">Type specifiers</a>
-            <span class="separator"> » </span>
-            <a href="#system-classes">System classes</a>
-            <span class="separator"> » </span>
-            <a class="here">Misc</a>
+            <div class="breadcrumbs">
+              <a href="#">Type specifiers</a>
+              <span class="crumb"><span class="s"> » </span><a href="#system-classes">System classes</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Misc</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -420,39 +369,14 @@
 
       <section id="types">
 
-        <nav class="section-nav">
-
-          <a href="#system-classes" class="navbox-previous">⬆</a>
-
-          <nav class="navbox" id="types_navbox">
-            <h1>
-              <a class="here">Types</a>
-              <span class="here-indicator-left"> </span>
-              <span class="here-indicator-right"> </span>
-            </h1>
-            <ul>
-              <li>
-                <a href="#types_numbers" class="inlining-node">Numbers</a>
-                <ul class="inlined-nodes">
-                  <li><a href="#types_numbers_integers">Integers</a></li>
-                  <li><a href="#types_numbers_floats">Floats</a></li>
-                </ul>
-              </li>
-              <li><a href="#types_misc">Misc</a></li>
-            </ul>
-          </nav>
-
-          <a href="#conditions" class="navbox-next">⬇</a>
-
-        </nav>
-
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#types" class="anchor">⚓</a>
           </span>
-          <a href="#">Type specifiers</a>
-          <span class="separator"> » </span>
-          <a class="here">Types</a>
+          <div class="breadcrumbs">
+            <a href="#">Type specifiers</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">Types</a></span>
+          </div>
         </h1>
 
         <nav class="hanging-menu">
@@ -461,17 +385,30 @@
           </ul>
         </nav>
 
+        <nav class="tabs">
+          <ul>
+            <li class="contains-children">
+              <a href="#types_numbers">Numbers</a>
+              <ul>
+                <li><a href="#types_numbers_integers">Integers</a></li>
+                <li><a href="#types_numbers_floats">Floats</a></li>
+              </ul>
+            </li>
+            <li><a href="#types_misc">Misc</a></li>
+          </ul>
+        </nav>
+
         <section id="types_numbers">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#types_numbers" class="anchor">⚓</a>
             </span>
-            <a href="#">Type specifiers</a>
-            <span class="separator"> » </span>
-            <a href="#types">Types</a>
-            <span class="separator"> » </span>
-            <a class="here">Numbers</a>
+            <div class="breadcrumbs">
+              <a href="#">Type specifiers</a>
+              <span class="crumb"><span class="s"> » </span><a href="#types">Types</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Numbers</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -482,17 +419,16 @@
 
           <section id="types_numbers_integers">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#types_numbers_integers" class="anchor">⚓</a>
               </span>
-              <a href="#">Type specifiers</a>
-              <span class="separator"> » </span>
-              <a href="#types">Types</a>
-              <span class="separator"> » </span>
-              <a href="#types_numbers">Numbers</a>
-              <span class="separator"> » </span>
-              <a class="here">Integers</a>
+              <div class="breadcrumbs">
+                <a href="#">Type specifiers</a>
+                <span class="crumb"><span class="s"> » </span><a href="#types">Types</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#types_numbers">Numbers</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">Integers</a></span>
+              </div>
             </h1>
 
             <nav class="hanging-menu">
@@ -501,60 +437,61 @@
               </ul>
             </nav>
 
-            <table class="vertical-tree">
-              <tbody>
-                <tr>
-                  <td colspan="10"><a class="symbol" href="../../#signed-byte">signed-byte</a></td>
-                </tr>
-                <tr>
-                  <td colspan="4"></td>
-                  <td colspan="6"><a class="symbol" href="../../#unsigned-byte">unsigned-byte</a></td>
-                </tr>
-                <tr>
-                  <td colspan="4"></td>
-                  <td colspan="2"><a class="symbol" href="../../#bit">bit</a></td>
-                  <td colspan="4"></td>
-                </tr>
-                <tr>
-                  <td>-∞</td>
-                  <td>...</td>
-                  <td>most-negative-fixnum</td>
-                  <td>...</td>
-                  <td>0</td>
-                  <td>1</td>
-                  <td>...</td>
-                  <td>most-positive-fixnum</td>
-                  <td>...</td>
-                  <td>+∞</td>
-                </tr>
-                <tr>
-                  <td colspan="2"></td>
-                  <td colspan="6"><a class="symbol" href="../../#fixnum">fixnum</a></td>
-                  <td colspan="2"></td>
-                </tr>
-                <tr>
-                  <td colspan="2"><a class="symbol" href="../../#bignum">bignum</a></td>
-                  <td colspan="6"></td>
-                  <td colspan="2"><a class="symbol" href="../../#bignum">bignum</a></td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="scroll">
+              <table class="vertical-tree">
+                <tbody>
+                  <tr>
+                    <td colspan="10"><a class="symbol" href="../../#signed-byte">signed-byte</a></td>
+                  </tr>
+                  <tr>
+                    <td colspan="4"></td>
+                    <td colspan="6"><a class="symbol" href="../../#unsigned-byte">unsigned-byte</a></td>
+                  </tr>
+                  <tr>
+                    <td colspan="4"></td>
+                    <td colspan="2"><a class="symbol" href="../../#bit">bit</a></td>
+                    <td colspan="4"></td>
+                  </tr>
+                  <tr>
+                    <td>-∞</td>
+                    <td>...</td>
+                    <td>most-negative-fixnum</td>
+                    <td>...</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>...</td>
+                    <td>most-positive-fixnum</td>
+                    <td>...</td>
+                    <td>+∞</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2"></td>
+                    <td colspan="6"><a class="symbol" href="../../#fixnum">fixnum</a></td>
+                    <td colspan="2"></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2"><a class="symbol" href="../../#bignum">bignum</a></td>
+                    <td colspan="6"></td>
+                    <td colspan="2"><a class="symbol" href="../../#bignum">bignum</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
           </section>
 
           <section id="types_numbers_floats">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#types_numbers_floats" class="anchor">⚓</a>
               </span>
-              <a href="#">Type specifiers</a>
-              <span class="separator"> » </span>
-              <a href="#types">Types</a>
-              <span class="separator"> » </span>
-              <a href="#types_numbers">Numbers</a>
-              <span class="separator"> » </span>
-              <a class="here">Floats</a>
+              <div class="breadcrumbs">
+                <a href="#">Type specifiers</a>
+                <span class="crumb"><span class="s"> » </span><a href="#types">Types</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#types_numbers">Numbers</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">Floats</a></span>
+              </div>
             </h1>
 
             <nav class="hanging-menu">
@@ -563,80 +500,82 @@
               </ul>
             </nav>
 
-            <table>
-              <thead>
-                <tr>
-                  <th>Number of float representations</th>
-                  <th colspan="4">Float representation groupings</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th>4</th>
-                  <td><b><a class="symbol" href="../../#short-float">short-float</a></b></td>
-                  <td><b><a class="symbol" href="../../#single-float">single-float</a></b></td>
-                  <td><b><a class="symbol" href="../../#double-float">double-float</a></b></td>
-                  <td><b><a class="symbol" href="../../#long-float">long-float</a></b></td>
-                </tr>
-                <tr>
-                  <th rowspan="2">3</th>
-                  <td><b><a class="symbol" href="../../#short-float">short-float</a></b></td>
-                  <td><b><a class="symbol" href="../../#single-float">single-float</a></b></td>
-                  <td colspan="2">
-                    <ul>
-                      <li><b><a class="symbol" href="../../#double-float">double-float</a></b></li>
-                      <li><a class="symbol" href="../../#long-float">long-float</a></li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan="2">
-                    <ul>
-                      <li><a class="symbol" href="../../#short-float">short-float</a></li>
-                      <li><b><a class="symbol" href="../../#single-float">single-float</a></b></li>
-                    </ul>
-                  </td>
-                  <td><b><a class="symbol" href="../../#double-float">double-float</a></b></td>
-                  <td><b><a class="symbol" href="../../#long-float">long-float</a></b></td>
-                </tr>
-                <tr>
-                  <th rowspan="2">2</th>
-                  <td><b><a class="symbol" href="../../#short-float">short-float</a></b></td>
-                  <td colspan="3">
-                    <ul>
-                      <li><b><a class="symbol" href="../../#single-float">single-float</a></b></li>
-                      <li><a class="symbol" href="../../#double-float">double-float</a></li>
-                      <li><a class="symbol" href="../../#long-float">long-float</a></li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan="2">
-                    <ul>
-                      <li><a class="symbol" href="../../#short-float">short-float</a></li>
-                      <li><b><a class="symbol" href="../../#single-float">single-float</a></b></li>
-                    </ul>
-                  </td>
-                  <td colspan="2">
-                    <ul>
-                      <li><b><a class="symbol" href="../../#double-float">double-float</a></b></li>
-                      <li><a class="symbol" href="../../#long-float">long-float</a></li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <th>1</th>
-                  <td colspan="4">
-                    <ul>
-                      <li><a class="symbol" href="../../#short-float">short-float</a></li>
-                      <li><b><a class="symbol" href="../../#single-float">single-float</a></b></li>
-                      <li><a class="symbol" href="../../#double-float">double-float</a></li>
-                      <li><a class="symbol" href="../../#long-float">long-float</a></li>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Number of float representations</th>
+                    <th colspan="4">Float representation groupings</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>4</th>
+                    <td><b><a class="symbol" href="../../#short-float">short-float</a></b></td>
+                    <td><b><a class="symbol" href="../../#single-float">single-float</a></b></td>
+                    <td><b><a class="symbol" href="../../#double-float">double-float</a></b></td>
+                    <td><b><a class="symbol" href="../../#long-float">long-float</a></b></td>
+                  </tr>
+                  <tr>
+                    <th rowspan="2">3</th>
+                    <td><b><a class="symbol" href="../../#short-float">short-float</a></b></td>
+                    <td><b><a class="symbol" href="../../#single-float">single-float</a></b></td>
+                    <td colspan="2">
+                      <ul>
+                        <li><b><a class="symbol" href="../../#double-float">double-float</a></b></li>
+                        <li><a class="symbol" href="../../#long-float">long-float</a></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <ul>
+                        <li><a class="symbol" href="../../#short-float">short-float</a></li>
+                        <li><b><a class="symbol" href="../../#single-float">single-float</a></b></li>
+                      </ul>
+                    </td>
+                    <td><b><a class="symbol" href="../../#double-float">double-float</a></b></td>
+                    <td><b><a class="symbol" href="../../#long-float">long-float</a></b></td>
+                  </tr>
+                  <tr>
+                    <th rowspan="2">2</th>
+                    <td><b><a class="symbol" href="../../#short-float">short-float</a></b></td>
+                    <td colspan="3">
+                      <ul>
+                        <li><b><a class="symbol" href="../../#single-float">single-float</a></b></li>
+                        <li><a class="symbol" href="../../#double-float">double-float</a></li>
+                        <li><a class="symbol" href="../../#long-float">long-float</a></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <ul>
+                        <li><a class="symbol" href="../../#short-float">short-float</a></li>
+                        <li><b><a class="symbol" href="../../#single-float">single-float</a></b></li>
+                      </ul>
+                    </td>
+                    <td colspan="2">
+                      <ul>
+                        <li><b><a class="symbol" href="../../#double-float">double-float</a></b></li>
+                        <li><a class="symbol" href="../../#long-float">long-float</a></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>1</th>
+                    <td colspan="4">
+                      <ul>
+                        <li><a class="symbol" href="../../#short-float">short-float</a></li>
+                        <li><b><a class="symbol" href="../../#single-float">single-float</a></b></li>
+                        <li><a class="symbol" href="../../#double-float">double-float</a></li>
+                        <li><a class="symbol" href="../../#long-float">long-float</a></li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
           </section>
 
@@ -650,15 +589,15 @@
 
         <section id="types_misc">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#types_misc" class="anchor">⚓</a>
             </span>
-            <a href="#">Type specifiers</a>
-            <span class="separator"> » </span>
-            <a href="#types">Types</a>
-            <span class="separator"> » </span>
-            <a class="here">Misc</a>
+            <div class="breadcrumbs">
+              <a href="#">Type specifiers</a>
+              <span class="crumb"><span class="s"> » </span><a href="#types">Types</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Misc</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -695,32 +634,14 @@
 
       <section id="conditions">
 
-        <nav class="section-nav">
-
-          <a href="#types" class="navbox-previous">⬆</a>
-
-          <nav class="navbox">
-            <h1>
-              <a class="here">Conditions</a>
-              <span class="here-indicator-left"> </span>
-              <span class="here-indicator-right"> </span>
-            </h1>
-            <ul>
-              <li><a href="#conditions_math">Math</a></li>
-              <li><a href="#conditions_generic">Generic</a></li>
-              <li><a href="#conditions_misc">Misc</a></li>
-            </ul>
-          </nav>
-
-        </nav>
-
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#conditions" class="anchor">⚓</a>
           </span>
-          <a href="#">Type specifiers</a>
-          <span class="separator"> » </span>
-          <a class="here">Conditions</a>
+          <div class="breadcrumbs">
+            <a href="#">Type specifiers</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">Conditions</a></span>
+          </div>
         </h1>
 
         <nav class="hanging-menu">
@@ -729,17 +650,25 @@
           </ul>
         </nav>
 
+        <nav class="tabs">
+          <ul>
+            <li><a href="#conditions_math">Math</a></li>
+            <li><a href="#conditions_generic">Generic</a></li>
+            <li><a href="#conditions_misc">Misc</a></li>
+          </ul>
+        </nav>
+
         <section id="conditions_math">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#conditions_math" class="anchor">⚓</a>
             </span>
-            <a href="#">Type specifiers</a>
-            <span class="separator"> » </span>
-            <a href="#conditions">Conditions</a>
-            <span class="separator"> » </span>
-            <a class="here">Math</a>
+            <div class="breadcrumbs">
+              <a href="#">Type specifiers</a>
+              <span class="crumb"><span class="s"> » </span><a href="#conditions">Conditions</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Math</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -760,15 +689,15 @@
 
         <section id="conditions_generic">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#conditions_generic" class="anchor">⚓</a>
             </span>
-            <a href="#">Type specifiers</a>
-            <span class="separator"> » </span>
-            <a href="#conditions">Conditions</a>
-            <span class="separator"> » </span>
-            <a class="here">Generic</a>
+            <div class="breadcrumbs">
+              <a href="#">Type specifiers</a>
+              <span class="crumb"><span class="s"> » </span><a href="#conditions">Conditions</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Generic</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -791,15 +720,15 @@
 
         <section id="conditions_misc">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#conditions_misc" class="anchor">⚓</a>
             </span>
-            <a href="#">Type specifiers</a>
-            <span class="separator"> » </span>
-            <a href="#conditions">Conditions</a>
-            <span class="separator"> » </span>
-            <a class="here">Misc</a>
+            <div class="breadcrumbs">
+              <a href="#">Type specifiers</a>
+              <span class="crumb"><span class="s"> » </span><a href="#conditions">Conditions</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Misc</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -839,11 +768,17 @@
     </main>
 
     <footer id="footer">
-      <div>
-        <a href="#" class="back-to-top">⬆</a>
-        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Farticles%2Fnotes-tips-standard-common-lisp-symbols%2Fnamespaces%2Ftype-specifiers%2F"><span class="checkmark">✔</span> HTML5</a></span>
-        <span class="page-badge"><a href="https://www.hexstreamsoft.com/README"><span class="checkmark">✔</span> Public Domain</a></span>
-        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Farticles%2Fnotes-tips-standard-common-lisp-symbols%2Fnamespaces%2Ftype-specifiers%2F"><span class="checkmark">✔</span> CSS3</a></span>
+      <div class="back-to-top left">
+        <a href="#">⬆</a>
+      </div>
+      <div class="main">
+        <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Farticles%2Fnotes-tips-standard-common-lisp-symbols%2Fnamespaces%2Ftype-specifiers%2F">✔ HTML5</a>
+        <a href="https://www.hexstreamsoft.com/README">✔ Public Domain</a>
+        <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Farticles%2Fnotes-tips-standard-common-lisp-symbols%2Fnamespaces%2Ftype-specifiers%2F">✔ CSS3</a>
+        <a>✔ Mobile-friendly</a>
+      </div>
+      <div class="back-to-top right">
+        <a href="#">⬆</a>
       </div>
     </footer>
 

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html>
+
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Jean-Philippe Paradis" />
@@ -8,6 +9,7 @@
     <link rel="license" href="https://www.hexstreamsoft.com/UNLICENSE" />
     <link rel="prev" href="../data-structures/" />
     <link rel="next" href="../environments/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Thin wrappers | Themes | Notes and tips: Standard Common Lisp symbols | Articles | HexstreamSoft</title>
     <link href="../../css/global.css" rel="stylesheet" type="text/css" />
     <link href="../../shared.css" rel="stylesheet" type="text/css" />
@@ -15,24 +17,20 @@
     <script src="https://www.hexstreamsoft.com/scripts/global.js"></script>
     <script src="../../scripts/global.js"></script>
   </head>
+
   <body>
 
-    <nav id="site-nav">
+    <nav id="top-nav">
 
-      <nav class="breadcrumbs-and-extras">
+      <div class="main">
 
-        <nav class="breadcrumbs">
+        <div class="breadcrumbs">
           <a href="https://www.hexstreamsoft.com/">HexstreamSoft</a>
-          <span class="separator"> » </span>
-          <a href="https://www.hexstreamsoft.com/articles/">Articles</a>
-          <span class="separator"> » </span>
-          <a href="../../">CL symbols</a>
-          <span class="separator"> » </span>
-          <a href="../">Themes</a>
-          <span class="separator"> » </span>
-          <a class="here">Thin wrappers</a>
-          <div class="float-clear"></div>
-        </nav>
+          <span class="crumb"><span class="s"> » </span><a href="https://www.hexstreamsoft.com/articles/">Articles</a></span>
+          <span class="crumb"><span class="s"> » </span><a href="../../">CL symbols</a></span>
+          <span class="crumb"><span class="s"> » </span><a href="../">Themes</a></span>
+          <span class="crumb"><span class="s"> » </span><a class="here">Data structures</a></span>
+        </div>
 
         <nav id="meta-nav">
           <a href="https://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/themes/thin-wrappers/">
@@ -56,157 +54,96 @@
           <a href="../../namespaces/">Switch to namespaces</a>
         </nav>
 
-        <div class="float-clear"></div>
+      </div>
 
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2014-10-27">27 october 2014</time><span>.</span></p>
+
+    </nav>
+
+    <nav class="ancestors-nav">
+
+      <nav class="tabs contains-title">
+        <h1>
+          <a href="../">Themes</a>
+        </h1>
+        <ul>
+          <li class="highlight">
+            <a href="../data-structures/">Data structures</a>
+          </li>
+          <li class="highlight">
+            <a class="here">Thin wrappers</a>
+          </li>
+          <li class="stub">
+            <a href="../environments/">Environments</a>
+          </li>
+          <li class="highlight">
+            <a href="../lambda-lists/">Lambda lists</a>
+          </li>
+          <li class="stub">
+            <a href="../args-and-retvals/">Arguments and return values</a>
+          </li>
+          <li class="stub">
+            <a href="../coercion/">Coercion</a>
+          </li>
+          <li class="highlight">
+            <a href="../comparisons/">Comparisons</a>
+          </li>
+          <li class="highlight">
+            <a href="../structural-sharing/">Structural sharing</a>
+          </li>
+          <li class="stub">
+            <a href="../reading-and-printing/">Reading and printing</a>
+          </li>
+          <li class="stub">
+            <a href="../debugging/">Debugging</a>
+          </li>
+          <li class="stub">
+            <a href="../safety/">Safety</a>
+          </li>
+          <li class="stub">
+            <a href="../optimization/">Optimization</a>
+          </li>
+          <li class="stub">
+            <a href="../documentation/">Documentation</a>
+          </li>
+          <li class="highlight">
+            <a href="../obsoletion/">Obsoletion</a>
+          </li>
+          <li class="highlight">
+            <a href="../unspecified-behavior/">Unspecified behavior</a>
+          </li>
+        </ul>
       </nav>
 
-
-
-      <nav class="ancestors-nav">
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="thin-wrappers_navbox">
-          <h1>
-            <a class="here">
-              Thin wrappers
-              <span class="here-indicator-left"> </span>
-              <span class="here-indicator-right"> </span>
-            </a>
-          </h1>
-          <ul>
-            <li><a href="#typep">typep</a></li>
-            <li>
-              <a href="#conses" class="inlining-node">Conses</a>
-              <ul class="inlined-nodes">
-                <li><a href="#conses_nth">nth</a></li>
-                <li><a href="#conses_car-and-cdr">car <i>/</i> cdr</a></li>
-                <li><a href="#conses_misc">Misc</a></li>
-              </ul>
-            </li>
-            <li><a href="#sequences">Sequences</a></li>
-            <li><a href="#conditionals">Conditionals</a></li>
-            <li><a href="#streams">Streams</a></li>
-            <li><a href="#accessor-specializing">Accessor-specializing</a></li>
-            <li><a href="#math">Math</a></li>
-            <li><a href="#conditions-and-restarts">Conditions <i>/</i> Restarts</a></li>
-            <li><a href="#misc">Misc</a></li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="themes_navbox">
-          <h1>
-            <a href="../">Themes</a>
-          </h1>
-          <ul>
-            <li class="highlight">
-              <a href="../data-structures/">Data structures</a>
-            </li>
-            <li class="highlight">
-              <a class="here">
-                Thin wrappers
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </a>
-            </li>
-            <li class="stub">
-              <a href="../environments/">Environments</a>
-            </li>
-            <li class="highlight">
-              <a href="../lambda-lists/">Lambda lists</a>
-            </li>
-            <li class="stub">
-              <a href="../args-and-retvals/">Args and retvals</a>
-            </li>
-            <li class="stub">
-              <a href="../coercion/">Coercion</a>
-            </li>
-            <li class="highlight">
-              <a href="../comparisons/">Comparisons</a>
-            </li>
-            <li class="highlight">
-              <a href="../structural-sharing/">Structural sharing</a>
-            </li>
-            <li class="stub">
-              <a href="../reading-and-printing/">Reading and printing</a>
-            </li>
-            <li class="stub">
-              <a href="../debugging/">Debugging</a>
-            </li>
-            <li class="stub">
-              <a href="../safety/">Safety</a>
-            </li>
-            <li class="stub">
-              <a href="../optimization/">Optimization</a>
-            </li>
-            <li class="stub">
-              <a href="../documentation/">Documentation</a>
-            </li>
-            <li class="highlight">
-              <a href="../obsoletion/">Obsoletion</a>
-            </li>
-            <li class="highlight">
-              <a href="../unspecified-behavior/">Unspecified behavior</a>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="cl-symbols_navbox">
-          <h1>
-            <a href="../../"><abbr title="Common Lisp">CL</abbr> symbols</a>
-          </h1>
+      <nav class="tabs contains-title contains-groups">
+        <h1>
+          <a href="../../"><abbr title="Common Lisp">CL</abbr> symbols</a>
+        </h1>
+        <div>
           <ul>
             <li>
               <a href="../../#all-standard-symbols">All standard symbols</a>
             </li>
           </ul>
           <ul>
-            <li>
-              <a href="../../namespaces/">Namespaces</a>
-            </li>
-            <li>
-              <a href="../">
-                Themes
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </a>
-            </li>
-            <li>
-              <a href="../../cross-references/">Cross-references</a>
-            </li>
-            <li>
-              <a href="../../datasets/">Datasets</a>
-            </li>
+            <li><a href="../../namespaces/">Namespaces</a></li>
+            <li><a class="here">Themes</a></li>
+            <li><a href="../../cross-references/">Cross-references</a></li>
+            <li><a href="../../datasets/">Datasets</a></li>
           </ul>
-        </nav>
+        </div>
+      </nav>
 
-        <div class="level-separator"></div>
+      <nav class="tabs contains-title">
+        <h1><a href="https://www.hexstreamsoft.com/articles/">Articles</a></h1>
+      </nav>
 
-        <nav class="navbox empty" id="articles_navbox">
-          <h1>
-            <a href="https://www.hexstreamsoft.com/articles/">Articles</a>
-          </h1>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="main_navbox">
-          <h1>
-            <a href="https://www.hexstreamsoft.com/">HexstreamSoft</a>
-          </h1>
+      <nav class="tabs contains-title contains-groups">
+        <h1><a href="https://www.hexstreamsoft.com/">HexstreamSoft</a></h1>
+        <div>
           <ul>
             <li><a href="https://www.hexstreamsoft.com/libraries/">Libraries</a></li>
-            <li>
-              <a href="https://www.hexstreamsoft.com/articles/">
-                Articles
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </a>
-            </li>
+            <li><a href="https://www.hexstreamsoft.com/articles/" class="ancestor">Articles</a></li>
             <li><a href="https://www.hexstreamsoft.com/accounts/">Accounts</a></li>
             <li><a href="https://www.hexstreamsoft.com/resources/">Resources</a></li>
           </ul>
@@ -214,13 +151,10 @@
             <li><a href="https://worknotes.hexstreamsoft.com/">Worknotes</a></li>
             <li><a href="https://status-quo.hexstreamsoft.com/">Status quo</a></li>
           </ul>
-        </nav>
-
+        </div>
       </nav>
 
     </nav>
-
-    <p id="last-updated"><span>This page was last updated on </span><time datetime="2014-10-27">27 october 2014</time><span>.</span></p>
 
     <main>
 
@@ -235,15 +169,30 @@
         </ul>
       </nav>
 
+      <nav class="tabs">
+        <ul>
+          <li><a href="#typep">typep</a></li>
+          <li><a href="#conses">Conses</a></li>
+          <li><a href="#sequences">Sequences</a></li>
+          <li><a href="#conditionals">Conditionals</a></li>
+          <li><a href="#streams">Streams</a></li>
+          <li><a href="#accessor-specializing">Accessor-specializing</a></li>
+          <li><a href="#math">Math</a></li>
+          <li><a href="#conditions-and-restarts">Conditions <i>/</i> Restarts</a></li>
+          <li><a href="#misc">Misc</a></li>
+        </ul>
+      </nav>
+
       <section id="typep">
 
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#typep" class="anchor">⚓</a>
           </span>
-          <a href="#">Thin wrappers</a>
-          <span class="separator"> » </span>
-          <a class="here">typep</a>
+          <div class="breadcrumbs">
+            <a href="#">Thin wrappers</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">typep</a></span>
+          </div>
         </h1>
 
         <nav class="hanging-menu">
@@ -286,13 +235,14 @@
 
       <section id="conses">
 
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#conses" class="anchor">⚓</a>
           </span>
-          <a href="#">Thin wrappers</a>
-          <span class="separator"> » </span>
-          <a class="here">Conses</a>
+          <div class="breadcrumbs">
+            <a href="#">Thin wrappers</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">Conses</a></span>
+          </div>
         </h1>
 
         <nav class="hanging-menu">
@@ -301,36 +251,25 @@
           </ul>
         </nav>
 
-        <nav class="section-nav">
-
-          <nav class="navbox" id="conses_navbox">
-            <h1>
-              <a class="here">Conses</a>
-              <span class="here-indicator-left"> </span>
-              <span class="here-indicator-right"> </span>
-            </h1>
-            <ul>
-              <li><a href="#conses_nth">nth</a></li>
-              <li><a href="#conses_car-and-cdr">car <i>/</i> cdr</a></li>
-              <li><a href="#conses_misc">Misc</a></li>
-            </ul>
-          </nav>
-
-          <a href="#sequences" class="navbox-next">⬇</a>
-
+        <nav class="tabs">
+          <ul>
+            <li><a href="#conses_nth">nth</a></li>
+            <li><a href="#conses_car-and-cdr">car <i>/</i> cdr</a></li>
+            <li><a href="#conses_misc">Misc</a></li>
+          </ul>
         </nav>
 
         <section id="conses_nth">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#conses_nth" class="anchor">⚓</a>
             </span>
-            <a href="#">Thin wrappers</a>
-            <span class="separator"> » </span>
-            <a href="#conses">Conses</a>
-            <span class="separator"> » </span>
-            <a class="here">nth</a>
+            <div class="breadcrumbs">
+              <a href="#">Thin wrappers</a>
+              <span class="crumb"><span class="s"> » </span><a href="#conses">Conses</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">nth</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -355,15 +294,15 @@
 
         <section id="conses_car-and-cdr">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#conses_car-and-cdr" class="anchor">⚓</a>
             </span>
-            <a href="#">Thin wrappers</a>
-            <span class="separator"> » </span>
-            <a href="#conses">Conses</a>
-            <span class="separator"> » </span>
-            <a class="here">car and cdr</a>
+            <div class="breadcrumbs">
+              <a href="#">Thin wrappers</a>
+              <span class="crumb"><span class="s"> » </span><a href="#conses">Conses</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">car and cdr</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -372,65 +311,68 @@
             </ul>
           </nav>
 
-          <table>
-            <tbody>
-              <tr>
-                <td colspan="4"><a class="symbol" href="../../#caar">caar</a></td>
-                <td colspan="4"><a class="symbol" href="../../#cadr">cadr</a></td>
-              </tr>
-              <tr>
-                <td colspan="2"><a class="symbol" href="../../#caaar">caaar</a></td>
-                <td colspan="2"><a class="symbol" href="../../#caadr">caadr</a></td>
-                <td colspan="2"><a class="symbol" href="../../#cadar">cadar</a></td>
-                <td colspan="2"><a class="symbol" href="../../#caddr">caddr</a></td>
-              </tr>
-              <tr>
-                <td><a class="symbol" href="../../#caaaar">caaaar</a></td>
-                <td><a class="symbol" href="../../#caaadr">caaadr</a></td>
-                <td><a class="symbol" href="../../#caadar">caadar</a></td>
-                <td><a class="symbol" href="../../#caaddr">caaddr</a></td>
-                <td><a class="symbol" href="../../#cadaar">cadaar</a></td>
-                <td><a class="symbol" href="../../#cadadr">cadadr</a></td>
-                <td><a class="symbol" href="../../#caddar">caddar</a></td>
-                <td><a class="symbol" href="../../#cadddr">cadddr</a></td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td colspan="4"><a class="symbol" href="../../#cdar">cdar</a></td>
-                <td colspan="4"><a class="symbol" href="../../#cddr">cddr</a></td>
-              </tr>
-              <tr>
-                <td colspan="2"><a class="symbol" href="../../#cdaar">cdaar</a></td>
-                <td colspan="2"><a class="symbol" href="../../#cdadr">cdadr</a></td>
-                <td colspan="2"><a class="symbol" href="../../#cddar">cddar</a></td>
-                <td colspan="2"><a class="symbol" href="../../#cdddr">cdddr</a></td>
-              </tr>
-              <tr>
-                <td><a class="symbol" href="../../#cdaaar">cdaaar</a></td>
-                <td><a class="symbol" href="../../#cdaadr">cdaadr</a></td>
-                <td><a class="symbol" href="../../#cdadar">cdadar</a></td>
-                <td><a class="symbol" href="../../#cdaddr">cdaddr</a></td>
-                <td><a class="symbol" href="../../#cddaar">cddaar</a></td>
-                <td><a class="symbol" href="../../#cddadr">cddadr</a></td>
-                <td><a class="symbol" href="../../#cdddar">cdddar</a></td>
-                <td><a class="symbol" href="../../#cddddr">cddddr</a></td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="scroll">
+            <table>
+              <tbody>
+                <tr>
+                  <td colspan="4"><a class="symbol" href="../../#caar">caar</a></td>
+                  <td colspan="4"><a class="symbol" href="../../#cadr">cadr</a></td>
+                </tr>
+                <tr>
+                  <td colspan="2"><a class="symbol" href="../../#caaar">caaar</a></td>
+                  <td colspan="2"><a class="symbol" href="../../#caadr">caadr</a></td>
+                  <td colspan="2"><a class="symbol" href="../../#cadar">cadar</a></td>
+                  <td colspan="2"><a class="symbol" href="../../#caddr">caddr</a></td>
+                </tr>
+                <tr>
+                  <td><a class="symbol" href="../../#caaaar">caaaar</a></td>
+                  <td><a class="symbol" href="../../#caaadr">caaadr</a></td>
+                  <td><a class="symbol" href="../../#caadar">caadar</a></td>
+                  <td><a class="symbol" href="../../#caaddr">caaddr</a></td>
+                  <td><a class="symbol" href="../../#cadaar">cadaar</a></td>
+                  <td><a class="symbol" href="../../#cadadr">cadadr</a></td>
+                  <td><a class="symbol" href="../../#caddar">caddar</a></td>
+                  <td><a class="symbol" href="../../#cadddr">cadddr</a></td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="4"><a class="symbol" href="../../#cdar">cdar</a></td>
+                  <td colspan="4"><a class="symbol" href="../../#cddr">cddr</a></td>
+                </tr>
+                <tr>
+                  <td colspan="2"><a class="symbol" href="../../#cdaar">cdaar</a></td>
+                  <td colspan="2"><a class="symbol" href="../../#cdadr">cdadr</a></td>
+                  <td colspan="2"><a class="symbol" href="../../#cddar">cddar</a></td>
+                  <td colspan="2"><a class="symbol" href="../../#cdddr">cdddr</a></td>
+                </tr>
+                <tr>
+                  <td><a class="symbol" href="../../#cdaaar">cdaaar</a></td>
+                  <td><a class="symbol" href="../../#cdaadr">cdaadr</a></td>
+                  <td><a class="symbol" href="../../#cdadar">cdadar</a></td>
+                  <td><a class="symbol" href="../../#cdaddr">cdaddr</a></td>
+                  <td><a class="symbol" href="../../#cddaar">cddaar</a></td>
+                  <td><a class="symbol" href="../../#cddadr">cddadr</a></td>
+                  <td><a class="symbol" href="../../#cdddar">cdddar</a></td>
+                  <td><a class="symbol" href="../../#cddddr">cddddr</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
         </section>
 
         <section id="conses_misc">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#conses_misc" class="anchor">⚓</a>
             </span>
-            <a href="#">Thin wrappers</a>
-            <span class="separator"> » </span>
-            <a href="#conses">Conses</a>
-            <span class="separator"> » </span>
-            <a class="here">Misc</a>
+            <div class="breadcrumbs">
+              <a href="#">Thin wrappers</a>
+              <span class="crumb"><span class="s"> » </span><a href="#conses">Conses</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Misc</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -439,106 +381,110 @@
             </ul>
           </nav>
 
-          <table>
-            <thead>
-              <tr>
-                <th>Wrapper name</th>
-                <th>Primary conceptual constituents</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th><a class="symbol" href="../../#acons">acons</a></th>
-                <td><a class="symbol" href="../../#cons">cons</a> (twice)</td>
-              </tr>
-              <tr>
-                <th><a class="symbol" href="../../#getf">getf</a></th>
-                <td><a class="symbol" href="../../#get-properties">get-properties</a></td>
-              </tr>
-              <tr>
-                <th><a class="symbol" href="../../#nth">nth</a></th>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#nthcdr">nthcdr</a></li>
-                    <li><a class="symbol" href="../../#car">car</a></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <th><a class="symbol" href="../../#nreconc">nreconc</a></th>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#nreverse">nreverse</a></li>
-                    <li><a class="symbol" href="../../#nconc">nconc</a></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <th><a class="symbol" href="../../#revappend">revappend</a></th>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#reverse">reverse</a></li>
-                    <li><a class="symbol" href="../../#nconc">nconc</a></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <th><a class="symbol" href="../../#push">push</a></th>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#get-setf-expansion">get-setf-expansion</a> (in expander)</li>
-                    <li><a class="symbol" href="../../#cons">cons</a></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <th><a class="symbol" href="../../#pushnew">pushnew</a></th>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#get-setf-expansion">get-setf-expansion</a> (in expander)</li>
-                    <li><a class="symbol" href="../../#adjoin">adjoin</a></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <th><a class="symbol" href="../../#pop">pop</a></th>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#get-setf-expansion">get-setf-expansion</a> (in expander)</li>
-                    <li><a class="symbol" href="../../#car">car</a></li>
-                    <li><a class="symbol" href="../../#cdr">cdr</a></li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Wrapper name</th>
+                  <th>Primary conceptual constituents</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th><a class="symbol" href="../../#acons">acons</a></th>
+                  <td><a class="symbol" href="../../#cons">cons</a> (twice)</td>
+                </tr>
+                <tr>
+                  <th><a class="symbol" href="../../#getf">getf</a></th>
+                  <td><a class="symbol" href="../../#get-properties">get-properties</a></td>
+                </tr>
+                <tr>
+                  <th><a class="symbol" href="../../#nth">nth</a></th>
+                  <td>
+                    <ul>
+                      <li><a class="symbol" href="../../#nthcdr">nthcdr</a></li>
+                      <li><a class="symbol" href="../../#car">car</a></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th><a class="symbol" href="../../#nreconc">nreconc</a></th>
+                  <td>
+                    <ul>
+                      <li><a class="symbol" href="../../#nreverse">nreverse</a></li>
+                      <li><a class="symbol" href="../../#nconc">nconc</a></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th><a class="symbol" href="../../#revappend">revappend</a></th>
+                  <td>
+                    <ul>
+                      <li><a class="symbol" href="../../#reverse">reverse</a></li>
+                      <li><a class="symbol" href="../../#nconc">nconc</a></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th><a class="symbol" href="../../#push">push</a></th>
+                  <td>
+                    <ul>
+                      <li><a class="symbol" href="../../#get-setf-expansion">get-setf-expansion</a> (in expander)</li>
+                      <li><a class="symbol" href="../../#cons">cons</a></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th><a class="symbol" href="../../#pushnew">pushnew</a></th>
+                  <td>
+                    <ul>
+                      <li><a class="symbol" href="../../#get-setf-expansion">get-setf-expansion</a> (in expander)</li>
+                      <li><a class="symbol" href="../../#adjoin">adjoin</a></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th><a class="symbol" href="../../#pop">pop</a></th>
+                  <td>
+                    <ul>
+                      <li><a class="symbol" href="../../#get-setf-expansion">get-setf-expansion</a> (in expander)</li>
+                      <li><a class="symbol" href="../../#car">car</a></li>
+                      <li><a class="symbol" href="../../#cdr">cdr</a></li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-          <table>
-            <tbody>
-              <tr>
-                <td><a class="symbol" href="../../#member">member</a></td>
-                <td><a class="symbol" href="../../#member-if-not">member-if-not</a></td>
-              </tr>
-              <tr>
-                <td><a class="symbol" href="../../#rassoc">rassoc</a></td>
-                <td><a class="symbol" href="../../#rassoc-if-not">rassoc-if-not</a></td>
-              </tr>
-              <tr>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#subst">subst</a></li>
-                    <li><a class="symbol" href="../../#nsubst">nsubst</a></li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#subst-if-not">subst-if-not</a></li>
-                    <li><a class="symbol" href="../../#nsubst-if-not">nsubst-if-not</a></li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="scroll">
+            <table>
+              <tbody>
+                <tr>
+                  <td><a class="symbol" href="../../#member">member</a></td>
+                  <td><a class="symbol" href="../../#member-if-not">member-if-not</a></td>
+                </tr>
+                <tr>
+                  <td><a class="symbol" href="../../#rassoc">rassoc</a></td>
+                  <td><a class="symbol" href="../../#rassoc-if-not">rassoc-if-not</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <ul>
+                      <li><a class="symbol" href="../../#subst">subst</a></li>
+                      <li><a class="symbol" href="../../#nsubst">nsubst</a></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul>
+                      <li><a class="symbol" href="../../#subst-if-not">subst-if-not</a></li>
+                      <li><a class="symbol" href="../../#nsubst-if-not">nsubst-if-not</a></li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
         </section>
 
@@ -552,13 +498,14 @@
 
       <section id="sequences">
 
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#sequences" class="anchor">⚓</a>
           </span>
-          <a href="#">Thin wrappers</a>
-          <span class="separator"> » </span>
-          <a class="here">Sequences</a>
+          <div class="breadcrumbs">
+            <a href="#">Thin wrappers</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">Sequences</a></span>
+          </div>
         </h1>
 
         <nav class="hanging-menu">
@@ -567,50 +514,52 @@
           </ul>
         </nav>
 
-        <table>
-          <tbody>
-            <tr>
-              <td><a class="symbol" href="../../#count">count</a></td>
-              <td><a class="symbol" href="../../#count-if-not">count-if-not</a></td>
-            </tr>
-            <tr>
-              <td><a class="symbol" href="../../#find">find</a></td>
-              <td><a class="symbol" href="../../#find-if-not">find-if-not</a></td>
-            </tr>
-            <tr>
-              <td><a class="symbol" href="../../#position">position</a></td>
-              <td><a class="symbol" href="../../#position-if-not">position-if-not</a></td>
-            </tr>
-            <tr>
-              <td>
-                <ul>
-                  <li><a class="symbol" href="../../#remove">remove</a></li>
-                  <li><a class="symbol" href="../../#delete">delete</a></li>
-                </ul>
-              </td>
-              <td>
-                <ul>
-                  <li><a class="symbol" href="../../#remove-if-not">remove-if-not</a></li>
-                  <li><a class="symbol" href="../../#delete-if-not">delete-if-not</a></li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <ul>
-                  <li><a class="symbol" href="../../#substitute">substitute</a></li>
-                  <li><a class="symbol" href="../../#nsubstitute">nsubstitute</a></li>
-                </ul>
-              </td>
-              <td>
-                <ul>
-                  <li><a class="symbol" href="../../#substitute-if-not">substitute-if-not</a></li>
-                  <li><a class="symbol" href="../../#nsubstitute-if-not">nsubstitute-if-not</a></li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="scroll">
+          <table>
+            <tbody>
+              <tr>
+                <td><a class="symbol" href="../../#count">count</a></td>
+                <td><a class="symbol" href="../../#count-if-not">count-if-not</a></td>
+              </tr>
+              <tr>
+                <td><a class="symbol" href="../../#find">find</a></td>
+                <td><a class="symbol" href="../../#find-if-not">find-if-not</a></td>
+              </tr>
+              <tr>
+                <td><a class="symbol" href="../../#position">position</a></td>
+                <td><a class="symbol" href="../../#position-if-not">position-if-not</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <ul>
+                    <li><a class="symbol" href="../../#remove">remove</a></li>
+                    <li><a class="symbol" href="../../#delete">delete</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li><a class="symbol" href="../../#remove-if-not">remove-if-not</a></li>
+                    <li><a class="symbol" href="../../#delete-if-not">delete-if-not</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <ul>
+                    <li><a class="symbol" href="../../#substitute">substitute</a></li>
+                    <li><a class="symbol" href="../../#nsubstitute">nsubstitute</a></li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li><a class="symbol" href="../../#substitute-if-not">substitute-if-not</a></li>
+                    <li><a class="symbol" href="../../#nsubstitute-if-not">nsubstitute-if-not</a></li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <ul>
           <li><a class="symbol" href="../../#copy-seq">copy-seq</a></li>
@@ -621,13 +570,14 @@
 
       <section id="conditionals">
 
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#conditionals" class="anchor">⚓</a>
           </span>
-          <a href="#">Thin wrappers</a>
-          <span class="separator"> » </span>
-          <a class="here">Conditionals</a>
+          <div class="breadcrumbs">
+            <a href="#">Thin wrappers</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">Conditionals</a></span>
+          </div>
         </h1>
 
         <nav class="hanging-menu">
@@ -636,142 +586,146 @@
           </ul>
         </nav>
 
-        <table>
-          <thead>
-            <tr>
-              <th>Wrapper name</th>
-              <th>Primary conceptual constituents</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>
-                <ul>
-                  <li><a class="symbol" href="../../#when">when</a></li>
-                  <li><a class="symbol" href="../../#unless">unless</a></li>
-                  <li><a class="symbol" href="../../#cond">cond</a></li>
-                </ul>
-              </th>
-              <td>
-                <ul>
-                  <li><a class="symbol" href="../../#if">if</a></li>
-                  <li><a class="symbol" href="../../#progn">progn</a></li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <ul>
-                  <li><a class="symbol" href="../../#and">and</a></li>
-                  <li><a class="symbol" href="../../#or">or</a></li>
-                </ul>
-              </th>
-              <td>
-                <ul>
-                  <li><a class="symbol" href="../../#let">let</a></li>
-                  <li><a class="symbol" href="../../#if">if</a></li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th><a class="symbol" href="../../#case">case</a></th>
-              <td>
-                <ul>
-                  <li><a class="symbol" href="../../#let">let</a></li>
-                  <li><a class="symbol" href="../../#cond">cond</a></li>
-                  <li><a class="symbol" href="../../#member">member</a></li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th><a class="symbol" href="../../#ccase">ccase</a></th>
-              <td>
-                <ul>
-                  <li><a class="symbol" href="../../#let">let</a></li>
-                  <li><a class="symbol" href="../../#cond">cond</a></li>
-                  <li><a class="symbol" href="../../#member">member</a></li>
-                  <li>TODO</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th><a class="symbol" href="../../#ecase">ecase</a></th>
-              <td>
-                <ul>
-                  <li><a class="symbol" href="../../#case">case</a></li>
-                  <li><a class="symbol" href="../../#error">error</a></li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th><a class="symbol" href="../../#typecase">typecase</a></th>
-              <td>
-                <ul>
-                  <li><a class="symbol" href="../../#let">let</a></li>
-                  <li><a class="symbol" href="../../#cond">cond</a></li>
-                  <li><a class="symbol" href="../../#typep">typep</a></li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th><a class="symbol" href="../../#ctypecase">ctypecase</a></th>
-              <td>
-                <ul>
-                  <li><a class="symbol" href="../../#let">let</a></li>
-                  <li><a class="symbol" href="../../#cond">cond</a></li>
-                  <li><a class="symbol" href="../../#typep">typep</a></li>
-                  <li>TODO</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th><a class="symbol" href="../../#etypecase">etypecase</a></th>
-              <td>
-                <ul>
-                  <li><a class="symbol" href="../../#typecase">typecase</a></li>
-                  <li><a class="symbol" href="../../#error">error</a></li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th><a class="symbol" href="../../#not">not</a></th>
-              <td><a class="symbol" href="../../#if">if</a></td>
-            </tr>
-            <tr>
-              <th><a class="symbol" href="../../#handler-case">handler-case</a></th>
-              <td>
-                <ul>
-                  <li><a class="symbol" href="../../#block">block</a></li>
-                  <li><a class="symbol" href="../../#let">let</a></li>
-                  <li><a class="symbol" href="../../#tagbody">tagbody</a></li>
-                  <li><a class="symbol" href="../../#handler-bind">handler-bind</a></li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th><a class="symbol" href="../../#restart-case">restart-case</a></th>
-              <td>
-                <ul>
-                  <li><a class="symbol" href="../../#block">block</a></li>
-                  <li><a class="symbol" href="../../#let">let</a></li>
-                  <li><a class="symbol" href="../../#tagbody">tagbody</a></li>
-                  <li><a class="symbol" href="../../#restart-bind">handler-bind</a></li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Wrapper name</th>
+                <th>Primary conceptual constituents</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>
+                  <ul>
+                    <li><a class="symbol" href="../../#when">when</a></li>
+                    <li><a class="symbol" href="../../#unless">unless</a></li>
+                    <li><a class="symbol" href="../../#cond">cond</a></li>
+                  </ul>
+                </th>
+                <td>
+                  <ul>
+                    <li><a class="symbol" href="../../#if">if</a></li>
+                    <li><a class="symbol" href="../../#progn">progn</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <ul>
+                    <li><a class="symbol" href="../../#and">and</a></li>
+                    <li><a class="symbol" href="../../#or">or</a></li>
+                  </ul>
+                </th>
+                <td>
+                  <ul>
+                    <li><a class="symbol" href="../../#let">let</a></li>
+                    <li><a class="symbol" href="../../#if">if</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><a class="symbol" href="../../#case">case</a></th>
+                <td>
+                  <ul>
+                    <li><a class="symbol" href="../../#let">let</a></li>
+                    <li><a class="symbol" href="../../#cond">cond</a></li>
+                    <li><a class="symbol" href="../../#member">member</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><a class="symbol" href="../../#ccase">ccase</a></th>
+                <td>
+                  <ul>
+                    <li><a class="symbol" href="../../#let">let</a></li>
+                    <li><a class="symbol" href="../../#cond">cond</a></li>
+                    <li><a class="symbol" href="../../#member">member</a></li>
+                    <li>TODO</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><a class="symbol" href="../../#ecase">ecase</a></th>
+                <td>
+                  <ul>
+                    <li><a class="symbol" href="../../#case">case</a></li>
+                    <li><a class="symbol" href="../../#error">error</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><a class="symbol" href="../../#typecase">typecase</a></th>
+                <td>
+                  <ul>
+                    <li><a class="symbol" href="../../#let">let</a></li>
+                    <li><a class="symbol" href="../../#cond">cond</a></li>
+                    <li><a class="symbol" href="../../#typep">typep</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><a class="symbol" href="../../#ctypecase">ctypecase</a></th>
+                <td>
+                  <ul>
+                    <li><a class="symbol" href="../../#let">let</a></li>
+                    <li><a class="symbol" href="../../#cond">cond</a></li>
+                    <li><a class="symbol" href="../../#typep">typep</a></li>
+                    <li>TODO</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><a class="symbol" href="../../#etypecase">etypecase</a></th>
+                <td>
+                  <ul>
+                    <li><a class="symbol" href="../../#typecase">typecase</a></li>
+                    <li><a class="symbol" href="../../#error">error</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><a class="symbol" href="../../#not">not</a></th>
+                <td><a class="symbol" href="../../#if">if</a></td>
+              </tr>
+              <tr>
+                <th><a class="symbol" href="../../#handler-case">handler-case</a></th>
+                <td>
+                  <ul>
+                    <li><a class="symbol" href="../../#block">block</a></li>
+                    <li><a class="symbol" href="../../#let">let</a></li>
+                    <li><a class="symbol" href="../../#tagbody">tagbody</a></li>
+                    <li><a class="symbol" href="../../#handler-bind">handler-bind</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><a class="symbol" href="../../#restart-case">restart-case</a></th>
+                <td>
+                  <ul>
+                    <li><a class="symbol" href="../../#block">block</a></li>
+                    <li><a class="symbol" href="../../#let">let</a></li>
+                    <li><a class="symbol" href="../../#tagbody">tagbody</a></li>
+                    <li><a class="symbol" href="../../#restart-bind">handler-bind</a></li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
       </section>
 
       <section id="streams">
 
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#streams" class="anchor">⚓</a>
           </span>
-          <a href="#">Thin wrappers</a>
-          <span class="separator"> » </span>
-          <a class="here">Streams</a>
+          <div class="breadcrumbs">
+            <a href="#">Thin wrappers</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">Streams</a></span>
+          </div>
         </h1>
 
         <nav class="hanging-menu">
@@ -780,163 +734,170 @@
           </ul>
         </nav>
 
-        <table>
-          <thead>
-            <tr>
-              <th>Wrapper name</th>
-              <th>Primary conceptual constituents</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th><a class="symbol" href="../../#with-open-file">with-open-file</a></th>
-              <td>
-                <ul>
-                  <li><a class="symbol" href="../../#with-open-stream">with-open-stream</a></li>
-                  <li><a class="symbol" href="../../#open">open</a></li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th><a class="symbol" href="../../#with-open-stream">with-open-stream</a></th>
-              <td>
-                <ul>
-                  <li><a class="symbol" href="../../#unwind-protect">unwind-protect</a></li>
-                  <li><a class="symbol" href="../../#close">close</a></li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th><a class="symbol" href="../../#read-from-string">read-from-string</a></th>
-              <td>
-                <ul>
-                  <li><a class="symbol" href="../../#with-input-from-string">with-input-from-string</a></li>
-                  <li><a class="symbol" href="../../#read">read</a></li>
-                  <li><a class="symbol" href="../../#read-preserving-whitespace">read-preserving-whitespace</a></li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th><a class="symbol" href="../../#write-line">write-line</a></th>
-              <td>
-                <ul>
-                  <li><a class="symbol" href="../../#write-string">write-string</a></li>
-                  <li><a class="symbol" href="../../#terpri">terpri</a></li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th><a class="symbol" href="../../#with-input-from-string">with-input-from-string</a></th>
-              <td>
-                <ul>
-                  <li><a class="symbol" href="../../#let">let</a></li>
-                  <li><a class="symbol" href="../../#make-string-input-stream">make-string-input-stream</a></li>
-                  <li><a class="symbol" href="../../#with-open-stream">with-open-stream</a></li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th><a class="symbol" href="../../#with-input-from-string">with-output-to-string</a></th>
-              <td>
-                <ul>
-                  <li><a class="symbol" href="../../#let">let</a></li>
-                  <li><a class="symbol" href="../../#make-string-output-stream">make-string-output-stream</a></li>
-                  <li><a class="symbol" href="../../#with-open-stream">with-open-stream</a></li>
-                  <li><a class="symbol" href="../../#get-output-stream-string">get-output-stream-string</a></li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <ul>
-                  <li><a class="symbol" href="../../#write-to-string">write-to-string</a></li>
-                  <li><a class="symbol" href="../../#prin1-to-string">prin1-to-string</a></li>
-                  <li><a class="symbol" href="../../#princ-to-string">princ-to-string</a></li>
-                </ul>
-              </th>
-              <td>
-                <ul>
-                  <li><a class="symbol" href="../../#with-output-to-string">with-output-to-string</a></li>
-                  <li><a class="symbol" href="../../#write">write</a> / <a class="symbol" href="../../#prin1">prin1</a> / <a class="symbol" href="../../#princ">princ</a></li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Wrapper name</th>
+                <th>Primary conceptual constituents</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th><a class="symbol" href="../../#with-open-file">with-open-file</a></th>
+                <td>
+                  <ul>
+                    <li><a class="symbol" href="../../#with-open-stream">with-open-stream</a></li>
+                    <li><a class="symbol" href="../../#open">open</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><a class="symbol" href="../../#with-open-stream">with-open-stream</a></th>
+                <td>
+                  <ul>
+                    <li><a class="symbol" href="../../#unwind-protect">unwind-protect</a></li>
+                    <li><a class="symbol" href="../../#close">close</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><a class="symbol" href="../../#read-from-string">read-from-string</a></th>
+                <td>
+                  <ul>
+                    <li><a class="symbol" href="../../#with-input-from-string">with-input-from-string</a></li>
+                    <li><a class="symbol" href="../../#read">read</a></li>
+                    <li><a class="symbol" href="../../#read-preserving-whitespace">read-preserving-whitespace</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><a class="symbol" href="../../#write-line">write-line</a></th>
+                <td>
+                  <ul>
+                    <li><a class="symbol" href="../../#write-string">write-string</a></li>
+                    <li><a class="symbol" href="../../#terpri">terpri</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><a class="symbol" href="../../#with-input-from-string">with-input-from-string</a></th>
+                <td>
+                  <ul>
+                    <li><a class="symbol" href="../../#let">let</a></li>
+                    <li><a class="symbol" href="../../#make-string-input-stream">make-string-input-stream</a></li>
+                    <li><a class="symbol" href="../../#with-open-stream">with-open-stream</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th><a class="symbol" href="../../#with-input-from-string">with-output-to-string</a></th>
+                <td>
+                  <ul>
+                    <li><a class="symbol" href="../../#let">let</a></li>
+                    <li><a class="symbol" href="../../#make-string-output-stream">make-string-output-stream</a></li>
+                    <li><a class="symbol" href="../../#with-open-stream">with-open-stream</a></li>
+                    <li><a class="symbol" href="../../#get-output-stream-string">get-output-stream-string</a></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <ul>
+                    <li><a class="symbol" href="../../#write-to-string">write-to-string</a></li>
+                    <li><a class="symbol" href="../../#prin1-to-string">prin1-to-string</a></li>
+                    <li><a class="symbol" href="../../#princ-to-string">princ-to-string</a></li>
+                  </ul>
+                </th>
+                <td>
+                  <ul>
+                    <li><a class="symbol" href="../../#with-output-to-string">with-output-to-string</a></li>
+                    <li><a class="symbol" href="../../#write">write</a> / <a class="symbol" href="../../#prin1">prin1</a> / <a class="symbol" href="../../#princ">princ</a></li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
         <p>The following are all thin wrappers over <a class="symbol" href="../../#write">write</a>.</p>
-        <table>
-          <thead>
-            <tr>
-              <th>Wrapper name</th>
-              <th>Keyword</th>
-              <th>Variable</th>
-              <th>Value</th>
-              <th>Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th rowspan="2"><a class="symbol" href="../../#pprint">pprint</a></th>
-              <td>:escape</td>
-              <td><a class="symbol" href="../../#*print-escape*">*print-escape*</a></td>
-              <td>true</td>
-              <td rowspan="2">Preceded by a #\Newline.</td>
-            </tr>
-            <tr>
-              <td>:pretty</td>
-              <td><a class="symbol" href="../../#*print-pretty*">*print-pretty*</a></td>
-              <td>true</td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th><a class="symbol" href="../../#prin1">prin1</a></th>
-              <td>:escape</td>
-              <td><a class="symbol" href="../../#*print-escape*">*print-escape*</a></td>
-              <td>true</td>
-              <td></td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th><a class="symbol" href="../../#print">print</a></th>
-              <td>:escape</td>
-              <td><a class="symbol" href="../../#*print-escape*">*print-escape*</a></td>
-              <td>true</td>
-              <td>
-                <ul>
-                  <li>Preceded by a #\Newline.</li>
-                  <li>Followed by a #\Space.</li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th rowspan="2"><a class="symbol" href="../../#princ">princ</a></th>
-              <td>:escape</td>
-              <td><a class="symbol" href="../../#*print-escape*">*print-escape*</a></td>
-              <td>false</td>
-              <td rowspan="2"></td>
-            </tr>
-            <tr>
-              <td>:readably</td>
-              <td><a class="symbol" href="../../#*print-readably*">*print-readably*</a></td>
-              <td>false</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Wrapper name</th>
+                <th>Keyword</th>
+                <th>Variable</th>
+                <th>Value</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th rowspan="2"><a class="symbol" href="../../#pprint">pprint</a></th>
+                <td>:escape</td>
+                <td><a class="symbol" href="../../#*print-escape*">*print-escape*</a></td>
+                <td>true</td>
+                <td rowspan="2">Preceded by a #\Newline.</td>
+              </tr>
+              <tr>
+                <td>:pretty</td>
+                <td><a class="symbol" href="../../#*print-pretty*">*print-pretty*</a></td>
+                <td>true</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th><a class="symbol" href="../../#prin1">prin1</a></th>
+                <td>:escape</td>
+                <td><a class="symbol" href="../../#*print-escape*">*print-escape*</a></td>
+                <td>true</td>
+                <td></td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th><a class="symbol" href="../../#print">print</a></th>
+                <td>:escape</td>
+                <td><a class="symbol" href="../../#*print-escape*">*print-escape*</a></td>
+                <td>true</td>
+                <td>
+                  <ul>
+                    <li>Preceded by a #\Newline.</li>
+                    <li>Followed by a #\Space.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th rowspan="2"><a class="symbol" href="../../#princ">princ</a></th>
+                <td>:escape</td>
+                <td><a class="symbol" href="../../#*print-escape*">*print-escape*</a></td>
+                <td>false</td>
+                <td rowspan="2"></td>
+              </tr>
+              <tr>
+                <td>:readably</td>
+                <td><a class="symbol" href="../../#*print-readably*">*print-readably*</a></td>
+                <td>false</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
       </section>
 
       <section id="accessor-specializing">
 
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#accessor-specializing" class="anchor">⚓</a>
           </span>
-          <a href="#">Thin wrappers</a>
-          <span class="separator"> » </span>
-          <a class="here">Accessor-specializing</a>
+          <div class="breadcrumbs">
+            <a href="#">Thin wrappers</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">Accessor-specializing</a></span>
+          </div>
         </h1>
 
         <nav class="hanging-menu">
@@ -956,13 +917,14 @@
 
       <section id="math">
 
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#math" class="anchor">⚓</a>
           </span>
-          <a href="#">Thin wrappers</a>
-          <span class="separator"> » </span>
-          <a class="here">Math</a>
+          <div class="breadcrumbs">
+            <a href="#">Thin wrappers</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">Math</a></span>
+          </div>
         </h1>
 
         <nav class="hanging-menu">
@@ -983,13 +945,14 @@
 
       <section id="conditions-and-restarts">
 
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#conditions-and-restarts" class="anchor">⚓</a>
           </span>
-          <a href="#">Thin wrappers</a>
-          <span class="separator"> » </span>
-          <a class="here">Conditions and restarts</a>
+          <div class="breadcrumbs">
+            <a href="#">Thin wrappers</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">Conditions and restarts</a></span>
+          </div>
         </h1>
 
         <nav class="hanging-menu">
@@ -1012,13 +975,14 @@
 
       <section id="misc">
 
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#misc" class="anchor">⚓</a>
           </span>
-          <a href="#">Thin wrappers</a>
-          <span class="separator"> » </span>
-          <a class="here">Misc</a>
+          <div class="breadcrumbs">
+            <a href="#">Thin wrappers</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">Misc</a></span>
+          </div>
         </h1>
 
         <nav class="hanging-menu">
@@ -1059,11 +1023,17 @@
     </main>
 
     <footer id="footer">
-      <div>
-        <a href="#" class="back-to-top">⬆</a>
-        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Farticles%2Fnotes-tips-standard-common-lisp-symbols%2Fthemes%2Fthin-wrappers%2F"><span class="checkmark">✔</span> HTML5</a></span>
-        <span class="page-badge"><a href="https://www.hexstreamsoft.com/README"><span class="checkmark">✔</span> Public Domain</a></span>
-        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Farticles%2Fnotes-tips-standard-common-lisp-symbols%2Fthemes%2Fthin-wrappers%2F"><span class="checkmark">✔</span> CSS3</a></span>
+      <div class="back-to-top left">
+        <a href="#">⬆</a>
+      </div>
+      <div class="main">
+        <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Farticles%2Fnotes-tips-standard-common-lisp-symbols%2Fthemes%2Fthin-wrappers%2F">✔ HTML5</a>
+        <a href="https://www.hexstreamsoft.com/README">✔ Public Domain</a>
+        <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Farticles%2Fnotes-tips-standard-common-lisp-symbols%2Fthemes%2Fthin-wrappers%2F">✔ CSS3</a>
+        <a>✔ Mobile-friendly</a>
+      </div>
+      <div class="back-to-top right">
+        <a href="#">⬆</a>
       </div>
     </footer>
 

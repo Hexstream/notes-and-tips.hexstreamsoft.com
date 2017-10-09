@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html>
+
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Jean-Philippe Paradis" />
@@ -9,6 +10,7 @@
     <link rel="prev" href="../operators/" />
     <link rel="next" href="../type-specifiers/" />
     <meta name="description" content="All the special variables and constants of Common Lisp, separated into logical groups. Find related variables quickly." />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Variables | Namespaces | Notes and tips: Standard Common Lisp symbols | Articles | HexstreamSoft</title>
     <link href="../../css/global.css" rel="stylesheet" type="text/css" />
     <link href="../../shared.css" rel="stylesheet" type="text/css" />
@@ -16,24 +18,20 @@
     <script src="https://www.hexstreamsoft.com/scripts/global.js"></script>
     <script src="../../scripts/global.js"></script>
   </head>
+
   <body>
 
-    <nav id="site-nav">
+    <nav id="top-nav">
 
-      <nav class="breadcrumbs-and-extras">
+      <div class="main">
 
-        <nav class="breadcrumbs">
+        <div class="breadcrumbs">
           <a href="https://www.hexstreamsoft.com/">HexstreamSoft</a>
-          <span class="separator"> » </span>
-          <a href="https://www.hexstreamsoft.com/articles/">Articles</a>
-          <span class="separator"> » </span>
-          <a href="../../">CL symbols</a>
-          <span class="separator"> » </span>
-          <a href="../">Namespaces</a>
-          <span class="separator"> » </span>
-          <a class="here">Variables</a>
-          <div class="float-clear"></div>
-        </nav>
+          <span class="crumb"><span class="s"> » </span><a href="https://www.hexstreamsoft.com/articles/">Articles</a></span>
+          <span class="crumb"><span class="s"> » </span><a href="../../">CL symbols</a></span>
+          <span class="crumb"><span class="s"> » </span><a href="../">Namespaces</a></span>
+          <span class="crumb"><span class="s"> » </span><a class="here">Variables</a></span>
+        </div>
 
         <nav id="meta-nav">
           <a href="https://www.hexstreamsoft.com/articles/notes-tips-standard-common-lisp-symbols/namespaces/variables/">
@@ -57,127 +55,75 @@
           <a href="../../themes/">Switch to themes</a>
         </nav>
 
-        <div class="float-clear"></div>
+      </div>
 
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2014-10-27">27 october 2014</time><span>.</span></p>
+
+    </nav>
+
+    <nav class="ancestors-nav">
+
+      <nav class="tabs contains-title">
+        <h1>
+          <a href="../">Namespaces</a>
+        </h1>
+        <ul>
+          <li class="highlight">
+            <a href="../operators/">Operators</a>
+          </li>
+          <li class="highlight">
+            <a class="here">Variables</a>
+          </li>
+          <li class="highlight">
+            <a href="../type-specifiers/">Type specifiers</a>
+          </li>
+          <li class="stub">
+            <a href="../lambda-lists/">Lambda lists</a>
+          </li>
+          <li>
+            <a href="../restart-kinds/">Restart kinds</a>
+          </li>
+          <li>
+            <a href="../declaration-identifiers/">Declaration identifiers</a>
+          </li>
+          <li>
+            <a href="../documentation-types/">Documentation types</a>
+          </li>
+          <li>
+            <a href="../method-combination-types/">Method combination types</a>
+          </li>
+        </ul>
       </nav>
 
-
-
-      <nav class="ancestors-nav">
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="variables_navbox">
-          <h1>
-            <a class="here">
-              Variables
-              <span class="here-indicator-left"> </span>
-              <span class="here-indicator-right"> </span>
-            </a>
-            <span class="item-count">(<span>116</span>)</span>
-          </h1>
-          <ul>
-            <li>
-              <a href="#special-variables">Special variables</a>
-              <span class="item-count">(<span>54</span>)</span>
-            </li>
-            <li>
-              <a href="#constants">Constants</a>
-              <span class="item-count">(<span>62</span>)</span>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="namespaces_navbox">
-          <h1>
-            <a href="../">Namespaces</a>
-          </h1>
-          <ul>
-            <li class="highlight">
-              <a href="../operators/">Operators</a>
-            </li>
-            <li class="highlight">
-              <a class="here">Variables</a>
-              <span class="here-indicator-left"> </span>
-              <span class="here-indicator-right"> </span>
-            </li>
-            <li class="highlight">
-              <a href="../type-specifiers/">Type specifiers</a>
-            </li>
-            <li class="stub">
-              <a href="../lambda-lists/">Lambda lists</a>
-            </li>
-            <li>
-              <a href="../restart-kinds/">Restart kinds</a>
-            </li>
-            <li>
-              <a href="../declaration-identifiers/">Declaration identifiers</a>
-            </li>
-            <li>
-              <a href="../documentation-types/">Documentation types</a>
-            </li>
-            <li>
-              <a href="../method-combination-types/">Method <abbr title="combination">comb</abbr> types</a>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="cl-symbols_navbox">
-          <h1>
-            <a href="../../"><abbr title="Common Lisp">CL</abbr> symbols</a>
-          </h1>
+      <nav class="tabs contains-title contains-groups">
+        <h1>
+          <a href="../../"><abbr title="Common Lisp">CL</abbr> symbols</a>
+        </h1>
+        <div>
           <ul>
             <li>
               <a href="../../#all-standard-symbols">All standard symbols</a>
             </li>
           </ul>
           <ul>
-            <li>
-              <a href="../">
-                Namespaces
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </a>
-            </li>
-            <li>
-              <a href="../../themes/">Themes</a>
-            </li>
-            <li>
-              <a href="../../cross-references/">Cross-references</a>
-            </li>
-            <li>
-              <a href="../../datasets/">Datasets</a>
-            </li>
+            <li><a class="here">Namespaces</a></li>
+            <li><a href="../../themes/">Themes</a></li>
+            <li><a href="../../cross-references/">Cross-references</a></li>
+            <li><a href="../../datasets/">Datasets</a></li>
           </ul>
-        </nav>
+        </div>
+      </nav>
 
-        <div class="level-separator"></div>
+      <nav class="tabs contains-title">
+        <h1><a href="https://www.hexstreamsoft.com/articles/">Articles</a></h1>
+      </nav>
 
-        <nav class="navbox empty" id="articles_navbox">
-          <h1>
-            <a href="https://www.hexstreamsoft.com/articles/">Articles</a>
-          </h1>
-        </nav>
-
-        <div class="level-separator"></div>
-
-        <nav class="navbox" id="main_navbox">
-          <h1>
-            <a href="https://www.hexstreamsoft.com/">HexstreamSoft</a>
-          </h1>
+      <nav class="tabs contains-title contains-groups">
+        <h1><a href="https://www.hexstreamsoft.com/">HexstreamSoft</a></h1>
+        <div>
           <ul>
             <li><a href="https://www.hexstreamsoft.com/libraries/">Libraries</a></li>
-            <li>
-              <a href="https://www.hexstreamsoft.com/articles/">
-                Articles
-                <span class="here-indicator-left"> </span>
-                <span class="here-indicator-right"> </span>
-              </a>
-            </li>
+            <li><a href="https://www.hexstreamsoft.com/articles/" class="ancestor">Articles</a></li>
             <li><a href="https://www.hexstreamsoft.com/accounts/">Accounts</a></li>
             <li><a href="https://www.hexstreamsoft.com/resources/">Resources</a></li>
           </ul>
@@ -185,13 +131,10 @@
             <li><a href="https://worknotes.hexstreamsoft.com/">Worknotes</a></li>
             <li><a href="https://status-quo.hexstreamsoft.com/">Status quo</a></li>
           </ul>
-        </nav>
-
+        </div>
       </nav>
 
     </nav>
-
-    <p id="last-updated"><span>This page was last updated on </span><time datetime="2014-10-27">27 october 2014</time><span>.</span></p>
 
     <main>
 
@@ -206,15 +149,27 @@
         </ul>
       </nav>
 
+      <nav class="tabs">
+        <ul>
+          <li>
+            <a href="#special-variables">Special variables <span class="item-count">(<span>54</span>)</span></a>
+          </li>
+          <li>
+            <a href="#constants">Constants <span class="item-count">(<span>62</span>)</span></a>
+          </li>
+        </ul>
+      </nav>
+
       <section id="special-variables">
 
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#special-variables" class="anchor">⚓</a>
           </span>
-          <a href="#">Variables</a>
-          <span class="separator"> » </span>
-          <a class="here">Special variables</a>
+          <div class="breadcrumbs">
+            <a href="#">Variables</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">Special variables</a></span>
+          </div>
         </h1>
 
         <nav class="hanging-menu">
@@ -223,58 +178,40 @@
           </ul>
         </nav>
 
-        <nav class="section-nav">
-
-          <nav class="navbox" id="special-variables_navbox">
-            <h1>
-              <a class="here">Special variables</a>
-              <span class="item-count">(<span>54</span>)</span>
-              <span class="here-indicator-left"> </span>
-              <span class="here-indicator-right"> </span>
-            </h1>
-            <ul>
-              <li>
-                  <a href="#special-variables_lisp-reader">Lisp Reader</a>
-                  <span class="item-count">(<span>5</span>)</span>
-                </li>
-                <li>
-                  <a href="#special-variables_lisp-printer">Lisp Printer</a>
-                  <span class="item-count">(<span>15</span>)</span>
-                </li>
-                <li>
-                  <a href="#special-variables_streams">Streams</a>
-                  <span class="item-count">(<span>7</span>)</span>
-                </li>
-                <li>
-                  <a href="#special-variables_repl"><abbr title="Read-Eval-Print Loop">REPL</abbr></a>
-                  <span class="item-count">(<span>10</span>)</span>
-                </li>
-                <li>
-                  <a href="#special-variables_files">Files</a>
-                  <span class="item-count">(<span>8</span>)</span>
-                </li>
-                <li>
-                  <a href="#special-variables_misc">Misc</a>
-                  <span class="item-count">(<span>9</span>)</span>
-                </li>
-            </ul>
-          </nav>
-
-          <a href="#constants" class="navbox-next">⬇</a>
-
+        <nav class="tabs">
+          <ul>
+            <li>
+              <a href="#special-variables_lisp-reader">Lisp Reader <span class="item-count">(<span>5</span>)</span></a>
+            </li>
+            <li>
+              <a href="#special-variables_lisp-printer">Lisp Printer <span class="item-count">(<span>15</span>)</span></a>
+            </li>
+            <li>
+              <a href="#special-variables_streams">Streams <span class="item-count">(<span>7</span>)</span></a>
+            </li>
+            <li>
+              <a href="#special-variables_repl"><abbr title="Read-Eval-Print Loop">REPL</abbr> <span class="item-count">(<span>10</span>)</span></a>
+            </li>
+            <li>
+              <a href="#special-variables_files">Files <span class="item-count">(<span>8</span>)</span></a>
+            </li>
+            <li>
+              <a href="#special-variables_misc">Misc <span class="item-count">(<span>9</span>)</span></a>
+            </li>
+          </ul>
         </nav>
 
         <section id="special-variables_lisp-reader">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#special-variables_lisp-reader" class="anchor">⚓</a>
             </span>
-            <a href="#">Variables</a>
-            <span class="separator"> » </span>
-            <a href="#special-variables">Special variables</a>
-            <span class="separator"> » </span>
-            <a class="here">Lisp Reader</a>
+            <div class="breadcrumbs">
+              <a href="#">Variables</a>
+              <span class="crumb"><span class="s"> » </span><a href="#special-variables">Special variables</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Lisp Reader</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -295,15 +232,15 @@
 
         <section id="special-variables_lisp-printer">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#special-variables_lisp-printer" class="anchor">⚓</a>
             </span>
-            <a href="#">Variables</a>
-            <span class="separator"> » </span>
-            <a href="#special-variables">Special variables</a>
-            <span class="separator"> » </span>
-            <a class="here">Lisp Printer</a>
+            <div class="breadcrumbs">
+              <a href="#">Variables</a>
+              <span class="crumb"><span class="s"> » </span><a href="#special-variables">Special variables</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Lisp Printer</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -333,15 +270,15 @@
 
         <section id="special-variables_streams">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#special-variables_streams" class="anchor">⚓</a>
             </span>
-            <a href="#">Variables</a>
-            <span class="separator"> » </span>
-            <a href="#special-variables">Special variables</a>
-            <span class="separator"> » </span>
-            <a class="here">Streams</a>
+            <div class="breadcrumbs">
+              <a href="#">Variables</a>
+              <span class="crumb"><span class="s"> » </span><a href="#special-variables">Special variables</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Streams</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -363,15 +300,15 @@
 
         <section id="special-variables_repl">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#special-variables_repl" class="anchor">⚓</a>
             </span>
-            <a href="#">Variables</a>
-            <span class="separator"> » </span>
-            <a href="#special-variables">Special variables</a>
-            <span class="separator"> » </span>
-            <a class="here">REPL</a>
+            <div class="breadcrumbs">
+              <a href="#">Variables</a>
+              <span class="crumb"><span class="s"> » </span><a href="#special-variables">Special variables</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">REPL</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -396,15 +333,15 @@
 
         <section id="special-variables_files">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#special-variables_files" class="anchor">⚓</a>
             </span>
-            <a href="#">Variables</a>
-            <span class="separator"> » </span>
-            <a href="#special-variables">Special variables</a>
-            <span class="separator"> » </span>
-            <a class="here">Files</a>
+            <div class="breadcrumbs">
+              <a href="#">Variables</a>
+              <span class="crumb"><span class="s"> » </span><a href="#special-variables">Special variables</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Files</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -427,15 +364,15 @@
 
         <section id="special-variables_misc">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#special-variables_misc" class="anchor">⚓</a>
             </span>
-            <a href="#">Variables</a>
-            <span class="separator"> » </span>
-            <a href="#special-variables">Special variables</a>
-            <span class="separator"> » </span>
-            <a class="here">Misc</a>
+            <div class="breadcrumbs">
+              <a href="#">Variables</a>
+              <span class="crumb"><span class="s"> » </span><a href="#special-variables">Special variables</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Misc</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -468,56 +405,14 @@
 
       <section id="constants">
 
-        <nav class="section-nav">
-
-          <a href="#special-variables" class="navbox-previous">⬆</a>
-
-          <nav class="navbox" id="constant-variables_navbox">
-            <h1>
-              <a class="here">Constants</a>
-              <span class="item-count">(<span>62</span>)</span>
-              <span class="here-indicator-left"> </span>
-              <span class="here-indicator-right"> </span>
-            </h1>
-            <ul>
-              <li>
-                <a href="#constants_implementation-limits" class="inlining-node">Implementation limits</a>
-                <span class="item-count">(<span>42</span>)</span>
-                <ul class="inlined-nodes">
-                  <li>
-                    <a href="#constants_implementation-limits_length">Length</a>
-                    <span class="item-count">(<span>6</span>)</span>
-                  </li>
-                  <li>
-                    <a href="#constants_implementation-limits_floats">Floats</a>
-                    <span class="item-count">(<span>32</span>)</span>
-                  </li>
-                  <li>
-                    <a href="#constants_implementation-limits_misc">Misc</a>
-                    <span class="item-count">(<span>4</span>)</span>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#constants_boole">Boole</a>
-                <span class="item-count">(<span>16</span>)</span>
-              </li>
-              <li>
-                <a href="#constants_misc">Misc</a>
-                <span class="item-count">(<span>4</span>)</span>
-              </li>
-            </ul>
-          </nav>
-
-        </nav>
-
-        <h1 class="breadcrumbs">
+        <h1 class="breadcrumbs-bar">
           <span class="section-relative-nav">
             <a href="#constants" class="anchor">⚓</a>
           </span>
-          <a href="#">Variables</a>
-          <span class="separator"> » </span>
-          <a class="here">Constants</a>
+          <div class="breadcrumbs">
+            <a href="#">Variables</a>
+            <span class="crumb"><span class="s"> » </span><a class="here">Constants</a></span>
+          </div>
         </h1>
 
         <nav class="hanging-menu">
@@ -526,17 +421,42 @@
           </ul>
         </nav>
 
+        <nav class="tabs">
+          <ul>
+            <li class="contains-children">
+              <a href="#constants_implementation-limits">Implementation limits <span class="item-count">(<span>42</span>)</span></a>
+              <ul>
+                <li>
+                  <a href="#constants_implementation-limits_length">Length <span class="item-count">(<span>6</span>)</span></a>
+                </li>
+                <li>
+                  <a href="#constants_implementation-limits_floats">Floats <span class="item-count">(<span>32</span>)</span></a>
+                </li>
+                <li>
+                  <a href="#constants_implementation-limits_misc">Misc <span class="item-count">(<span>4</span>)</span></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#constants_boole">Boole <span class="item-count">(<span>16</span>)</span></a>
+            </li>
+            <li>
+              <a href="#constants_misc">Misc <span class="item-count">(<span>4</span>)</span></a>
+            </li>
+          </ul>
+        </nav>
+
         <section id="constants_implementation-limits">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#constants_implementation-limits" class="anchor">⚓</a>
             </span>
-            <a href="#">Variables</a>
-            <span class="separator"> » </span>
-            <a href="#constants">Constants</a>
-            <span class="separator"> » </span>
-            <a class="here">Implementation limits</a>
+            <div class="breadcrumbs">
+              <a href="#">Variables</a>
+              <span class="crumb"><span class="s"> » </span><a href="#constants">Constants</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Implementation limits</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -547,17 +467,16 @@
 
           <section id="constants_implementation-limits_length">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#constants_implementation-limits_length" class="anchor">⚓</a>
               </span>
-              <a href="#">Variables</a>
-              <span class="separator"> » </span>
-              <a href="#constants">Constants</a>
-              <span class="separator"> » </span>
-              <a href="#constants_implementation-limits">Implementation limits</a>
-              <span class="separator"> » </span>
-              <a class="here">Length</a>
+              <div class="breadcrumbs">
+                <a href="#">Variables</a>
+                <span class="crumb"><span class="s"> » </span><a href="#constants">Constants</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#constants_implementation-limits">Implementation limits</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">Length</a></span>
+              </div>
             </h1>
 
             <nav class="hanging-menu">
@@ -579,17 +498,16 @@
 
           <section id="constants_implementation-limits_floats">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#float-limits" class="anchor">⚓</a>
               </span>
-              <a href="#">Variables</a>
-              <span class="separator"> » </span>
-              <a href="#constants">Constants</a>
-              <span class="separator"> » </span>
-              <a href="#constants_implementation-limits">Implementation limits</a>
-              <span class="separator"> » </span>
-              <a class="here">Floats</a>
+              <div class="breadcrumbs">
+                <a href="#">Variables</a>
+                <span class="crumb"><span class="s"> » </span><a href="#constants">Constants</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#constants_implementation-limits">Implementation limits</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">Floats</a></span>
+              </div>
             </h1>
 
             <nav class="hanging-menu">
@@ -599,111 +517,113 @@
             </nav>
 
             <p>(&lt;= short single double long)</p>
-            <table>
-              <thead>
-                <tr>
-                  <th>Kind</th>
-                  <th>Negative</th>
-                  <th>Positive</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th rowspan="2">Least</th>
-                  <td>
-                    <ul>
-                      <li><a class="symbol" href="../../#least-negative-normalized-short-float">least-negative-normalized-short-float</a></li>
-                      <li><a class="symbol" href="../../#least-negative-normalized-single-float">least-negative-normalized-single-float</a></li>
-                      <li><a class="symbol" href="../../#least-negative-normalized-double-float">least-negative-normalized-double-float</a></li>
-                      <li><a class="symbol" href="../../#least-negative-normalized-long-float">least-negative-normalized-long-float</a></li>
-                    </ul>
-                  </td>
-                  <td>
-                    <ul>
-                      <li><a class="symbol" href="../../#least-positive-normalized-short-float">least-positive-normalized-short-float</a></li>
-                      <li><a class="symbol" href="../../#least-positive-normalized-single-float">least-positive-normalized-single-float</a></li>
-                      <li><a class="symbol" href="../../#least-positive-normalized-double-float">least-positive-normalized-double-float</a></li>
-                      <li><a class="symbol" href="../../#least-positive-normalized-long-float">least-positive-normalized-long-float</a></li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <ul>
-                      <li><a class="symbol" href="../../#least-negative-short-float">least-negative-short-float</a></li>
-                      <li><a class="symbol" href="../../#least-negative-single-float">least-negative-single-float</a></li>
-                      <li><a class="symbol" href="../../#least-negative-double-float">least-negative-double-float</a></li>
-                      <li><a class="symbol" href="../../#least-negative-long-float">least-negative-long-float</a></li>
-                    </ul>
-                  </td>
-                  <td>
-                    <ul>
-                      <li><a class="symbol" href="../../#least-positive-short-float">least-positive-short-float</a></li>
-                      <li><a class="symbol" href="../../#least-positive-single-float">least-positive-single-float</a></li>
-                      <li><a class="symbol" href="../../#least-positive-double-float">least-positive-double-float</a></li>
-                      <li><a class="symbol" href="../../#least-positive-long-float">least-positive-long-float</a></li>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr>
-                  <th>Most</th>
-                  <td>
-                    <ul>
-                      <li><a class="symbol" href="../../#most-negative-short-float">most-negative-short-float</a></li>
-                      <li><a class="symbol" href="../../#most-negative-single-float">most-negative-single-float</a></li>
-                      <li><a class="symbol" href="../../#most-negative-double-float">most-negative-double-float</a></li>
-                      <li><a class="symbol" href="../../#most-negative-long-float">most-negative-long-float</a></li>
-                    </ul>
-                  </td>
-                  <td>
-                    <ul>
-                      <li><a class="symbol" href="../../#most-positive-short-float">most-positive-short-float</a></li>
-                      <li><a class="symbol" href="../../#most-positive-single-float">most-positive-single-float</a></li>
-                      <li><a class="symbol" href="../../#most-positive-double-float">most-positive-double-float</a></li>
-                      <li><a class="symbol" href="../../#most-positive-long-float">most-positive-long-float</a></li>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr>
-                  <th>Epsilon</th>
-                  <td>
-                    <ul>
-                      <li><a class="symbol" href="../../#short-float-negative-epsilon">short-float-negative-epsilon</a></li>
-                      <li><a class="symbol" href="../../#single-float-negative-epsilon">single-float-negative-epsilon</a></li>
-                      <li><a class="symbol" href="../../#double-float-negative-epsilon">double-float-negative-epsilon</a></li>
-                      <li><a class="symbol" href="../../#long-float-negative-epsilon">long-float-negative-epsilon</a></li>
-                    </ul>
-                  </td>
-                  <td>
-                    <ul>
-                      <li><a class="symbol" href="../../#short-float-epsilon">short-float-epsilon</a></li>
-                      <li><a class="symbol" href="../../#single-float-epsilon">single-float-epsilon</a></li>
-                      <li><a class="symbol" href="../../#double-float-epsilon">double-float-epsilon</a></li>
-                      <li><a class="symbol" href="../../#long-float-epsilon">long-float-epsilon</a></li>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+
+            <div class="scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Kind</th>
+                    <th>Negative</th>
+                    <th>Positive</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th rowspan="2">Least</th>
+                    <td>
+                      <ul>
+                        <li><a class="symbol" href="../../#least-negative-normalized-short-float">least-negative-normalized-short-float</a></li>
+                        <li><a class="symbol" href="../../#least-negative-normalized-single-float">least-negative-normalized-single-float</a></li>
+                        <li><a class="symbol" href="../../#least-negative-normalized-double-float">least-negative-normalized-double-float</a></li>
+                        <li><a class="symbol" href="../../#least-negative-normalized-long-float">least-negative-normalized-long-float</a></li>
+                      </ul>
+                    </td>
+                    <td>
+                      <ul>
+                        <li><a class="symbol" href="../../#least-positive-normalized-short-float">least-positive-normalized-short-float</a></li>
+                        <li><a class="symbol" href="../../#least-positive-normalized-single-float">least-positive-normalized-single-float</a></li>
+                        <li><a class="symbol" href="../../#least-positive-normalized-double-float">least-positive-normalized-double-float</a></li>
+                        <li><a class="symbol" href="../../#least-positive-normalized-long-float">least-positive-normalized-long-float</a></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <ul>
+                        <li><a class="symbol" href="../../#least-negative-short-float">least-negative-short-float</a></li>
+                        <li><a class="symbol" href="../../#least-negative-single-float">least-negative-single-float</a></li>
+                        <li><a class="symbol" href="../../#least-negative-double-float">least-negative-double-float</a></li>
+                        <li><a class="symbol" href="../../#least-negative-long-float">least-negative-long-float</a></li>
+                      </ul>
+                    </td>
+                    <td>
+                      <ul>
+                        <li><a class="symbol" href="../../#least-positive-short-float">least-positive-short-float</a></li>
+                        <li><a class="symbol" href="../../#least-positive-single-float">least-positive-single-float</a></li>
+                        <li><a class="symbol" href="../../#least-positive-double-float">least-positive-double-float</a></li>
+                        <li><a class="symbol" href="../../#least-positive-long-float">least-positive-long-float</a></li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <th>Most</th>
+                    <td>
+                      <ul>
+                        <li><a class="symbol" href="../../#most-negative-short-float">most-negative-short-float</a></li>
+                        <li><a class="symbol" href="../../#most-negative-single-float">most-negative-single-float</a></li>
+                        <li><a class="symbol" href="../../#most-negative-double-float">most-negative-double-float</a></li>
+                        <li><a class="symbol" href="../../#most-negative-long-float">most-negative-long-float</a></li>
+                      </ul>
+                    </td>
+                    <td>
+                      <ul>
+                        <li><a class="symbol" href="../../#most-positive-short-float">most-positive-short-float</a></li>
+                        <li><a class="symbol" href="../../#most-positive-single-float">most-positive-single-float</a></li>
+                        <li><a class="symbol" href="../../#most-positive-double-float">most-positive-double-float</a></li>
+                        <li><a class="symbol" href="../../#most-positive-long-float">most-positive-long-float</a></li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <th>Epsilon</th>
+                    <td>
+                      <ul>
+                        <li><a class="symbol" href="../../#short-float-negative-epsilon">short-float-negative-epsilon</a></li>
+                        <li><a class="symbol" href="../../#single-float-negative-epsilon">single-float-negative-epsilon</a></li>
+                        <li><a class="symbol" href="../../#double-float-negative-epsilon">double-float-negative-epsilon</a></li>
+                        <li><a class="symbol" href="../../#long-float-negative-epsilon">long-float-negative-epsilon</a></li>
+                      </ul>
+                    </td>
+                    <td>
+                      <ul>
+                        <li><a class="symbol" href="../../#short-float-epsilon">short-float-epsilon</a></li>
+                        <li><a class="symbol" href="../../#single-float-epsilon">single-float-epsilon</a></li>
+                        <li><a class="symbol" href="../../#double-float-epsilon">double-float-epsilon</a></li>
+                        <li><a class="symbol" href="../../#long-float-epsilon">long-float-epsilon</a></li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </section>
 
           <section id="constants_implementation-limits_misc">
 
-            <h1 class="breadcrumbs">
+            <h1 class="breadcrumbs-bar">
               <span class="section-relative-nav">
                 <a href="#constants_implementation-limits_misc" class="anchor">⚓</a>
               </span>
-              <a href="#">Variables</a>
-              <span class="separator"> » </span>
-              <a href="#constants">Constants</a>
-              <span class="separator"> » </span>
-              <a href="#constants_implementation-limits">Implementation limits</a>
-              <span class="separator"> » </span>
-              <a class="here">Misc</a>
+              <div class="breadcrumbs">
+                <a href="#">Variables</a>
+                <span class="crumb"><span class="s"> » </span><a href="#constants">Constants</a></span>
+                <span class="crumb"><span class="s"> » </span><a href="#constants_implementation-limits">Implementation limits</a></span>
+                <span class="crumb"><span class="s"> » </span><a class="here">Misc</a></span>
+              </div>
             </h1>
 
             <nav class="hanging-menu">
@@ -730,15 +650,15 @@
 
         <section id="constants_boole">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#constants_boole" class="anchor">⚓</a>
             </span>
-            <a href="#">Variables</a>
-            <span class="separator"> » </span>
-            <a href="#constants">Constants</a>
-            <span class="separator"> » </span>
-            <a class="here">Boole</a>
+            <div class="breadcrumbs">
+              <a href="#">Variables</a>
+              <span class="crumb"><span class="s"> » </span><a href="#constants">Constants</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Boole</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -769,15 +689,15 @@
 
         <section id="constants_misc">
 
-          <h1 class="breadcrumbs">
+          <h1 class="breadcrumbs-bar">
             <span class="section-relative-nav">
               <a href="#constants_misc" class="anchor">⚓</a>
             </span>
-            <a href="#">Variables</a>
-            <span class="separator"> » </span>
-            <a href="#constants">Constants</a>
-            <span class="separator"> » </span>
-            <a class="here">Misc</a>
+            <div class="breadcrumbs">
+              <a href="#">Variables</a>
+              <span class="crumb"><span class="s"> » </span><a href="#constants">Constants</a></span>
+              <span class="crumb"><span class="s"> » </span><a class="here">Misc</a></span>
+            </div>
           </h1>
 
           <nav class="hanging-menu">
@@ -805,13 +725,20 @@
     </main>
 
     <footer id="footer">
-      <div>
-        <a href="#" class="back-to-top">⬆</a>
-        <span class="page-badge"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Farticles%2Fnotes-tips-standard-common-lisp-symbols%2Fnamespaces%2Fvariables%2F"><span class="checkmark">✔</span> HTML5</a></span>
-        <span class="page-badge"><a href="https://www.hexstreamsoft.com/README"><span class="checkmark">✔</span> Public Domain</a></span>
-        <span class="page-badge"><a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Farticles%2Fnotes-tips-standard-common-lisp-symbols%2Fnamespaces%2Fvariables%2F"><span class="checkmark">✔</span> CSS3</a></span>
+      <div class="back-to-top left">
+        <a href="#">⬆</a>
+      </div>
+      <div class="main">
+        <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Farticles%2Fnotes-tips-standard-common-lisp-symbols%2Fnamespaces%2Fvariables%2F">✔ HTML5</a>
+        <a href="https://www.hexstreamsoft.com/README">✔ Public Domain</a>
+        <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fwww.hexstreamsoft.com%2Farticles%2Fnotes-tips-standard-common-lisp-symbols%2Fnamespaces%2Fvariables%2F">✔ CSS3</a>
+        <a>✔ Mobile-friendly</a>
+      </div>
+      <div class="back-to-top right">
+        <a href="#">⬆</a>
       </div>
     </footer>
+
 
   </body>
 </html>
