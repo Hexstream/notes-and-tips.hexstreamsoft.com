@@ -1,0 +1,71 @@
+#all-standard-symbols-table th, #all-standard-symbols-table td {
+    text-align: left;
+    vertical-align: top;
+    padding: 0.5em;
+}
+
+#all-standard-symbols-table table th, #all-standard-symbols-table table td {
+    vertical-align: middle;
+}
+
+#all-standard-symbols-table td {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#all-standard-symbols-table tbody th, #obsoletion-status > table th {
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+#all-standard-symbols-table th * {
+    text-decoration: none;
+}
+
+#all-standard-symbols-table th > ul {
+    font-weight: normal;
+    font-size: smaller;
+    margin-top: 0.25em;
+    margin-bottom: 0;
+}
+
+#all-standard-symbols-table th ul {
+    margin-top: 0;
+}
+
+#all-standard-symbols-table th ul li {
+    margin-top: 0.25em;
+}
+
+#all-standard-symbols-table .horizontal-grouping-header {
+    border-left-style: hidden;
+    padding: 0;
+}
+
+#all-standard-symbols-table .horizontal-grouping-header a {
+    display: block;
+    padding: 0.25em;
+    text-align: left;
+}
+
+#all-standard-symbols-table table {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+@media (max-width: 48em) {
+    #all-standard-symbols-table {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    #all-standard-symbols-table tbody th,
+    #all-standard-symbols-table .horizontal-grouping-header a {
+        white-space: initial;
+    }
+
+    #all-standard-symbols-table > tbody > tr > th.horizontal-grouping-header a {
+        font-size: x-large;
+    }
+}

@@ -14,6 +14,7 @@
     <title>Thin wrappers | Themes | Notes and tips: Standard Common Lisp symbols | Articles | HexstreamSoft</title>
     <link href="../../css/global.css" rel="stylesheet" type="text/css" />
     <link href="../../shared.css" rel="stylesheet" type="text/css" />
+    <link href="index.css" rel="stylesheet" type="text/css" />
     <script src="https://global.hexstream.dev/scripts/global.js"></script>
     <script src="https://www.hexstreamsoft.com/scripts/global.js"></script>
     <script src="../../scripts/global.js"></script>
@@ -48,7 +49,7 @@
 
       </div>
 
-      <p id="last-updated"><span>This page was last updated on </span><time datetime="2014-10-27">27 october 2014</time><span>.</span></p>
+      <p id="last-updated"><span>This page was last updated on </span><time datetime="2020-10-15">15 october 2020</time><span>.</span></p>
 
     </nav>
 
@@ -155,6 +156,10 @@
         </ul>
       </nav>
 
+      <p id="not-rigorous">
+        <small>(The code on this page is intended to be illustrative and informative, not rigorous or performant.)</small>
+      </p>
+
       <section id="typep">
 
         <h1 class="breadcrumbs-bar">
@@ -173,36 +178,152 @@
           </ul>
         </nav>
 
-        <ul>
-          <li><a class="symbol" href="../../#arrayp">arrayp</a></li>
-          <li><a class="symbol" href="../../#atom">atom</a> (function only)</li>
-          <li><a class="symbol" href="../../#bit-vector-p">bit-vector-p</a></li>
-          <li><a class="symbol" href="../../#characterp">characterp</a></li>
-          <li><a class="symbol" href="../../#compiled-function-p">compiled-function-p</a></li>
-          <li><a class="symbol" href="../../#complexp">complexp</a></li>
-          <li><a class="symbol" href="../../#consp">consp</a></li>
-          <li><a class="symbol" href="../../#floatp">floatp</a></li>
-          <li><a class="symbol" href="../../#functionp">functionp</a></li>
-          <li><a class="symbol" href="../../#hash-table-p">hash-table-p</a></li>
-          <li><a class="symbol" href="../../#integerp">integerp</a></li>
-          <li><a class="symbol" href="../../#keywordp">keywordp</a></li>
-          <li><a class="symbol" href="../../#listp">listp</a></li>
-          <li><a class="symbol" href="../../#null">null</a> (function only)</li>
-          <li><a class="symbol" href="../../#numberp">numberp</a></li>
-          <li><a class="symbol" href="../../#packagep">packagep</a></li>
-          <li><a class="symbol" href="../../#pathnamep">pathnamep</a></li>
-          <li><a class="symbol" href="../../#rationalp">rationalp</a></li>
-          <li><a class="symbol" href="../../#readtablep">readtablep</a></li>
-          <li><a class="symbol" href="../../#realp">realp</a></li>
-          <li><a class="symbol" href="../../#simple-bit-vector-p">simple-bit-vector-p</a></li>
-          <li><a class="symbol" href="../../#simple-string-p">simple-string-p</a></li>
-          <li><a class="symbol" href="../../#simple-vector-p">simple-vector-p</a></li>
-          <li><a class="symbol" href="../../#standard-char-p">standard-char-p</a> (argument must be a character)</li>
-          <li><a class="symbol" href="../../#streamp">streamp</a></li>
-          <li><a class="symbol" href="../../#stringp">stringp</a></li>
-          <li><a class="symbol" href="../../#symbolp">symbolp</a></li>
-          <li><a class="symbol" href="../../#vectorp">vectorp</a></li>
-        </ul>
+        <div class="thin-wrappers">
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_arrayp.htm" target="_blank">arrayp</a> <var>object</var>)</code></div>
+            <div class="expansion"><code>(typep <var>object</var> 'array)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_atom.htm" target="_blank">atom</a> <var>object</var>)</code></div>
+            <div class="expansion"><code>(typep <var>object</var> 'atom)</code></div>
+            <div class="note">(function only)</div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_bt_vec.htm" target="_blank">bit-vector-p</a> <var>object</var>)</code></div>
+            <div class="expansion"><code>(typep <var>object</var> 'bit-vector)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chp.htm" target="_blank">characterp</a> <var>object</var>)</code></div>
+            <div class="expansion"><code>(typep <var>object</var> 'character)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_cmpd_f.htm" target="_blank">compiled-function-p</a> <var>object</var>)</code></div>
+            <div class="expansion"><code>(typep <var>object</var> 'compiled-function)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_comp_3.htm" target="_blank">complexp</a> <var>object</var>)</code></div>
+            <div class="expansion"><code>(typep <var>object</var> 'complex)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_consp.htm" target="_blank">consp</a> <var>object</var>)</code></div>
+            <div class="expansion"><code>(typep <var>object</var> 'cons)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_floatp.htm" target="_blank">floatp</a> <var>object</var>)</code></div>
+            <div class="expansion"><code>(typep <var>object</var> 'float)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_fnp.htm" target="_blank">functionp</a> <var>object</var>)</code></div>
+            <div class="expansion"><code>(typep <var>object</var> 'function)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_hash_t.htm" target="_blank">hash-table-p</a> <var>object</var>)</code></div>
+            <div class="expansion"><code>(typep <var>object</var> 'hash-table)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_inte_1.htm" target="_blank">integerp</a> <var>object</var>)</code></div>
+            <div class="expansion"><code>(typep <var>object</var> 'integer)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_kwdp.htm" target="_blank">keywordp</a> <var>object</var>)</code></div>
+            <div class="expansion"><code>(typep <var>object</var> 'keyword)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_listp.htm" target="_blank">listp</a> <var>object</var>)</code></div>
+            <div class="expansion"><code>(typep <var>object</var> 'list)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_null.htm" target="_blank">null</a> <var>object</var>)</code></div>
+            <div class="expansion"><code>(typep <var>object</var> 'null)</code></div>
+            <div class="note">(function only)</div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_nump.htm" target="_blank">numberp</a> <var>object</var>)</code></div>
+            <div class="expansion"><code>(typep <var>object</var> 'number)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_pkgp.htm" target="_blank">packagep</a> <var>object</var>)</code></div>
+            <div class="expansion"><code>(typep <var>object</var> 'package)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_pnp.htm" target="_blank">pathnamep</a> <var>object</var>)</code></div>
+            <div class="expansion"><code>(typep <var>object</var> 'pathname)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_rati_1.htm" target="_blank">rationalp</a> <var>object</var>)</code></div>
+            <div class="expansion"><code>(typep <var>object</var> 'rational)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_rdta_1.htm" target="_blank">readtablep</a> <var>object</var>)</code></div>
+            <div class="expansion"><code>(typep <var>object</var> 'readtable)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_realp.htm" target="_blank">realp</a> <var>object</var>)</code></div>
+            <div class="expansion"><code>(typep <var>object</var> 'real)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_smp_bt.htm" target="_blank">simple-bit-vector-p</a> <var>object</var>)</code></div>
+            <div class="expansion"><code>(typep <var>object</var> 'simple-bit-vector)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_smp_st.htm" target="_blank">simple-string-p</a> <var>object</var>)</code></div>
+            <div class="expansion"><code>(typep <var>object</var> 'simple-string)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_smp_ve.htm" target="_blank">simple-vector-p</a> <var>object</var>)</code></div>
+            <div class="expansion"><code>(typep <var>object</var> 'simple-vector)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_std_ch.htm" target="_blank">standard-char-p</a> <var>object</var>)</code></div>
+            <div class="expansion"><code>(typep (the character <var>character</var>) 'standard-char)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_stmp.htm" target="_blank">streamp</a> <var>object</var>)</code></div>
+            <div class="expansion"><code>(typep <var>object</var> 'stream)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_stgp.htm" target="_blank">stringp</a> <var>object</var>)</code></div>
+            <div class="expansion"><code>(typep <var>object</var> 'string)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_symbol.htm" target="_blank">symbolp</a> <var>object</var>)</code></div>
+            <div class="expansion"><code>(typep <var>object</var> 'symbol)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_vecp.htm" target="_blank">vectorp</a> <var>object</var>)</code></div>
+            <div class="expansion"><code>(typep <var>object</var> 'vector)</code></div>
+          </article>
+
+        </div>
+
       </section>
 
       <section id="conses">
@@ -250,18 +371,60 @@
             </ul>
           </nav>
 
-          <ul>
-            <li><a class="symbol" href="../../#first">first</a></li>
-            <li><a class="symbol" href="../../#second">second</a></li>
-            <li><a class="symbol" href="../../#third">third</a></li>
-            <li><a class="symbol" href="../../#fourth">fourth</a></li>
-            <li><a class="symbol" href="../../#fifth">fifth</a></li>
-            <li><a class="symbol" href="../../#sixth">sixth</a></li>
-            <li><a class="symbol" href="../../#seventh">seventh</a></li>
-            <li><a class="symbol" href="../../#eighth">eighth</a></li>
-            <li><a class="symbol" href="../../#ninth">ninth</a></li>
-            <li><a class="symbol" href="../../#tenth">tenth</a></li>
-          </ul>
+          <div class="thin-wrappers">
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_firstc.htm" target="_blank">first</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(nth 0 <var>list</var>)</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_firstc.htm" target="_blank">second</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(nth 1 <var>list</var>)</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_firstc.htm" target="_blank">third</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(nth 2 <var>list</var>)</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_firstc.htm" target="_blank">fourth</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(nth 3 <var>list</var>)</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_firstc.htm" target="_blank">fifth</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(nth 4 <var>list</var>)</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_firstc.htm" target="_blank">sixth</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(nth 5 <var>list</var>)</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_firstc.htm" target="_blank">seventh</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(nth 6 <var>list</var>)</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_firstc.htm" target="_blank">eighth</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(nth 7 <var>list</var>)</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_firstc.htm" target="_blank">ninth</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(nth 8 <var>list</var>)</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_firstc.htm" target="_blank">tenth</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(nth 9 <var>list</var>)</code></div>
+            </article>
+
+          </div>
+
         </section>
 
         <section id="conses_car-and-cdr">
@@ -283,53 +446,148 @@
             </ul>
           </nav>
 
-          <div class="scroll">
-            <table>
-              <tbody>
-                <tr>
-                  <td colspan="4"><a class="symbol" href="../../#caar">caar</a></td>
-                  <td colspan="4"><a class="symbol" href="../../#cadr">cadr</a></td>
-                </tr>
-                <tr>
-                  <td colspan="2"><a class="symbol" href="../../#caaar">caaar</a></td>
-                  <td colspan="2"><a class="symbol" href="../../#caadr">caadr</a></td>
-                  <td colspan="2"><a class="symbol" href="../../#cadar">cadar</a></td>
-                  <td colspan="2"><a class="symbol" href="../../#caddr">caddr</a></td>
-                </tr>
-                <tr>
-                  <td><a class="symbol" href="../../#caaaar">caaaar</a></td>
-                  <td><a class="symbol" href="../../#caaadr">caaadr</a></td>
-                  <td><a class="symbol" href="../../#caadar">caadar</a></td>
-                  <td><a class="symbol" href="../../#caaddr">caaddr</a></td>
-                  <td><a class="symbol" href="../../#cadaar">cadaar</a></td>
-                  <td><a class="symbol" href="../../#cadadr">cadadr</a></td>
-                  <td><a class="symbol" href="../../#caddar">caddar</a></td>
-                  <td><a class="symbol" href="../../#cadddr">cadddr</a></td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr>
-                  <td colspan="4"><a class="symbol" href="../../#cdar">cdar</a></td>
-                  <td colspan="4"><a class="symbol" href="../../#cddr">cddr</a></td>
-                </tr>
-                <tr>
-                  <td colspan="2"><a class="symbol" href="../../#cdaar">cdaar</a></td>
-                  <td colspan="2"><a class="symbol" href="../../#cdadr">cdadr</a></td>
-                  <td colspan="2"><a class="symbol" href="../../#cddar">cddar</a></td>
-                  <td colspan="2"><a class="symbol" href="../../#cdddr">cdddr</a></td>
-                </tr>
-                <tr>
-                  <td><a class="symbol" href="../../#cdaaar">cdaaar</a></td>
-                  <td><a class="symbol" href="../../#cdaadr">cdaadr</a></td>
-                  <td><a class="symbol" href="../../#cdadar">cdadar</a></td>
-                  <td><a class="symbol" href="../../#cdaddr">cdaddr</a></td>
-                  <td><a class="symbol" href="../../#cddaar">cddaar</a></td>
-                  <td><a class="symbol" href="../../#cddadr">cddadr</a></td>
-                  <td><a class="symbol" href="../../#cdddar">cdddar</a></td>
-                  <td><a class="symbol" href="../../#cddddr">cddddr</a></td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="thin-wrappers">
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">caar</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(car (car <var>list</var>))</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">cadr</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(car (cdr <var>list</var>))</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">caaar</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(car (car (car <var>list</var>)))</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">caadr</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(car (car (cdr <var>list</var>)))</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">cadar</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(car (cdr (car <var>list</var>)))</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">caddr</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(car (cdr (cdr <var>list</var>)))</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">caaaar</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(car (car (car (car <var>list</var>))))</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">caaadr</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(car (car (car (cdr <var>list</var>))))</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">caadar</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(car (car (cdr (car <var>list</var>))))</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">caaddr</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(car (car (cdr (cdr <var>list</var>))))</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">cadaar</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(car (cdr (car (car <var>list</var>))))</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">cadadr</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(car (cdr (car (cdr <var>list</var>))))</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">caddar</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(car (cdr (cdr (car <var>list</var>))))</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">cadddr</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(car (cdr (cdr (cdr <var>list</var>))))</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">cdar</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(cdr (car <var>list</var>))</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">cddr</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(cdr (cdr <var>list</var>))</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">cdaar</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(cdr (car (car <var>list</var>)))</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">cdadr</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(cdr (car (cdr <var>list</var>)))</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">cddar</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(cdr (cdr (car <var>list</var>)))</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">cdddr</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(cdr (cdr (cdr <var>list</var>)))</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">cdaaar</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(cdr (car (car (car <var>list</var>))))</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">cdaadr</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(cdr (car (car (cdr <var>list</var>))))</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">cdadar</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(cdr (car (cdr (car <var>list</var>))))</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">cdaddr</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(cdr (car (cdr (cdr <var>list</var>))))</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">cddaar</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(cdr (cdr (car (car <var>list</var>))))</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">cddadr</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(cdr (cdr (car (cdr <var>list</var>))))</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">cdddar</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(cdr (cdr (cdr (car <var>list</var>))))</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">cddddr</a> <var>list</var>)</code></div>
+              <div class="expansion"><code>(cdr (cdr (cdr (cdr <var>list</var>))))</code></div>
+            </article>
+
           </div>
 
         </section>
@@ -353,109 +611,125 @@
             </ul>
           </nav>
 
-          <div class="scroll">
-            <table>
-              <thead>
-                <tr>
-                  <th>Wrapper name</th>
-                  <th>Primary conceptual constituents</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th><a class="symbol" href="../../#acons">acons</a></th>
-                  <td><a class="symbol" href="../../#cons">cons</a> (twice)</td>
-                </tr>
-                <tr>
-                  <th><a class="symbol" href="../../#getf">getf</a></th>
-                  <td><a class="symbol" href="../../#get-properties">get-properties</a></td>
-                </tr>
-                <tr>
-                  <th><a class="symbol" href="../../#nth">nth</a></th>
-                  <td>
-                    <ul>
-                      <li><a class="symbol" href="../../#nthcdr">nthcdr</a></li>
-                      <li><a class="symbol" href="../../#car">car</a></li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <th><a class="symbol" href="../../#nreconc">nreconc</a></th>
-                  <td>
-                    <ul>
-                      <li><a class="symbol" href="../../#nreverse">nreverse</a></li>
-                      <li><a class="symbol" href="../../#nconc">nconc</a></li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <th><a class="symbol" href="../../#revappend">revappend</a></th>
-                  <td>
-                    <ul>
-                      <li><a class="symbol" href="../../#reverse">reverse</a></li>
-                      <li><a class="symbol" href="../../#nconc">nconc</a></li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <th><a class="symbol" href="../../#push">push</a></th>
-                  <td>
-                    <ul>
-                      <li><a class="symbol" href="../../#get-setf-expansion">get-setf-expansion</a> (in expander)</li>
-                      <li><a class="symbol" href="../../#cons">cons</a></li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <th><a class="symbol" href="../../#pushnew">pushnew</a></th>
-                  <td>
-                    <ul>
-                      <li><a class="symbol" href="../../#get-setf-expansion">get-setf-expansion</a> (in expander)</li>
-                      <li><a class="symbol" href="../../#adjoin">adjoin</a></li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <th><a class="symbol" href="../../#pop">pop</a></th>
-                  <td>
-                    <ul>
-                      <li><a class="symbol" href="../../#get-setf-expansion">get-setf-expansion</a> (in expander)</li>
-                      <li><a class="symbol" href="../../#car">car</a></li>
-                      <li><a class="symbol" href="../../#cdr">cdr</a></li>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <div class="thin-wrappers">
 
-          <div class="scroll">
-            <table>
-              <tbody>
-                <tr>
-                  <td><a class="symbol" href="../../#member">member</a></td>
-                  <td><a class="symbol" href="../../#member-if-not">member-if-not</a></td>
-                </tr>
-                <tr>
-                  <td><a class="symbol" href="../../#rassoc">rassoc</a></td>
-                  <td><a class="symbol" href="../../#rassoc-if-not">rassoc-if-not</a></td>
-                </tr>
-                <tr>
-                  <td>
-                    <ul>
-                      <li><a class="symbol" href="../../#subst">subst</a></li>
-                      <li><a class="symbol" href="../../#nsubst">nsubst</a></li>
-                    </ul>
-                  </td>
-                  <td>
-                    <ul>
-                      <li><a class="symbol" href="../../#subst-if-not">subst-if-not</a></li>
-                      <li><a class="symbol" href="../../#nsubst-if-not">nsubst-if-not</a></li>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_butlas.htm" target="_blank">butlast</a> <var>list</var> <var>n</var>)</code></div>
+              <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_ldiffc.htm" target="_blank">ldiff</a> <var>list</var> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_last.htm" target="_blank">last</a> <var>list</var> <var>n</var>))</code></div>
+              <div class="note">(unless <var>list</var> is a dotted list and <var>n</var> is 0)</div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper">(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_acons.htm" target="_blank">acons</a> <var>key</var> <var>datum</var> <var>alist</var>)<code></code></div>
+              <div class="expansion">(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_cons.htm" target="_blank">cons</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_cons.htm" target="_blank">cons</a> <var>key</var> <var>datum</var>) <var>alist</var>)<code></code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_getf.htm" target="_blank">getf</a> <var>plist</var> <var>indicator</var> <var>default</var>)</code></div>
+              <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_multip.htm" target="_blank">multiple-value-bind</a> (<var>ignored</var> <var>value</var> <var>tail</var>)
+    (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_get_pr.htm" target="_blank">get-properties</a> <var>plist</var> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_list.htm" target="_blank">list</a> <var>indicator</var>))
+  (if <var>tail</var> <var>value</var> <var>default</var>))</code></pre></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_rempro.htm" target="_blank">remprop</a> <var>x</var> <var>y</var>)</code></div>
+              <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_remf.htm" target="_blank">remf</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_symb_4.htm" target="_blank">symbol-plist</a> <var>x</var>) <var>y</var>)</code></pre></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_set.htm" target="_blank">set</a> <var>symbol</var> <var>value</var>)</code></div>
+              <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_setf.htm" target="_blank">setf</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_symb_5.htm" target="_blank">symbol-value</a> <var>symbol</var>) <var>value</var>)</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_nth.htm" target="_blank">nth</a> <var>n</var> <var>list</var>)</code></div>
+              <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">car</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_nthcdr.htm" target="_blank">nthcdr</a> <var>n</var> <var>list</var>))</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_revapp.htm" target="_blank">nreconc</a> <var>list</var> <var>tail</var>)</code></div>
+              <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_nconc.htm" target="_blank">nconc</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_revers.htm" target="_blank">nreverse</a> <var>list</var>) <var>tail</var>)</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_revapp.htm" target="_blank">revappend</a> <var>list</var> <var>tail</var>)</code></div>
+              <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_nconc.htm" target="_blank">nconc</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_revers.htm" target="_blank">reverse</a> <var>list</var>) <var>tail</var>)</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_push.htm" target="_blank">push</a> <var>item</var> <var>place</var>)</code></div>
+              <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_setf.htm" target="_blank">setf</a> <var>place</var> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_cons.htm" target="_blank">cons</a> <var>item</var> <var>place</var>))</code></div>
+              <div class="note">(basically)</div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_pshnew.htm" target="_blank">pushnew</a> <var>item</var> <var>place</var>)</code></div>
+              <div class="expansion"><code>(setf <var>place</var> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_adjoin.htm" target="_blank">adjoin</a> <var>item</var> <var>place</var>))</code></div>
+              <div class="note">(basically)</div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_pop.htm" target="_blank">pop</a> <var>place</var>)</code></div>
+              <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_prog1c.htm" target="_blank">prog1</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">car</a> <var>place</var>)
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_setf.htm" target="_blank">setf</a> <var>place</var> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">cdr</a> <var>place</var>)))</code></pre></div>
+              <div class="note">(basically)</div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_member.htm" target="_blank">member</a> 2 '(1 2 3))</code></pre></div>
+              <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_mem_m.htm" target="_blank">member-if</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_lambda.htm" target="_blank">lambda</a> (<var>element</var>)
+             (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_eql.htm" target="_blank">eql</a> <var>element</var> 2))
+           '(1 2 3))</code></pre></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_mem_m.htm" target="_blank">member-if-not</a> #'<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_nump.htm" target="_blank">numberp</a> '(1 "two" 3))</code></pre></div>
+              <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_mem_m.htm" target="_blank">member-if</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_comple.htm" target="_blank">complement</a> #'numberp) '(1 "two" 3))</code></pre></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_assocc.htm" target="_blank">assoc</a> 2 '((1 . "one") (2 . "two") (3 . "three")))</code></pre></div>
+              <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_find_.htm" target="_blank">find-if</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_lambda.htm" target="_blank">lambda</a> (<var>entry</var>)
+           (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_and.htm" target="_blank">and</a> <var>entry</var>
+                (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_eql.htm" target="_blank">eql</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">car</a> <var>entry</var>) 2)))
+         '((1 . "one") (2 . "two") (3 . "three")))</code></pre></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_rassoc.htm" target="_blank">rassoc</a> "two" '((1 . "one") (2 . "two") (3 . "three"))
+        :test #'<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_stgeq_.htm" target="_blank">string=</a>)</code></pre></div>
+              <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_rassoc.htm" target="_blank">rassoc-if</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_lambda.htm" target="_blank">lambda</a> (<var>value</var>)
+             (string= <var>value</var> "two"))
+           '((1 . "one") (2 . "two") (3 . "three")))</code></pre></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_rassoc.htm" target="_blank">rassoc-if-not</a> #'<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chp.htm" target="_blank">characterp</a>
+               '((1 . "one") (2 . "two") (3 . "three")))</code></pre></div>
+              <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_rassoc.htm" target="_blank">rassoc-if</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_comple.htm" target="_blank">complement</a> #'<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chp.htm" target="_blank">characterp</a>)
+           '((1 . "one") (2 . "two") (3 . "three")))</code></pre></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>subst</code></div>
+              <div class="expansion"><code>TODO</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>nsubst</code></div>
+              <div class="expansion"><code>TODO</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>subst-if-not</code></div>
+              <div class="expansion"><code>TODO</code></div>
+            </article>
+
+            <article class="thin-wrapper">
+              <div class="wrapper"><code>nsubst-if-not</code></div>
+              <div class="expansion"><code>TODO</code></div>
+            </article>
+
           </div>
 
         </section>
@@ -486,58 +760,95 @@
           </ul>
         </nav>
 
-        <div class="scroll">
-          <table>
-            <tbody>
-              <tr>
-                <td><a class="symbol" href="../../#count">count</a></td>
-                <td><a class="symbol" href="../../#count-if-not">count-if-not</a></td>
-              </tr>
-              <tr>
-                <td><a class="symbol" href="../../#find">find</a></td>
-                <td><a class="symbol" href="../../#find-if-not">find-if-not</a></td>
-              </tr>
-              <tr>
-                <td><a class="symbol" href="../../#position">position</a></td>
-                <td><a class="symbol" href="../../#position-if-not">position-if-not</a></td>
-              </tr>
-              <tr>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#remove">remove</a></li>
-                    <li><a class="symbol" href="../../#delete">delete</a></li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#remove-if-not">remove-if-not</a></li>
-                    <li><a class="symbol" href="../../#delete-if-not">delete-if-not</a></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#substitute">substitute</a></li>
-                    <li><a class="symbol" href="../../#nsubstitute">nsubstitute</a></li>
-                  </ul>
-                </td>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#substitute-if-not">substitute-if-not</a></li>
-                    <li><a class="symbol" href="../../#nsubstitute-if-not">nsubstitute-if-not</a></li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="thin-wrappers">
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_countc.htm" target="_blank">count</a></code></div>
+            <div class="expansion"><code>TODO</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_countc.htm" target="_blank">count-if-not</a></code></div>
+            <div class="expansion"><code>TODO</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_find_.htm" target="_blank">find</a></code></div>
+            <div class="expansion"><code>TODO</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_find_.htm" target="_blank">find-if-not</a></code></div>
+            <div class="expansion"><code>TODO</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_pos_p.htm" target="_blank">position</a></code></div>
+            <div class="expansion"><code>TODO</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_pos_p.htm" target="_blank">position-if-not</a></code></div>
+            <div class="expansion"><code>TODO</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_rm_rm.htm" target="_blank">remove</a></code></div>
+            <div class="expansion"><code>TODO</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_rm_rm.htm" target="_blank">remove-if-not</a></code></div>
+            <div class="expansion"><code>TODO</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_rm_rm.htm" target="_blank">delete</a></code></div>
+            <div class="expansion"><code>TODO</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_rm_rm.htm" target="_blank">delete-if-not</a></code></div>
+            <div class="expansion"><code>TODO</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_sbs_s.htm" target="_blank">substitute</a></code></div>
+            <div class="expansion"><code>TODO</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_sbs_s.htm" target="_blank">substitute-if-not</a></code></div>
+            <div class="expansion"><code>TODO</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_sbs_s.htm" target="_blank">nsubstitute</a></code></div>
+            <div class="expansion"><code>TODO</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_sbs_s.htm" target="_blank">nsubstitute-if-not</a></code></div>
+            <div class="expansion"><code>TODO</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_cp_seq.htm" target="_blank">copy-seq</a> <var>sequence</var>)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_subseq.htm" target="_blank">subseq</a> <var>sequence</var> 0)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_fill.htm" target="_blank">fill</a> <var>sequence</var> <var>item</var>)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_sbs_s.htm" target="_blank">nsubstitute-if</a> <var>item</var> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_cons_1.htm" target="_blank">constantly</a> t) <var>sequence</var>)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_vector.htm" target="_blank">vector</a> (foo) (bar) (baz))</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_mk_ar.htm" target="_blank">make-array</a> 3 :initial-contents (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_list.htm" target="_blank">list</a> (foo) (bar) (baz)))</code></div>
+          </article>
+
         </div>
 
-        <ul>
-          <li><a class="symbol" href="../../#copy-seq">copy-seq</a></li>
-          <li><a class="symbol" href="../../#fill">fill</a></li>
-          <li><a class="symbol" href="../../#vector">vector</a></li>
-        </ul>
       </section>
 
       <section id="conditionals">
@@ -558,132 +869,165 @@
           </ul>
         </nav>
 
-        <div class="scroll">
-          <table>
-            <thead>
-              <tr>
-                <th>Wrapper name</th>
-                <th>Primary conceptual constituents</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>
-                  <ul>
-                    <li><a class="symbol" href="../../#when">when</a></li>
-                    <li><a class="symbol" href="../../#unless">unless</a></li>
-                    <li><a class="symbol" href="../../#cond">cond</a></li>
-                  </ul>
-                </th>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#if">if</a></li>
-                    <li><a class="symbol" href="../../#progn">progn</a></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <th>
-                  <ul>
-                    <li><a class="symbol" href="../../#and">and</a></li>
-                    <li><a class="symbol" href="../../#or">or</a></li>
-                  </ul>
-                </th>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#let">let</a></li>
-                    <li><a class="symbol" href="../../#if">if</a></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <th><a class="symbol" href="../../#case">case</a></th>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#let">let</a></li>
-                    <li><a class="symbol" href="../../#cond">cond</a></li>
-                    <li><a class="symbol" href="../../#member">member</a></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <th><a class="symbol" href="../../#ccase">ccase</a></th>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#let">let</a></li>
-                    <li><a class="symbol" href="../../#cond">cond</a></li>
-                    <li><a class="symbol" href="../../#member">member</a></li>
-                    <li>TODO</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <th><a class="symbol" href="../../#ecase">ecase</a></th>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#case">case</a></li>
-                    <li><a class="symbol" href="../../#error">error</a></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <th><a class="symbol" href="../../#typecase">typecase</a></th>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#let">let</a></li>
-                    <li><a class="symbol" href="../../#cond">cond</a></li>
-                    <li><a class="symbol" href="../../#typep">typep</a></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <th><a class="symbol" href="../../#ctypecase">ctypecase</a></th>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#let">let</a></li>
-                    <li><a class="symbol" href="../../#cond">cond</a></li>
-                    <li><a class="symbol" href="../../#typep">typep</a></li>
-                    <li>TODO</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <th><a class="symbol" href="../../#etypecase">etypecase</a></th>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#typecase">typecase</a></li>
-                    <li><a class="symbol" href="../../#error">error</a></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <th><a class="symbol" href="../../#not">not</a></th>
-                <td><a class="symbol" href="../../#if">if</a></td>
-              </tr>
-              <tr>
-                <th><a class="symbol" href="../../#handler-case">handler-case</a></th>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#block">block</a></li>
-                    <li><a class="symbol" href="../../#let">let</a></li>
-                    <li><a class="symbol" href="../../#tagbody">tagbody</a></li>
-                    <li><a class="symbol" href="../../#handler-bind">handler-bind</a></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <th><a class="symbol" href="../../#restart-case">restart-case</a></th>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#block">block</a></li>
-                    <li><a class="symbol" href="../../#let">let</a></li>
-                    <li><a class="symbol" href="../../#tagbody">tagbody</a></li>
-                    <li><a class="symbol" href="../../#restart-bind">handler-bind</a></li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="thin-wrappers">
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_when_.htm" target="_blank">when</a> <var>condition</var>
+  (foo)
+  (bar))</code></pre></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_if.htm" target="_blank">if</a> <var>condition</var>
+    (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_progn.htm" target="_blank">progn</a>
+      (foo)
+      (bar))
+    nil)</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_when_.htm" target="_blank">unless</a> <var>condition</var>
+  (foo)
+  (bar))</code></pre></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_when_.htm" target="_blank">when</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_not.htm" target="_blank">not</a> <var>condition</var>)
+  (foo)
+  (bar))</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_cond.htm" target="_blank">cond</a>
+  (<var>condition-1</var> (foo) (bar))
+  (<var>condition-2</var> (baz) (quux)))</code></pre></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_if.htm" target="_blank">if</a> <var>condition-1</var>
+    (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_progn.htm" target="_blank">progn</a> (foo) (bar))
+    (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_if.htm" target="_blank">if</a> <var>condition-2</var>
+        (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_progn.htm" target="_blank">progn</a> (baz) (quux))
+        nil))</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_and.htm" target="_blank">and</a> (foo) (bar) (baz))</code></pre></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm" target="_blank">let</a> ((<var>var1</var> (foo)))
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_when_.htm" target="_blank">when</a> <var>var1</var>
+    (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm" target="_blank">let</a> ((<var>var2</var> (bar)))
+      (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_when_.htm" target="_blank">when</a> <var>var2</var>
+        (baz)))))</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_or.htm" target="_blank">or</a> (foo) (bar) (baz))</code></pre></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm" target="_blank">let</a> ((<var>var1</var> (foo)))
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_if.htm" target="_blank">if</a> <var>var1</var>
+      <var>var1</var>
+      (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm" target="_blank">let</a> ((<var>var2</var> (bar)))
+        (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_if.htm" target="_blank">if</a> <var>var2</var>
+            <var>var2</var>
+            (baz)))))</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_case_.htm" target="_blank">case</a> (foo)
+  (key1
+   (bar)
+   (baz))
+  ((key2 key3)
+   (quux)))</code></pre></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm" target="_blank">let</a> ((<var>key</var> (foo)))
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_cond.htm" target="_blank">cond</a>
+    ((<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_eql.htm" target="_blank">eql</a> <var>key</var> 'key1)
+     (bar)
+     (baz))
+    ((<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_member.htm" target="_blank">member</a> <var>key</var> '(key2 key3))
+     (quux))))</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_case_.htm" target="_blank">ccase</a> (foo)
+  (key1
+   (bar)
+   (baz))
+  ((key2 key3)
+   (quux)))</code></pre></div>
+            <div class="expansion"><pre><code>TODO</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_case_.htm" target="_blank">ecase</a> (foo)
+  (key1
+   (bar)
+   (baz))
+  ((key2 key3)
+   (quux)))</code></pre></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm" target="_blank">let</a> ((key (foo)))
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_case_.htm" target="_blank">case</a> key
+    (key1
+     (bar)
+     (baz))
+    ((key2 key3)
+     (quux))
+    (t
+     (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_error.htm" target="_blank">error</a> 'type-error
+            :datum key
+            :expected-type '(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_member.htm" target="_blank">member</a> key1 key2 key3)))))</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_tpcase.htm" target="_blank">typecase</a> (foo)
+  (type1
+   (bar)
+   (baz))
+  (type2
+   (quux)))</code></pre></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm" target="_blank">let</a> ((<var>key</var> (foo)))
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_cond.htm" target="_blank">cond</a>
+    ((<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_typep.htm" target="_blank">typep</a> <var>key</var> 'type1)
+     (bar)
+     (baz))
+    ((<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_typep.htm" target="_blank">typep</a> <var>key</var> 'type2)
+     (quux))))</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_tpcase.htm" target="_blank">ctypecase</a> (foo)
+  (type1
+   (bar)
+   (baz))
+  (type2
+   (quux)))</code></pre></div>
+            <div class="expansion"><pre><code>TODO</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_tpcase.htm" target="_blank">etypecase</a> (foo)
+  (type1
+   (bar)
+   (baz))
+  (type2
+   (quux)))</code></pre></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_tpcase.htm" target="_blank">typecase</a> (foo)
+  (type1
+   (bar)
+   (baz))
+  (type2
+   (quux))
+  (t
+   (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_error.htm" target="_blank">error</a> '<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/e_tp_err.htm" target="_blank">type-error</a>
+          :datum key
+          :expected-type '(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_or.htm" target="_blank">or</a> type1 type2))))</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_not.htm" target="_blank">not</a> <var>generalized-boolean</var>)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_if.htm" target="_blank">if</a> <var>generalized-boolean</var> t nil)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_hand_1.htm" target="_blank">handler-case</a></code></div>
+            <div class="expansion"><code>TODO</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_rst_ca.htm" target="_blank">restart-case</a></code></div>
+            <div class="expansion"><code>TODO</code></div>
+          </article>
+
         </div>
 
       </section>
@@ -706,156 +1050,106 @@
           </ul>
         </nav>
 
-        <div class="scroll">
-          <table>
-            <thead>
-              <tr>
-                <th>Wrapper name</th>
-                <th>Primary conceptual constituents</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th><a class="symbol" href="../../#with-open-file">with-open-file</a></th>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#with-open-stream">with-open-stream</a></li>
-                    <li><a class="symbol" href="../../#open">open</a></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <th><a class="symbol" href="../../#with-open-stream">with-open-stream</a></th>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#unwind-protect">unwind-protect</a></li>
-                    <li><a class="symbol" href="../../#close">close</a></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <th><a class="symbol" href="../../#read-from-string">read-from-string</a></th>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#with-input-from-string">with-input-from-string</a></li>
-                    <li><a class="symbol" href="../../#read">read</a></li>
-                    <li><a class="symbol" href="../../#read-preserving-whitespace">read-preserving-whitespace</a></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <th><a class="symbol" href="../../#write-line">write-line</a></th>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#write-string">write-string</a></li>
-                    <li><a class="symbol" href="../../#terpri">terpri</a></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <th><a class="symbol" href="../../#with-input-from-string">with-input-from-string</a></th>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#let">let</a></li>
-                    <li><a class="symbol" href="../../#make-string-input-stream">make-string-input-stream</a></li>
-                    <li><a class="symbol" href="../../#with-open-stream">with-open-stream</a></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <th><a class="symbol" href="../../#with-input-from-string">with-output-to-string</a></th>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#let">let</a></li>
-                    <li><a class="symbol" href="../../#make-string-output-stream">make-string-output-stream</a></li>
-                    <li><a class="symbol" href="../../#with-open-stream">with-open-stream</a></li>
-                    <li><a class="symbol" href="../../#get-output-stream-string">get-output-stream-string</a></li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <th>
-                  <ul>
-                    <li><a class="symbol" href="../../#write-to-string">write-to-string</a></li>
-                    <li><a class="symbol" href="../../#prin1-to-string">prin1-to-string</a></li>
-                    <li><a class="symbol" href="../../#princ-to-string">princ-to-string</a></li>
-                  </ul>
-                </th>
-                <td>
-                  <ul>
-                    <li><a class="symbol" href="../../#with-output-to-string">with-output-to-string</a></li>
-                    <li><a class="symbol" href="../../#write">write</a> / <a class="symbol" href="../../#prin1">prin1</a> / <a class="symbol" href="../../#princ">princ</a></li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <div class="thin-wrappers">
 
-        <p>The following are all thin wrappers over <a class="symbol" href="../../#write">write</a>.</p>
-        <div class="scroll">
-          <table>
-            <thead>
-              <tr>
-                <th>Wrapper name</th>
-                <th>Keyword</th>
-                <th>Variable</th>
-                <th>Value</th>
-                <th>Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th rowspan="2"><a class="symbol" href="../../#pprint">pprint</a></th>
-                <td>:escape</td>
-                <td><a class="symbol" href="../../#*print-escape*">*print-escape*</a></td>
-                <td>true</td>
-                <td rowspan="2">Preceded by a #\Newline.</td>
-              </tr>
-              <tr>
-                <td>:pretty</td>
-                <td><a class="symbol" href="../../#*print-pretty*">*print-pretty*</a></td>
-                <td>true</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <th><a class="symbol" href="../../#prin1">prin1</a></th>
-                <td>:escape</td>
-                <td><a class="symbol" href="../../#*print-escape*">*print-escape*</a></td>
-                <td>true</td>
-                <td></td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <th><a class="symbol" href="../../#print">print</a></th>
-                <td>:escape</td>
-                <td><a class="symbol" href="../../#*print-escape*">*print-escape*</a></td>
-                <td>true</td>
-                <td>
-                  <ul>
-                    <li>Preceded by a #\Newline.</li>
-                    <li>Followed by a #\Space.</li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <th rowspan="2"><a class="symbol" href="../../#princ">princ</a></th>
-                <td>:escape</td>
-                <td><a class="symbol" href="../../#*print-escape*">*print-escape*</a></td>
-                <td>false</td>
-                <td rowspan="2"></td>
-              </tr>
-              <tr>
-                <td>:readably</td>
-                <td><a class="symbol" href="../../#*print-readably*">*print-readably*</a></td>
-                <td>false</td>
-              </tr>
-            </tbody>
-          </table>
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_w_open.htm" target="_blank">with-open-file</a> (<var>stream</var> <var>filename</var>)
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_stg.htm" target="_blank">write-line</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_rd_lin.htm" target="_blank">read-line</a> <var>stream</var>)))</code></pre></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_w_op_1.htm" target="_blank">with-open-stream</a> (stream (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_open.htm" target="_blank">open</a> <var>filename</var>))
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_stg.htm" target="_blank">write-line</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_rd_lin.htm" target="_blank">read-line</a> <var>stream</var>)))</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_w_op_1.htm" target="_blank">with-open-stream</a> (<var>stream</var> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_mk_s_1.htm" target="_blank">make-string-input-stream</a> "foo bar"))
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_values.htm" target="_blank">values</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_rd_rd.htm" target="_blank">read</a> <var>stream</var>) (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_rd_rd.htm" target="_blank">read</a> <var>stream</var>)))</code></pre></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm" target="_blank">let</a> ((<var>stream</var> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_mk_s_1.htm" target="_blank">make-string-input-stream</a> "foo bar")))
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_unwind.htm" target="_blank">unwind-protect</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_values.htm" target="_blank">values</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_rd_rd.htm" target="_blank">read</a> <var>stream</var>) (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_rd_rd.htm" target="_blank">read</a> <var>stream</var>))
+    (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_close.htm" target="_blank">close</a> <var>stream</var>)))</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_rd_fro.htm" target="_blank">read-from-string</a> "(1 2)")</code></pre></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm" target="_blank">let</a> (<var>index</var>)
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_values.htm" target="_blank">values</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_w_in_f.htm" target="_blank">with-input-from-string</a> (<var>stream</var> "(1 2)" :index <var>index</var>)
+            (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_rd_rd.htm" target="_blank">read</a> <var>stream</var>))
+          index))</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_stg.htm" target="_blank">write-string</a> <var>foo</var> <var>stream</var>)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_seq.htm" target="_blank">write-sequence</a> (the <a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_string.htm" target="_blank">string</a> <var>foo</var>) <var>stream</var>)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_stg.htm" target="_blank">write-line</a> "foo")</code></div>
+            <div class="expansion"><code>(prog1 (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_stg.htm" target="_blank">write-string</a> "foo") (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_terpri.htm" target="_blank">terpri</a>))</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_w_in_f.htm" target="_blank">with-input-from-string</a> (<var>stream</var> "foobar" :start 0 :end 3)
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_rd_lin.htm" target="_blank">read-line</a> <var>stream</var>))</code></pre></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_w_op_1.htm" target="_blank">with-open-stream</a> (<var>stream</var> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_mk_s_1.htm" target="_blank">make-string-input-stream</a> "foobar" 0 3))
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_rd_lin.htm" target="_blank">read-line</a> <var>stream</var>))</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_w_out_.htm" target="_blank">with-output-to-string</a> (<var>stream</var>)
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_pr.htm" target="_blank">princ</a> "foo" <var>stream</var>))</code></pre></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_w_op_1.htm" target="_blank">with-open-stream</a> (<var>stream</var> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_mk_s_2.htm" target="_blank">make-string-output-stream</a>))
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_pr.htm" target="_blank">princ</a> "foo" <var>stream</var>)
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_get_ou.htm" target="_blank">get-output-stream-string</a> <var>stream</var>))</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_to_.htm" target="_blank">write-to-string</a> <var>object</var>)</code></pre></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_w_out_.htm" target="_blank">with-output-to-string</a> (<var>stream</var>)
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_pr.htm" target="_blank">write</a> <var>object</var> :stream <var>stream</var>))</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_to_.htm" target="_blank">prin1-to-string</a> <var>object</var>)</code></pre></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_w_out_.htm" target="_blank">with-output-to-string</a> (<var>stream</var>)
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_pr.htm" target="_blank">prin1</a> <var>object</var> <var>stream</var>))</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_to_.htm" target="_blank">princ-to-string</a> <var>object</var>)</code></pre></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_w_out_.htm" target="_blank">with-output-to-string</a> (<var>stream</var>)
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_pr.htm" target="_blank">princ</a> <var>object</var> <var>stream</var>))</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_pr.htm" target="_blank">pprint</a> "foo")</code></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_progn.htm" target="_blank">progn</a>
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_terpri.htm" target="_blank">terpri</a>)
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_pr.htm" target="_blank">write</a> "foo" :escape t :pretty t)
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_values.htm" target="_blank">values</a>))</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_pr.htm" target="_blank">prin1</a> "foo")</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_pr.htm" target="_blank">write</a> "foo" :escape t)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_pr.htm" target="_blank">print</a> "foo")</code></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm" target="_blank">let</a> ((<var>object</var> "foo"))
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_terpri.htm" target="_blank">terpri</a>)
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_pr.htm" target="_blank">prin1</a> <var>object</var>)
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_cha.htm" target="_blank">write-char</a> #\Space)
+  <var>object</var>)</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_pr.htm" target="_blank">princ</a> "foo")</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_pr.htm" target="_blank">write</a> "foo" :escape nil :readably nil)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_terpri.htm" target="_blank">terpri</a>)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_wr_cha.htm" target="_blank">write-char</a> #\Newline)</code></div>
+          </article>
+
         </div>
 
       </section>
@@ -878,12 +1172,34 @@
           </ul>
         </nav>
 
-        <ul>
-          <li><a class="symbol" href="../../#bit">bit</a></li>
-          <li><a class="symbol" href="../../#char">char</a></li>
-          <li><a class="symbol" href="../../#schar">schar</a></li>
-          <li><a class="symbol" href="../../#svref">svref</a></li>
-        </ul>
+        <div class="thin-wrappers">
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_bit.htm" target="_blank">bit</a> <var>bit-array</var> <var>i</var> <var>j</var> <var>k</var>)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_aref.htm" target="_blank">aref</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_the.htm" target="_blank">the</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/t_array.htm" target="_blank">array</a> <a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_bit.htm" target="_blank">bit</a>) <var>bit-array</var>) <var>i</var> <var>j</var> <var>k</var>)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_bt_sb.htm" target="_blank">sbit</a> <var>bit-array</var> <var>i</var> <var>j</var> <var>k</var>)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_aref.htm" target="_blank">aref</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_the.htm" target="_blank">the</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/t_smp_ar.htm" target="_blank">simple-array</a> <a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_bit.htm" target="_blank">bit</a>) <var>bit-array</var>) <var>i</var> <var>j</var> <var>k</var>)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_char_.htm" target="_blank">char</a> <var>string</var> <var>index</var>)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_aref.htm" target="_blank">aref</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_the.htm" target="_blank">the</a> <a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_string.htm" target="_blank">string</a> <var>string</var>) <var>index</var>)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_char_.htm" target="_blank">schar</a> <var>simple-string</var> 0)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_aref.htm" target="_blank">aref</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_the.htm" target="_blank">the</a> <a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/t_smp_st.htm" target="_blank">simple-string</a> <var>simple-string</var>) 0)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_svref.htm" target="_blank">svref</a> <var>simple-vector</var> 0)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_aref.htm" target="_blank">aref</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_the.htm" target="_blank">the</a> <a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/t_smp_ve.htm" target="_blank">simple-vector</a> <var>simple-vector</var>) 0)</code></div>
+          </article>
+
+        </div>
 
       </section>
 
@@ -905,14 +1221,89 @@
           </ul>
         </nav>
 
-        <ul>
-          <li><a class="symbol" href="../../#1+">1+</a> / <a class="symbol" href="../../#1-">1-</a></li>
-          <li><a class="symbol" href="../../#incf">incf</a> / <a class="symbol" href="../../#decf">decf</a></li>
-          <li><a class="symbol" href="../../#evenp">evenp</a> / <a class="symbol" href="../../#oddp">oddp</a></li>
-          <li><a class="symbol" href="../../#logtest">logtest</a> / <a class="symbol" href="../../#mask-field">mask-field</a></li>
-          <li><a class="symbol" href="../../#signum">signum</a> / <a class="symbol" href="../../#minusp">minusp</a> / <a class="symbol" href="../../#zerop">zerop</a> / <a class="symbol" href="../../#plusp">plusp</a></li>
-          <li><a class="symbol" href="../../#phase">phase</a></li>
-        </ul>
+        <div class="thin-wrappers">
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_1pl_1_.htm" target="_blank">1+</a> <var>number</var>)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_pl.htm" target="_blank">+</a> <var>number</var> 1)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_1pl_1_.htm" target="_blank">1-</a> <var>number</var>)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a__.htm" target="_blank">-</a> <var>number</var> 1)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_incf_.htm" target="_blank">incf</a> <var>place</var> 42)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_setf.htm" target="_blank">setf</a> <var>place</var> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_pl.htm" target="_blank">+</a> <var>place</var> 42))</code></div>
+            <div class="note">(basically)</div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_incf_.htm" target="_blank">decf</a> <var>place</var> 42)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_setf.htm" target="_blank">setf</a> <var>place</var> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a__.htm" target="_blank">-</a> <var>place</var> 42))</code></div>
+            <div class="note">(basically)</div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_evenpc.htm" target="_blank">evenp</a> <var>integer</var>)</code></pre></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_if.htm" target="_blank">if</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_inte_1.htm" target="_blank">integerp</a> <var>integer</var>)
+    (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_zerop.htm" target="_blank">zerop</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_mod.htm" target="_blank">mod</a> <var>integer</var> 2))
+    (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_error.htm" target="_blank">error</a> 'type-error
+           :datum <var>integer</var>
+           :expected-type 'integer))</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_evenpc.htm" target="_blank">oddp</a> <var>integer</var>)</code></pre></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_not.htm" target="_blank">not</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_evenpc.htm" target="_blank">evenp</a> <var>integer</var>))</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_logbtp.htm" target="_blank">logbitp</a> <var>k</var> <var>n</var>)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_ldb_te.htm" target="_blank">ldb-test</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_by_by.htm" target="_blank">byte</a> <var>1</var> <var>k</var>) <var>n</var>)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_logtes.htm" target="_blank">logtest</a> <var>x</var> <var>y</var>)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_not.htm" target="_blank">not</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_zerop.htm" target="_blank">zerop</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_logand.htm" target="_blank">logand</a> <var>x</var> <var>y</var>)))</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_mask_f.htm" target="_blank">mask-field</a> <var>bytespec</var> <var>integer</var>)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_logand.htm" target="_blank">logand</a> <var>integer</var> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_dpb.htm" target="_blank">dpb</a> -1 <var>bytespec</var> 0))</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_signum.htm" target="_blank">signum</a> <var>number</var>)</code></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_if.htm" target="_blank">if</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_zerop.htm" target="_blank">zerop</a> <var>number</var>)
+    <var>number</var>
+    (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_sl.htm" target="_blank">/</a> <var>number</var> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_abs.htm" target="_blank">abs</a> <var>number</var>)))</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_minusp.htm" target="_blank">minusp</a> <var>real</var>)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_eq_sle.htm" target="_blank">&lt;</a> <var>real</var> 0)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_zerop.htm" target="_blank">zerop</a> <var>number</var>)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_eq_sle.htm" target="_blank">=</a> <var>number</var> 0)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_minusp.htm" target="_blank">plusp</a> <var>real</var>)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_eq_sle.htm" target="_blank">&gt;</a> <var>real</var> 0)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_phase.htm" target="_blank">phase</a> <var>number</var>)</code></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_asin_.htm" target="_blank">atan</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_realpa.htm" target="_blank">imagpart</a> <var>number</var>)
+      (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_realpa.htm" target="_blank">realpart</a> <var>number</var>))</code></pre></div>
+          </article>
+
+        </div>
+
       </section>
 
       <section id="conditions-and-restarts">
@@ -933,16 +1324,66 @@
           </ul>
         </nav>
 
-        <ul>
-          <li><a class="symbol" href="../../#warn">warn</a></li>
-          <li><a class="symbol" href="../../#error">error</a> (function only)</li>
-          <li><a class="symbol" href="../../#cerror">cerror</a></li>
-          <li><a class="symbol" href="../../#abort">abort</a> (function only)</li>
-          <li><a class="symbol" href="../../#continue">continue</a> (function only)</li>
-          <li><a class="symbol" href="../../#muffle-warning">muffle-warning</a></li>
-          <li><a class="symbol" href="../../#ignore-errors">ignore-errors</a></li>
-          <li><a class="symbol" href="../../#with-simple-restart">with-simple-restart</a></li>
-        </ul>
+        <div class="thin-wrappers">
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_warn.htm" target="_blank">warn</a></code></div>
+            <div class="expansion"><code>TODO</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_error.htm" target="_blank">error</a></code></div>
+            <div class="expansion"><code>TODO</code></div>
+            <div class="note">(function only)</div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_cerror.htm" target="_blank">cerror</a></code></div>
+            <div class="expansion"><code>TODO</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_abort.htm" target="_blank">abort</a></code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_invo_1.htm" target="_blank">invoke-restart</a> '<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_abort.htm" target="_blank">abort</a>)</code></div>
+            <div class="note">(function only)</div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_contin.htm" target="_blank">continue</a></code></div>
+            <div class="expansion"><pre><code>(<a class="shttp://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htmymbol" href="let">let</a> ((<var>restart</var> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_find_r.htm" target="_blank">find-restart</a> 'continue)))
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_when_.htm" target="_blank">when</a> <var>restart</var>
+    (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_invo_1.htm" target="_blank">invoke-restart</a> <var>restart</var>)))</code></pre></div>
+            <div class="note">(function only)</div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_muffle.htm" target="_blank">muffle-warning</a></code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_invo_1.htm" target="_blank">invoke-restart</a> '<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_muffle.htm" target="_blank">muffle-warning</a>)</code></div>
+            <div class="note">(function only)</div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_use_va.htm" target="_blank">use-value</a></code></div>
+            <div class="expansion"><code>TODO</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_store_.htm" target="_blank">store-value</a></code></div>
+            <div class="expansion"><code>TODO</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_ignore.htm" target="_blank">ignore-errors</a></code></div>
+            <div class="expansion"><code>TODO</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_w_smp_.htm" target="_blank">with-simple-restart</a></code></div>
+            <div class="expansion"><code>TODO</code></div>
+          </article>
+
+        </div>
+
       </section>
 
       <section id="misc">
@@ -963,33 +1404,194 @@
           </ul>
         </nav>
 
-        <ul>
-          <li><a class="symbol" href="../../#alphanumericp">alphanumericp</a></li>
-          <li><a class="symbol" href="../../#array-dimension">array-dimension</a></li>
-          <li><a class="symbol" href="../../#array-rank">array-rank</a></li>
-          <li><a class="symbol" href="../../#char=">char=</a></li>
-          <li><a class="symbol" href="../../#character">character</a></li>
-          <li><a class="symbol" href="../../#constantly">constantly</a></li>
-          <li><a class="symbol" href="../../#copy-symbol">copy-symbol</a></li>
-          <li><a class="symbol" href="../../#declaim">declaim</a></li>
-          <li><a class="symbol" href="../../#defgeneric">defgeneric</a> (mostly)</li>
-          <li><a class="symbol" href="../../#defparameter">defparameter</a> (mostly)</li>
-          <li><a class="symbol" href="../../#defun">defun</a> (mostly)</li>
-          <li><a class="symbol" href="../../#defvar">defvar</a> (mostly)</li>
-          <li><a class="symbol" href="../../#find-all-symbols">find-all-symbols</a></li>
-          <li><a class="symbol" href="../../#funcall">funcall</a></li>
-          <li><a class="symbol" href="../../#get-decoded-time">get-decoded-time</a></li>
-          <li><a class="symbol" href="../../#in-package">in-package</a> (mostly)</li>
-          <li><a class="symbol" href="../../#integer-length">integer-length</a></li>
-          <li><a class="symbol" href="../../#lambda">lambda</a></li>
-          <li><a class="symbol" href="../../#multiple-value-list">multiple-value-list</a></li>
-          <li><a class="symbol" href="../../#prog">prog</a></li>
-          <li><a class="symbol" href="../../#prog1">prog1</a></li>
-          <li><a class="symbol" href="../../#prog2">prog2</a></li>
-          <li><a class="symbol" href="../../#return">return</a></li>
-          <li><a class="symbol" href="../../#values-list">values-list</a></li>
-          <li><a class="symbol" href="../../#with-accessors">with-accessors</a></li>
-        </ul>
+        <div class="thin-wrappers">
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_apply.htm" target="_blank">apply</a> function :foo <var>bar</var> <var>keys</var>)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_apply.htm" target="_blank">apply</a> function (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_list_.htm" target="_blank">list*</a> :foo <var>bar</var> <var>keys</var>))</code></div>
+            <div class="note">(tip)</div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_typep.htm" target="_blank">typep</a> <var>foo</var> '(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_cons.htm" target="_blank">cons</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_eql.htm" target="_blank">eql</a> symbol)))</code></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_and.htm" target="_blank">and</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_consp.htm" target="_blank">consp</a> <var>foo</var>)
+     (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_eq.htm" target="_blank">eq</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_car_c.htm" target="_blank">car</a> <var>foo</var>) 'symbol))</code></pre></div>
+            <div class="note">(tip)</div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_alphan.htm" target="_blank">alphanumericp</a> <var>character</var>)</code></pre></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_or.htm" target="_blank">or</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_alpha_.htm" target="_blank">alpha-char-p</a> <var>character</var>)
+    (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_not.htm" target="_blank">not</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_null.htm" target="_blank">null</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_digi_1.htm" target="_blank">digit-char-p</a> <var>character</var>))))</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_ar_dim.htm" target="_blank">array-dimension</a> <var>array</var> <var>dimension</var>)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_nth.htm" target="_blank">nth</a> <var>dimension</var> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_ar_d_1.htm" target="_blank">array-dimensions</a> <var>array</var>))</code></div>
+            <div class="note">(except <var>dimension</var> must be less than the rank of <var>array</var>)</div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_ar_ran.htm" target="_blank">array-rank</a> <var>array</var>)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_length.htm" target="_blank">length</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_ar_d_1.htm" target="_blank">array-dimensions</a> <var>array</var>))</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_ar_tot.htm" target="_blank">array-total-size</a> <var>array</var>)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_reduce.htm" target="_blank">reduce</a> #'<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_st.htm" target="_blank">*</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_ar_d_1.htm" target="_blank">array-dimensions</a> <var>array</var>))</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_chareq.htm" target="_blank">char=</a> <var>char1</var> <var>char2</var>)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_eq_sle.htm" target="_blank">=</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_char_i.htm" target="_blank">char-int</a> <var>char1</var>) (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_char_i.htm" target="_blank">char-int</a> <var>char2</var>))</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_ch.htm" target="_blank">character</a> <var>object</var>)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_coerce.htm" target="_blank">coerce</a> <var>object</var> '<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_ch.htm" target="_blank">character</a>)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_cons_1.htm" target="_blank">constantly</a> t)</code></pre></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_lambda.htm" target="_blank">lambda</a> (&rest <var>args</var>)
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_declar.htm" target="_blank">declare</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/d_ignore.htm" target="_blank">ignore</a> <var>args</var>))
+  t)</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_cp_sym.htm" target="_blank">copy-symbol</a> <var>symbol</var>)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_mk_sym.htm" target="_blank">make-symbol</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_symb_2.htm" target="_blank">symbol-name</a> <var>symbol</var>))</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_declai.htm" target="_blank">declaim</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/d_optimi.htm" target="_blank">optimize</a> <a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/d_optimi.htm" target="_blank">safety</a>))</code></pre></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_eval_w.htm" target="_blank">eval-when</a> (:compile-toplevel :load-toplevel :execute)
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_procla.htm" target="_blank">proclaim</a> '(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/d_optimi.htm" target="_blank">optimize</a> <a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/d_optimi.htm" target="_blank">safety</a>)))</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defgen.htm" target="_blank">defgeneric</a></code></pre></div>
+            <div class="expansion"><pre><code>TODO</code></pre></div>
+            <div class="note">(mostly)</div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpar.htm" target="_blank">defparameter</a> <var>*var*</var> <var>value</var>)</code></pre></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_progn.htm" target="_blank">progn</a>
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_declai.htm" target="_blank">declaim</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/d_specia.htm" target="_blank">special</a> <var>*var*</var>))
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_setf.htm" target="_blank">setf</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_symb_5.htm" target="_blank">symbol-value</a> '<var>*var*</var>) <var>value</var>)
+  '<var>*var*</var>)</code></pre></div>
+            <div class="note">(mostly?)</div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defpar.htm" target="_blank">defvar</a> <var>*var*</var> <var>value</var>)</code></pre></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_progn.htm" target="_blank">progn</a>
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_declai.htm" target="_blank">declaim</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/d_specia.htm" target="_blank">special</a> <var>*var*</var>))
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_when_.htm" target="_blank">unless</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_boundp.htm" target="_blank">boundp</a> '<var>*var*</var>)
+    (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_setf.htm" target="_blank">setf</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_symb_5.htm" target="_blank">symbol-value</a> '<var>*var*</var>) <var>value</var>))
+  '<var>*var*</var>)</code></pre></div>
+            <div class="note">(mostly?)</div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_defun.htm" target="_blank">defun</a> my-function ())</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_setf.htm" target="_blank">setf</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_fdefin.htm" target="_blank">fdefinition</a> 'my-function) (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_lambda.htm" target="_blank">lambda</a> ()))</code></div>
+            <div class="note">(mostly)</div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_find_a.htm" target="_blank">find-all-symbols</a> "SYMBOL")</code></pre></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_rm_dup.htm" target="_blank">delete-duplicates</a>
+ (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_mapc_.htm" target="_blank">mapcan</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_lambda.htm" target="_blank">lambda</a> (<var>package</var>)
+           (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm" target="_blank">let</a> ((<var>found</var> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_find_s.htm" target="_blank">find-symbol</a> "SYMBOL" <var>package</var>)))
+             (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_when_.htm" target="_blank">when</a> <var>found</var>
+               (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_list.htm" target="_blank">list</a> <var>found</var>))))
+         (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_list_a.htm" target="_blank">list-all-packages</a>)))</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_funcal.htm" target="_blank">funcall</a> <var>function</var> (foo) (bar) (baz))</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_apply.htm" target="_blank">apply</a> <var>function</var> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_list.htm" target="_blank">list</a> (foo) (bar) (baz)))</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_get_un.htm" target="_blank">get-decoded-time</a>)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_dec_un.htm" target="_blank">decode-universal-time</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_get_un.htm" target="_blank">get-universal-time</a>))</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_in_pkg.htm" target="_blank">in-package</a> #:foo)</code></pre></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_eval_w.htm" target="_blank">eval-when</a> (:compile-toplevel :load-toplevel :execute)
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm" target="_blank">let</a> ((<var>package</var> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_find_p.htm" target="_blank">find-package</a> '#:foo)))
+    (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_if.htm" target="_blank">if</a> <var>package</var>
+        (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_setf.htm" target="_blank">setf</a> <var><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/v_pkg.htm" target="_blank">*package*</a></var> <var>package</var>)
+        (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_error.htm" target="_blank">error</a> [...]))))</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_intege.htm" target="_blank">integer-length</a> <var>integer</var>)</code></pre></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_floorc.htm" target="_blank">ceiling</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_log.htm" target="_blank">log</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_if.htm" target="_blank">if</a> (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_minusp.htm" target="_blank">minusp</a> <var>integer</var>)
+                  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a__.htm" target="_blank">-</a> <var>integer</var>)
+                  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_1pl_1_.htm" target="_blank">1+</a> <var>integer</var>))
+              2))</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_lambda.htm" target="_blank">lambda</a> ())</code></div>
+            <div class="expansion"><code>#'(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_lambda.htm" target="_blank">lambda</a> ())</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_mult_1.htm" target="_blank">multiple-value-list</a> <var>form</var>)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_multip.htm" target="_blank">multiple-value-call</a> #'<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_list.htm" target="_blank">list</a> <var>form</var>)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_prog_.htm" target="_blank">prog</a></code></div>
+            <div class="expansion"><code>TODO</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_prog1c.htm" target="_blank">prog1</a> (foo)
+  (bar))</code></pre></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm" target="_blank">let</a> ((<var>value</var> (foo)))
+  (bar)
+  <var>value</var>)</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_prog1c.htm" target="_blank">prog2</a> (foo) (bar)
+  (baz))</code></pre></div>
+            <div class="expansion"><pre><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_progn.htm" target="_blank">progn</a>
+  (foo)
+  (<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_let_l.htm" target="_blank">let</a> ((<var>value</var> (bar)))
+    (baz)
+    <var>value</var>))</code></pre></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_return.htm" target="_blank">return</a> (foo))</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/s_ret_fr.htm" target="_blank">return-from</a> nil (foo))</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_vals_l.htm" target="_blank">values-list</a> <var>list</var>)</code></div>
+            <div class="expansion"><code>(<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/f_apply.htm" target="_blank">apply</a> #'<a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/a_values.htm" target="_blank">values</a> <var>list</var>)</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_w_acce.htm" target="_blank">with-accessors</a></code></div>
+            <div class="expansion"><code>TODO</code></div>
+          </article>
+
+          <article class="thin-wrapper">
+            <div class="wrapper"><code><a class="symbol" href="http://www.lispworks.com/documentation/HyperSpec/Body/m_w_slts.htm" target="_blank">with-slots</a></code></div>
+            <div class="expansion"><code>TODO</code></div>
+          </article>
+
+        </div>
+
       </section>
 
     </main>

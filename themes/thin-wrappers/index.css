@@ -1,0 +1,46 @@
+#not-rigorous {
+    text-align: center;
+}
+
+.thin-wrappers {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+}
+
+.thin-wrapper {
+    display: flex;
+    flex-flow: column;
+    margin: 0.5em;
+}
+
+.thin-wrapper .wrapper, .thin-wrapper .expansion, .thin-wrapper .note {
+    padding: 0.5rem;
+    border: thin solid black;
+    font-size: larger;
+}
+
+.thin-wrapper .wrapper {
+    border-bottom: none;
+    position: relative;
+}
+
+.thin-wrapper .expansion {
+    border-top: thin solid rgba(0, 0, 0, 0.25);
+}
+
+.thin-wrapper .note {
+    border: none;
+    font-size: smaller;
+    font-style: italic;
+}
+
+.thin-wrapper .wrapper:after {
+    color: gray;
+    position: absolute;
+    top: 100%;
+    margin-top: -0.5em;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
