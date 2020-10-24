@@ -6,6 +6,7 @@
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start;
+    margin-left: -0.5em;
 }
 
 .thin-wrapper {
