@@ -1,3 +1,7 @@
 .navlist .quick-links a {
     padding: 0.5em;
 }
+
+.cards .card h1 {
+    font-size: medium;
+}

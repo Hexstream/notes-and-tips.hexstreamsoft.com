@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Figures | CLHS | Cross-references | Notes and tips: Standard Common Lisp symbols</title>
     <link href="../../../css/global.css" rel="stylesheet" type="text/css" />
+    <link href="https://global.hexstream.dev/css/cards.css" rel="stylesheet" type="text/css" />
     <link href="../../../shared.css" rel="stylesheet" type="text/css" />
     <link href="index.css" rel="stylesheet" type="text/css" />
     <script src="https://global.hexstream.dev/scripts/global.js"></script>
@@ -3709,29 +3710,20 @@ float          ::=  [sign]
 
 exponent       ::=  exponent-marker
                     [sign]
-                    {digit}+</pre>
+                    {digit}+
 
-        <dl>
+sign --- a <a href="http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_s.htm#sign">sign</a>.
 
-          <dt>sign</dt>
-          <dd>a <a href="http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_s.htm#sign">sign</a>.</dd>
+slash --- a <a href="http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_s.htm#slash">slash</a>
 
-          <dt>slash</dt>
-          <dd>a <a href="http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_s.htm#slash">slash</a></dd>
+decimal-point --- a <a href="http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_d.htm#dot">dot</a>.
 
-          <dt>decimal-point</dt>
-          <dd>a <a href="http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_d.htm#dot">dot</a>.</dd>
+exponent-marker --- an <a href="http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_e.htm#exponent_marker">exponent marker</a>.
 
-          <dt>exponent-marker</dt>
-          <dd>an <a href="http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_e.htm#exponent_marker">exponent marker</a>.</dd>
+decimal-digit --- a <a href="http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_d.htm#digit">digit</a> in <a href="http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_r.htm#radix">radix</a> 10.
 
-          <dt>decimal-digit</dt>
-          <dd>a <a href="http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_d.htm#digit">digit</a> in <a href="http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_r.htm#radix">radix</a> 10.</dd>
-
-          <dt>digit</dt>
-          <dd>a <a href="http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_d.htm#digit">digit</a> in the current input radix.</dd>
-
-        </dl>
+digit --- a <a href="http://www.lispworks.com/documentation/HyperSpec/Body/26_glo_d.htm#digit">digit</a> in the current input radix.
+        </pre>
 
       </section>
 
@@ -9177,34 +9169,64 @@ exponent       ::=  exponent-marker
           </ul>
         </nav>
 
-        <dl>
+        <div class="cards">
 
-          <dt>(cons #+spice "Spice" #-spice "Lispm" x)</dt>
-          <dd>in implementation A ...  (CONS "Spice" X)</dd>
-          <dd>in implementation B ...  (CONS "Lispm" X)</dd>
-          <dd>in implementation C ...  (CONS "Lispm" X)</dd>
+          <article class="card">
+            <h1>(cons #+spice "Spice" #-spice "Lispm" x)</h1>
+            <p>
+              in implementation A ...  (CONS "Spice" X)
+              <br/>
+              in implementation B ...  (CONS "Lispm" X)
+              <br/>
+              in implementation C ...  (CONS "Lispm" X)
+            </p>
+          </article>
 
-          <dt>(cons #+spice "Spice" #+LispM "Lispm" x)</dt>
-          <dd>in implementation A ...  (CONS "Spice" X)</dd>
-          <dd>in implementation B ...  (CONS "Lispm" X)</dd>
-          <dd>in implementation C ...  (CONS X)</dd>
+          <article class="card">
+            <h1>(cons #+spice "Spice" #+LispM "Lispm" x)</h1>
+            <p>
+              in implementation A ...  (CONS "Spice" X)
+              <br/>
+              in implementation B ...  (CONS "Lispm" X)
+              <br/>
+              in implementation C ...  (CONS X)
+            </p>
+          </article>
 
-          <dt>(setq a '(1 2 #+perq 43 #+(not perq) 27))</dt>
-          <dd>in implementation A ...  (SETQ A '(1 2 43))</dd>
-          <dd>in implementation B ...  (SETQ A '(1 2 27))</dd>
-          <dd>in implementation C ...  (SETQ A '(1 2 27))</dd>
+          <article class="card">
+            <h1>(setq a '(1 2 #+perq 43 #+(not perq) 27))</h1>
+            <p>
+              in implementation A ...  (SETQ A '(1 2 43))
+              <br/>
+              in implementation B ...  (SETQ A '(1 2 27))
+              <br/>
+              in implementation C ...  (SETQ A '(1 2 27))
+            </p>
+          </article>
 
-          <dt>(let ((a 3) #+(or spice lispm) (b 3)) (foo a))</dt>
-          <dd>in implementation A ...  (LET ((A 3) (B 3)) (FOO A))</dd>
-          <dd>in implementation B ...  (LET ((A 3) (B 3)) (FOO A))</dd>
-          <dd>in implementation C ...  (LET ((A 3)) (FOO A))</dd>
+          <article class="card">
+            <h1>(let ((a 3) #+(or spice lispm) (b 3)) (foo a))</h1>
+            <p>
+              in implementation A ...  (LET ((A 3) (B 3)) (FOO A))
+              <br/>
+              in implementation B ...  (LET ((A 3) (B 3)) (FOO A))
+              <br/>
+              in implementation C ...  (LET ((A 3)) (FOO A))
+            </p>
+          </article>
 
-          <dt>(cons #+Lispm "#+Spice" #+Spice "foo" #-(or Lispm Spice) 7 x)</dt>
-          <dd>in implementation A ...  (CONS "foo" X)</dd>
-          <dd>in implementation B ...  (CONS "#+Spice" X)</dd>
-          <dd>in implementation C ...  (CONS 7 X)</dd>
+          <article class="card">
+            <h1>(cons #+Lispm "#+Spice" #+Spice "foo" #-(or Lispm Spice) 7 x)</h1>
+            <p>
+              in implementation A ...  (CONS "foo" X)
+              <br/>
+              in implementation B ...  (CONS "#+Spice" X)
+              <br/>
+              in implementation C ...  (CONS 7 X)
+            </p>
+          </article>
 
-        </dl>
+        </div>
 
       </section>
 

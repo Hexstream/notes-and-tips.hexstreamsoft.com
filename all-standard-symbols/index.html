@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>All standard symbols | Notes and tips: Standard Common Lisp symbols | Articles | HexstreamSoft</title>
     <link href="../css/global.css" rel="stylesheet" type="text/css" />
+    <link href="https://global.hexstream.dev/css/cards.css" rel="stylesheet" type="text/css" />
     <link href="../shared.css" rel="stylesheet" type="text/css" />
     <link href="index.css" rel="stylesheet" type="text/css" />
     <script src="https://global.hexstream.dev/scripts/global.js"></script>
@@ -1739,24 +1740,29 @@
                 <td>
                   <div class="topic">
                     <p>Many programming languages support two kinds of division operations, both of which are imprecise:</p>
-                    <dl>
-                      <dt>Integer division</dt>
-                      <dd>
+                    <div class="cards">
+                      <section class="card">
+                        <h1>Integer division</h1>
                         <p>In many languages, returns an integer result and loses the remainder. For example, dividing 3 by 2 would yield 1 and the remainder of 1 would be lost.</p>
                         <p>Common Lisp supports this type of division with <a class="symbol" href="#floor">floor</a> and <a class="symbol" href="#truncate">truncate</a> when using 2 integer arguments (but these functions can do much more).</p>
-                      </dd>
-                      <dt>Floating-point division</dt>
-                      <dd>
-                        <p>Floating-point numbers have many inherent limitations regarding accuracy. For example, the result of dividing 1 by 3 can't be representated accurately using floating-point numbers. The real result is 1/3 or 0.333... but a floating-point representation might yield 0.33333334 as an answer.</p>
+                      </section>
+                      <section class="card">
+                        <h1>Floating-point division</h1>
+                        <p>
+                          Floating-point numbers have many inherent limitations regarding accuracy.
+                          <br/>
+                          For example, the result of dividing 1 by 3 can't be representated accurately using floating-point numbers.
+                          <br/>
+                          The real result is 1/3 or 0.333... but a floating-point representation might yield 0.33333334 as an answer.
+                        </p>
                         <p>Common Lisp supports this type of division. Simply pass floating-point numbers to <a class="symbol" href="#/">/</a>:</p>
                         <pre class="example"><code class="common-lisp">(/ 1.0 3) → 0.33333334</code></pre>
-                        (Results may vary depending on the kinds of floats the current Common Lisp implementation supports.)
-                      </dd>
-                    </dl>
+                        <p>(Results may vary depending on the kinds of floats the current Common Lisp implementation supports.)</p>
+                      </section>
+                    </div>
                     <p>One of the many features that sets Common Lisp apart from other languages is that it supports true fractions directly:</p>
                     <pre class="example"><code class="common-lisp">(/ 3 9) → 1/3</code></pre>
                     <pre class="example"><code class="common-lisp">(/ 20 15) → 4/3</code></pre>
-
                   </div>
                 </td>
               </tr>
@@ -15317,20 +15323,28 @@
                     <p>To remove an entry from the hash-table, use <a class="symbol" href="#remhash">remhash</a>.</p>
                     <p>To efficiently remove all entries from the hash-table, use <a class="symbol" href="#clrhash">clrhash</a>.</p>
                     <p>There are three standard operators for iterating over all entries of a hash-table:</p>
-                    <dl>
-                      <dt><a class="symbol" href="#maphash">maphash</a></dt>
-                      <dd><pre class="example"><code class="common-lisp">(maphash (lambda (key value)
+                    <div class="cards">
+                      <section class="card">
+                        <h1><a class="symbol" href="#maphash">maphash</a></h1>
+                        <p></p>
+                        <pre class="example"><code class="common-lisp">(maphash (lambda (key value)
            ...)
-         hash-table)</code></pre></dd>
-                      <dt><a class="symbol" href="#with-hash-table-iterator">with-hash-table-iterator</a></dt>
-                      <dd><pre class="example"><code class="common-lisp">(with-hash-table-iterator (entry hash-table)
+         hash-table)</code></pre>
+                      </section>
+                      <section class="card">
+                        <h1><a class="symbol" href="#with-hash-table-iterator">with-hash-table-iterator</a></h1>
+                        <p></p>
+                        <pre class="example"><code class="common-lisp">(with-hash-table-iterator (entry hash-table)
   (loop (multiple-value-bind (more key value) (entry)
           (unless more
             (return))
-          ...)))</code></pre></dd>
-                      <dt><a class="symbol" href="#loop">loop</a></dt>
-                      <dd><p>TODO. Le <i>sigh</i>.</p></dd>
-                    </dl>
+          ...)))</code></pre>
+                      </section>
+                      <section class="card">
+                        <h1><a class="symbol" href="#loop">loop</a></h1>
+                        <p>TODO. Le <i>sigh</i>.</p>
+                      </section>
+                    </div>
                   </div>
                 </td>
               </tr>
