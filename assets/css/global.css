@@ -1,10 +1,45 @@
-@import "https://global.hexstream.dev/css/global.css";
-
-.packed-sections {
-    display: flex;
-    flex-flow: row wrap;
+table > tbody > tr > td > div.topic {
+    border-top: dashed thin #9D9D9D; /*dashed thin #9D9D9D;*/
+    margin-left: -0.5em;
+    margin-right: -0.5em;
 }
 
-.packed-sections > section {
-    flex: 1 1 auto;
+.topic:first-child {
+    border-top: none;
+}
+
+.deprecated {
+    color: red;
+}
+
+.discouraged {
+    color: red;
+}
+
+.obsolete {
+    color: red;
+}
+
+.not-deprecated {
+    color: green;
+}
+
+.vertical-tree tbody td {
+    vertical-align: top;
+    text-align: center;
+}
+
+.related {
+    font-style: italic;
+    border: solid antiquewhite 0.15em;
+    padding: 0.05em 0.15em;
+    margin-left: 0.25em;
+}
+
+.highlight, .highlight a {
+    color: green;
+}
+
+.stub, .stub a {
+    color: #BB0000;
 }

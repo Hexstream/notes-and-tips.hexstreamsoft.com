@@ -70,3 +70,13 @@ table .hanging-menu {
 table > tbody > tr > th.horizontal-grouping-header a {
     font-size: inherit;
 }
+
+
+.packed-sections {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.packed-sections > section {
+    flex: 1 1 auto;
+}
