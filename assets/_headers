@@ -1,0 +1,14 @@
+/*
+  ! Cache-Control
+  Cache-Control: public, max-age=86400, s-maxage=2592000
+
+/special/status.txt
+  ! Cache-Control
+  Cache-Control: no-store
+
+
+/*.sexp
+  Content-Type: text/plain; charset=utf-8
+
+/cross-reference-categories.el
+  Content-Type: text/plain; charset=utf-8
