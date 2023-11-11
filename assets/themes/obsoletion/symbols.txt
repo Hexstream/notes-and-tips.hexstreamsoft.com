@@ -22,3 +22,5 @@ psetq
 rplaca
 rplacd
 set
+prog
+prog*
