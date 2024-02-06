@@ -1,10 +1,10 @@
-#all-standard-symbols-table th, #all-standard-symbols-table td {
+#all-standard-symbols-table :is(th, td) {
     text-align: left;
     vertical-align: top;
     padding: 0.5em;
 }
 
-#all-standard-symbols-table table th, #all-standard-symbols-table table td {
+#all-standard-symbols-table table :is(th, td) {
     vertical-align: middle;
 }
 
@@ -13,7 +13,8 @@
     padding-bottom: 0;
 }
 
-#all-standard-symbols-table tbody th, #obsoletion-status > table th {
+#all-standard-symbols-table tbody th,
+#obsoletion-status > table th {
     vertical-align: top;
     white-space: nowrap;
 }
@@ -60,8 +61,7 @@
         box-sizing: border-box;
     }
 
-    #all-standard-symbols-table tbody th,
-    #all-standard-symbols-table .horizontal-grouping-header a {
+    #all-standard-symbols-table :is(tbody th, .horizontal-grouping-header a) {
         white-space: initial;
     }
 

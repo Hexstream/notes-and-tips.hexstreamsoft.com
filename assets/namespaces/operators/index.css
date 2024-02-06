@@ -1,3 +1,3 @@
-#clos-init-table th, #clos-init-table td {
+#clos-init-table :is(th, td) {
     text-align: center;
 }

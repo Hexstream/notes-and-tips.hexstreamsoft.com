@@ -19,7 +19,7 @@ main {
     margin: 0.5em;
 }
 
-.thin-wrapper .wrapper, .thin-wrapper .expansion, .thin-wrapper .note {
+.thin-wrapper :is(.wrapper, .expansion, .note) {
     padding: 0.5rem;
     border: thin solid black;
     font-size: larger;
