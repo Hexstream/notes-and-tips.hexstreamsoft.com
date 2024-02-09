@@ -10,7 +10,7 @@ main ol li.tree {
     padding: 0.2em 0.4em;
 }
 
-main ol li:before {
+main ol li::before {
     counter-increment: section;
     content: counters(section, ".");
     margin-right: 0.3em;
