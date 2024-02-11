@@ -8,15 +8,7 @@ table > tbody > tr > td > div.topic {
     border-top: none;
 }
 
-.deprecated {
-    color: red;
-}
-
-.discouraged {
-    color: red;
-}
-
-.obsolete {
+.deprecated, .discouraged, .obsolete {
     color: red;
 }
 
