@@ -61,7 +61,7 @@ table .hanging-menu {
     margin-top: 0;
     top: -0.25em;
     right: -0.85em;
-    background: transparent;
+    background-color: transparent;
 }
 
 table > tbody > tr > th.horizontal-grouping-header a {
