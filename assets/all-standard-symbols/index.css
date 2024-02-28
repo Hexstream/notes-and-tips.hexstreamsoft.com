@@ -62,7 +62,7 @@
     }
 
     #all-standard-symbols-table :is(tbody th, .horizontal-grouping-header a) {
-        white-space: revert;
+        white-space: initial;
     }
 
     #all-standard-symbols-table > tbody > tr > th.horizontal-grouping-header a {
