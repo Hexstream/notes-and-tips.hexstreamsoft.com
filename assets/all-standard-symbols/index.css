@@ -1,5 +1,5 @@
 #all-standard-symbols-table :is(th, td) {
-    text-align: left;
+    text-align: initial;
     vertical-align: top;
     padding: 0.5em;
 }
@@ -46,7 +46,7 @@
 #all-standard-symbols-table .horizontal-grouping-header a {
     display: block;
     padding: 0.25em;
-    text-align: left;
+    text-align: initial;
 }
 
 #all-standard-symbols-table table {

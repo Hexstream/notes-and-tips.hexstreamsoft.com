@@ -34,12 +34,12 @@ table th:is(.anchor, .horizontal-grouping-header) {
 
 table th.anchor a {
     display: inline;
-    text-align: right;
+    text-align: end;
     padding-right: 0.6em;
 }
 
 table th.horizontal-grouping-header {
-    text-align: left;
+    text-align: initial;
 }
 
 table th.horizontal-grouping-header .superclass {
