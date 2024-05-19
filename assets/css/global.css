@@ -1,3 +1,17 @@
+.symbols-list > li {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+table :where(th, td) > .symbols-list > li:first-child {
+    margin-top: 0;
+}
+
+table :where(th, td) > .symbols-list > li:last-child {
+    margin-bottom: 0;
+}
+
+
 table > tbody > tr > td > div.topic {
     border-top: dashed thin #9D9D9D; /*dashed thin #9D9D9D;*/
     margin-left: -0.5em;

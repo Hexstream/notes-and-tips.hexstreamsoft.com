@@ -51,10 +51,6 @@ table th.horizontal-grouping-header small {
     font-weight: normal;
 }
 
-table th ul li + li {
-    margin-top: 0.2em;
-}
-
 table .hanging-menu {
     font-size: medium;
     font-weight: normal;

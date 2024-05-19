@@ -26,7 +26,6 @@
 #all-standard-symbols-table th > ul {
     font-weight: normal;
     font-size: smaller;
-    margin-top: 0.25em;
     margin-bottom: 0;
 }
 
@@ -36,6 +35,7 @@
 
 #all-standard-symbols-table th ul li {
     margin-top: 0.25em;
+    margin-bottom: 0.25em;
 }
 
 #all-standard-symbols-table .horizontal-grouping-header {

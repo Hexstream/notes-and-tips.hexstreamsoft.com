@@ -31,8 +31,17 @@ main table td ul {
     margin-bottom: 0;
 }
 
-main table td ul li + li {
+main table td ul li {
     margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+main table td ul li:first-child {
+    margin-top: 0;
+}
+
+main table td ul li:last-child {
+    margin-bottom: 0;
 }
 
 #summary-table td ul {
